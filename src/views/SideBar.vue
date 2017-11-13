@@ -18,13 +18,29 @@
 const navData = [
   {
     isItem: false,
-    text: '基础'
+    text: 'Base'
   },
   {
     isItem: true,
     text_en: 'Button',
     text_zh: '按钮',
     name: 'component_button'
+  },
+  {
+    isItem: false,
+    text: 'Feedback'
+  },
+  {
+    isItem: true,
+    text_en: 'Alert',
+    text_zh: '提示框',
+    name: 'component_alert'
+  },
+  {
+    isItem: true,
+    text_en: 'Model',
+    text_zh: '模态框',
+    name: 'component_model'
   },
 ];
 
@@ -83,6 +99,7 @@ export default {
   }
   .site-sidebar__nav-item__subtitle {
     font-size: 14px;
+    padding-left: 8px;
     &.active,
     &:hover {
       color: @brand-primary;

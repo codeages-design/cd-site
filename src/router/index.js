@@ -13,6 +13,12 @@ const routes = [{
   children: [
     ...component,
   ],
+}, {
+  path: '/',
+  name: 'home',
+  redirect: {
+    name: 'component_button'
+  }
 }];
 
 const router = new Router({
