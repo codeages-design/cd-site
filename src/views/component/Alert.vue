@@ -17,7 +17,7 @@
             针对提示框颜色的描述
           </div>
           <div class="site-panel__footer">
-            <pre><code class="html">
+            <pre v-highlightjs><code class="html">
               {{code.alert_color}}
             </code></pre>
           </div>
@@ -38,7 +38,7 @@
             针对可关闭的提示框的描述
           </div>
           <div class="site-panel__footer">
-            <pre><code class="html">
+            <pre v-highlightjs><code class="html">
               {{code.alert_close}}
             </code></pre>
           </div>

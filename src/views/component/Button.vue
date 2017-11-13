@@ -16,7 +16,7 @@
             针对按钮类型的描述
           </div>
           <div class="site-panel__footer">
-            <pre><code class="html">
+            <pre v-highlightjs><code class="html">
               {{ code.button_type }}
             </code></pre>
           </div>
@@ -35,7 +35,7 @@
             针对按钮颜色的描述
           </div>
           <div class="site-panel__footer">
-            <pre><code class="html">
+            <pre v-highlightjs><code class="html">
               {{ code.button_color }}
             </code></pre>
           </div>
@@ -53,7 +53,7 @@
             针对按钮大小的描述
           </div>
           <div class="site-panel__footer">
-            <pre><code class="html">
+            <pre v-highlightjs><code class="html">
               {{ code.button_size }}
             </code></pre>
           </div>

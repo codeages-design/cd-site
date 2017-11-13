@@ -18,14 +18,7 @@
 <script>
 import XSideBar from '@/views/SideBar';
 import XHeader from '@/views/Header';
-
-import 'highlight.js/styles/googlecode.css'
-import hljs from 'highlight.js';
-
-hljs.highlightCode = () => {
-  let blocks = document.querySelectorAll('pre code');
-  [].forEach.call(blocks, hljs.highlightBlock);
-};
+import 'highlight.js/styles/googlecode.css';
 
 export default {
   name: 'layout',
@@ -44,8 +37,5 @@ export default {
       return this.isHideSidebar = !this.isHideSidebar;
     },
   },
-  mounted() {
-    hljs.highlightCode()
-  }
 };
 </script>
