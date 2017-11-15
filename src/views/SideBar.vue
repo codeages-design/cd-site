@@ -72,45 +72,4 @@ export default {
 </script>
 
 <style lang="less">
-@brand-primary: #43bc60;
-
-.site-sidebar {
-  position: absolute;
-  top: 16px;
-  left: 0;
-  bottom: 16px;
-  width: 200px;
-  border-right: 1px solid rgba(0, 0, 0, 0.08);
-  // height: 100%;
-  overflow: auto;
-}
-
-.site-sidebar__nav {
-  list-style: none;
-  padding-left: 8px;
-}
-
-.site-sidebar__nav-item {
-  padding: 8px 16px;
-  display: block;
-  .site-sidebar__nav-item__title {
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.32);
-  }
-  .site-sidebar__nav-item__subtitle {
-    font-size: 14px;
-    padding-left: 8px;
-    &.active,
-    &:hover {
-      color: @brand-primary;
-    }
-    &:hover {
-      cursor: pointer;
-    }
-    span + span {
-      margin-left: 8px;
-      font-size: 12px
-    }
-  }
-}
 </style>

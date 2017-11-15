@@ -1,6 +1,8 @@
 @import './variables.less';
 @import './mixins.less';
 @import './components.less';
+@import './header.less';
+@import './sidebar.less';
 @import '~codeages-design/src/less/codeages-design.less';
 
 body {
@@ -8,52 +10,57 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-family: Helvetica Neue,Helvetica,Arial,PingFang SC,Hiragino Sans GB,Microsoft YaHei,sans-serif;
-  background-color: #f1f1f1;
+  background-color: #fff;
   overflow-x: hidden;
   margin: 0;
   color: rgba(0, 0, 0, 0.56);
 }
 
 pre {
-  margin: 0;
-  background-color: #f8f8f8;
+  margin-top: 0;
+  margin-bottom: 24px;
+  background-color: #fafafa;
+  code {
+    border-radius: 4px;
+  }
 }
 
 .hljs {
-  padding: 0 !important;
-  color: rgba(0, 0, 0, 0.56) !important;
-  background-color: #f8f8f8 !important;
-}
-
-.site-content {
-  position: relative;
-  width: 90%;
-  min-width: 1200px;
-  min-height: 800px;
-  margin: 0 auto;
+  padding: 0 8px !important;
   border-radius: 4px;
-  background-color: #fff;
-  padding: 24px;
-  overflow: hidden;
+  color: rgba(0, 0, 0, 0.56) !important;
+  background-color: #fafafa !important;
 }
 
 .site-main {
   padding-left: 200px;
 }
 
-.site-main-title {
-  font-size: 28px;
+.site-content {
+  position: relative;
+  width: 90%;
+  // min-width: 1200px;
+  min-height: 800px;
+  margin: 0 auto;
+  border-radius: 4px;
+  background-color: #fff;
+  padding: 24px;
+  // overflow: hidden;
+}
+
+.site-content-title {
+  font-size: 32px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.88);
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
-.site-main-des {
+.site-content-des {
   font-size: 14px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 
-.site-main-subtitle {
+.site-content-subtitle {
   font-size: 22px;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.88);

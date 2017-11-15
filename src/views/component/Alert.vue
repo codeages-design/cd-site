@@ -1,8 +1,8 @@
 <template>
   <div class="compontent-alert">
-    <div class="site-main-title">Alert 提示框</div>
-    <div class="site-main-des">提示框用于开始一个即时操作</div>
-    <div class="site-main-subtitle">代码演示</div>
+    <div class="site-content-title">Alert 提示框</div>
+    <div class="site-content-des">提示框用于开始一个即时操作</div>
+    <div class="site-content-subtitle">代码演示</div>
     <div class="cd-row">
       <div class="col-xs-6">
         <div class="site-panel">

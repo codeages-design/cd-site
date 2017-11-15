@@ -1,48 +1,60 @@
 <template>
-  <div class="panel panel-default">
-    <div class="panel-heading">
-      <h3 class="panel-title"><slot name="title"></slot></h3>
+  <div class="cd-panel" :class="{'active': isShowCode}">
+    <div class="cd-panel-heading">
+      <div class="cd-panel-title">
+        <slot name="title"></slot>
+      </div>
+      <div class="cd-panel-action">
+        <i class="cd-icon cd-icon-sad copy-code" :data-clipboard-text="code" v-if="isShowCode"></i>
+        <i class="cd-icon cd-icon-sad-o" :class="{'active': isShowCode}" @click="toggleCode"></i>
+      </div>
     </div>
-    <div class="panel-body">
-      <slot></slot>
+    <div class="cd-panel-body">
+      <slot name="code" v-if="isShowCode"></slot>
+      <slot name="style"></slot>
+      <slot name="dec"></slot>
     </div>
   </div>
 </template>
 
-<style lang="less">
-.panel {
-  margin-bottom: 24px;
-  background-color: #fff;
-  border: 1px solid transparent;
-  border-radius: 4px;
-  padding: 0 16px;
-  .panel-heading {
-    position: relative;
-    font-size: 16px;
-    padding: 8px 0;
-    border-top-right-radius: 3px;
-    border-top-left-radius: 3px;
-  }
-  .panel-body {
-    padding-top: 24px;
-    padding-bottom: 24px;
-  }
-  .panel-title {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-size: 16px;
-    line-height: 1;
+<script>
+import Clipboard from 'clipboard';
+
+export default {
+  props: ['code'],
+  data() {
+    return {
+      isShowCode: false
+    }
+  },
+  methods: {
+    toggleCode() {
+      this.isShowCode = !this.isShowCode;
+    },
+  },
+  mounted() {
+    new Clipboard('.copy-code');
   }
 }
-.panel-default {
-  border-color: #e4ecf3;
-  .panel-heading {
-    background: #fff;
-    border-bottom: 1px solid #f5f5f5;
+</script>
+
+<style lang="less" scoped>
+@import '~@/assets/less/mixins.less';
+
+.cd-panel {
+  .site-transition();
+  &:hover {
+    .site-transition();
+    .site-box-shadow-z(8px);
   }
-  .panel-title {
-    padding: 8px 0;
-    color: #313131;
+  .cd-panel-action i {
+    .site-transition();
+    &:hover,
+    &.active {
+      .site-transition();
+      cursor: pointer;
+      opacity: 0.56;
+    }
   }
 }
 </style>

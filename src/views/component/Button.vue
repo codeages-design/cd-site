@@ -1,63 +1,55 @@
 <template>
   <div class="compontent-button">
-    <div class="site-main-title">Button 按钮</div>
-    <div class="site-main-des">按钮用于开始一个即时操作</div>
-    <div class="site-main-subtitle">代码演示</div>
+    <div class="site-content-title">Button 按钮</div>
+    <div class="site-content-des">
+      按钮是用户界面中使用最为广泛且最为让用户接受和理解的通用组件之一，我们在 Codeages Design 中引入了多种不同的按钮样式以匹配不同的交互场景使用，我们不推崇使用太多的场景色来定义按钮，而是通过默认按钮和主要按钮的权重来定义操作主次。
+    </div>
     <div class="cd-row">
       <div class="col-xs-6">
-        <div class="site-panel">
-          <div class="site-panel__heading">
-            <button class="cd-btn cd-btn-primary">Raised按钮</button>
-            <button class="cd-btn cd-btn-ghost-primary">Ghost按钮</button>
-            <button class="cd-btn cd-btn-flat-primary">Flat按钮</button>
-          </div>
-          <div class="site-panel__body">
-            <div class="site-panel__title">按钮类型</div>
-            针对按钮类型的描述
-          </div>
-          <div class="site-panel__footer">
-            <pre v-highlightjs><code class="html">
-              {{ code.button_type }}
+        <x-panel :code="code.button_base|trim">
+          <span slot="title">
+            通用按钮（Button）
+          </span>
+          <div slot="code">
+            <pre v-highlightjs><code class="html" id="base-code">
+              {{ code.button_base }}
             </code></pre>
           </div>
-        </div>
-        <div class="site-panel">
-          <div class="site-panel__heading">
-            <button class="cd-btn cd-btn-primary cd-mt8">Primary按钮</button>
-            <button class="cd-btn cd-btn-default">Default按钮</button>
-            <button class="cd-btn cd-btn-danger">Danger按钮</button>
-            <button class="cd-btn cd-btn-success">Success按钮</button>
-            <button class="cd-btn cd-btn-warning">Warning按钮</button>
-            <button class="cd-btn cd-btn-info">Info按钮</button>
+          <div class="cd-mb16" slot="style" v-html="code.button_base"></div>
+          <div class="cd-text-xs" slot="dec">
+            在大部分场景下，我们采用通用按钮的样式，而且在同一按钮组中，能且只能存在一个主要按钮，从而与默认按钮区分交互权重。
           </div>
-          <div class="site-panel__body">
-            <div class="site-panel__title">按钮颜色</div>
-            针对按钮颜色的描述
+        </x-panel>
+        <x-panel :code="code.button_link">
+          <div slot="title">
+            链接按钮（Link Button）
           </div>
-          <div class="site-panel__footer">
+          <div slot="code">
             <pre v-highlightjs><code class="html">
-              {{ code.button_color }}
+              {{ code.button_link }}
             </code></pre>
           </div>
-        </div>
+          <div class="cd-mb16" slot="style" v-html="code.button_link"></div>
+          <div class="cd-text-xs" slot="dec">
+            链接按钮相较于通用按钮而言弱化了按钮属性，可以和通用按钮结合使用用以引导用户点击通用按钮，如果两个链接按钮结合使用则可以通过颜色定义操作场景。
+          </div>
+        </x-panel>
       </div>
       <div class="col-xs-6">
-        <div class="site-panel">
-          <div class="site-panel__heading">
-            <button class="cd-btn cd-btn-primary cd-btn-sm">小号按钮</button>
-            <button class="cd-btn cd-btn-primary">默认按钮</button>
-            <button class="cd-btn cd-btn-primary cd-btn-lg">大号按钮</button>
+        <x-panel :code="code.button_ghost">
+          <div slot="title">
+            幽灵按钮（Ghost Button）
           </div>
-          <div class="site-panel__body">
-            <div class="site-panel__title">按钮大小</div>
-            针对按钮大小的描述
-          </div>
-          <div class="site-panel__footer">
+          <div slot="code">
             <pre v-highlightjs><code class="html">
-              {{ code.button_size }}
+              {{ code.button_ghost }}
             </code></pre>
           </div>
-        </div>
+          <div class="cd-mb16" slot="style" v-html="code.button_ghost"></div>
+          <div class="cd-text-xs" slot="dec">
+            在一些需要弱化按钮视觉点并且需要不断重复某个组件的场景下，我们可以采用幽灵按钮代替通用按钮（例如设置列表），从而不在视觉流上喧宾夺主。
+          </div>
+        </x-panel>
       </div>
     </div>
   </div>
@@ -65,16 +57,23 @@
 
 <script>
 import * as code from './button';
+import XPanel from '@/components/Panel';
+
 export default {
+  components: {
+    XPanel
+  },
   data() {
     return {
       code,
     }
+  },
+  methods: {
   }
 }
 </script>
 
-<style lang="less" scoped>
+<style lang="less">
 .compontent-button .cd-btn {
   margin-right: 8px;
   margin-bottom: 8px;

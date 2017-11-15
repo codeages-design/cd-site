@@ -1,9 +1,9 @@
 <template>
   <div id="app" class="site-wrap" :class="{ 'hide-sidebar': isHideSidebar }">
     <x-header></x-header>
-    <main class="site-content">
-      <x-side-bar @sidebarToggle="sidebarToggle"></x-side-bar>
-      <div class="site-main" v-loading="isLoading">
+    <x-side-bar @sidebarToggle="sidebarToggle"></x-side-bar>
+    <main class="site-main">
+      <div class="site-content" v-loading="isLoading">
         <keep-alive>
           <router-view v-if="$route.meta.keepAlive">
           </router-view>

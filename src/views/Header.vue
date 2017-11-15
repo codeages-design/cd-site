@@ -1,8 +1,8 @@
 <template>
-  <header class="site-header clearfix">
-    <div class="site-header__logo">CodeAges Design</div>
-    <div class="site-header__nav">
-      <ul>
+  <header class="site-header">
+    <div class="site-header__logo"><img src="/static/img/logo@2x.png" srcset="/static/img/logo.png 1x, /static/img/logo@2x.png 2x" alt=""></div>
+    <div class="site-header__nav site-clearfix">
+      <ul class="">
         <li :class="{ active: routeName === nav.name }" @click="switchNav(nav.name)" v-for="(nav, index) in navData" :key="index">
           {{nav.text}}
         </li>
@@ -47,44 +47,6 @@ export default {
 </script>
 
 <style lang="less">
-@brand-primary: #43bc60;
-
-.site-header {
-  position: relative;
-  background-color: #fff;
-  margin-bottom: 24px;
-  padding: 12px 24px;
-
-}
-
-.site-header__logo {
-  float: left;
-  height: 40px;
-  line-height: 40px;
-  width: 200px;
-  color: @brand-primary;
-}
-
-.site-header__nav {
-  float: right;
-  > ul {
-    list-style: none;
-    float: right;
-    margin: 0 auto;
-    > li {
-      line-height: 20px;
-      padding: 10px 20px;
-      font-size: 14px;
-      float: left;
-      &.active,
-      &:hover {
-        color: @brand-primary;
-      }
-      &:hover {
-        cursor: pointer;
-      }
-    }
-  }
-}
+// @brand-primary: #43bc60;
 </style>
 
