@@ -26,4 +26,12 @@ export default [{
   path: 'radio',
   name: 'component_radio',
   component: (resolve) => require(['@/views/component/Radio.vue'], resolve),
+}, {
+  path: 'avatar',
+  name: 'component_avatar',
+  component: (resolve) => require(['@/views/component/Avatar.vue'], resolve),
+}, {
+  path: 'steps',
+  name: 'component_steps',
+  component: (resolve) => require(['@/views/component/Steps.vue'], resolve),
 }];

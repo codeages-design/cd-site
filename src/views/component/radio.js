@@ -50,7 +50,7 @@ export const radio_size = `
 
 export const radio_js = `
 cd.radio({
-  el: '[data-toggle="cd-radio"]',
+  el: '#radio',
   cb() {
     console.log('这是回调函数')
   }
