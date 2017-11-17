@@ -9,8 +9,10 @@ export const loading_base = `
 `;
 
 export const loading_js = `
-let loading = cd.loading();
+let loading = cd.loading({
+  isFixed: false
+});
 
 // 插入
-$dom.html(loading);
+$target.html(loading);
 `;

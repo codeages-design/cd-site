@@ -8,7 +8,7 @@
       <div class="col-xs-6">
         <x-panel :code="code.loading_base|trim">
           <span slot="title">
-            HTML调用
+            基础
           </span>
           <div slot="code">
             <pre v-highlightjs><code class="html">
@@ -21,26 +21,13 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
-        <x-panel :code="code.loading_js|trim">
-          <span slot="title">
-            JS调用
-          </span>
-          <div slot="code">
-            <pre v-highlightjs><code class="js">
-              {{ code.loading_js }}
-            </code></pre>
-          </div>
-          <div class="cd-mb16" slot="style" id="loading-box"></div>
-          <div class="cd-text-xs" slot="dec">
-            在大部分场景下，我们采用通用按钮的样式，而且在同一按钮组中，能且只能存在一个主要按钮，从而与默认按钮区分交互权重。
-          </div>
-        </x-panel>
-      </div>
     </div>
     <div class="site-content-subtitle">
       API
     </div>
+    <pre v-highlightjs><code class="js">
+      {{ code.loading_js }}
+    </code></pre>
     <div class="cd-table-responsive">
       <table class="cd-table">
         <thead>

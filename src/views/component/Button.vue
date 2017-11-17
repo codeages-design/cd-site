@@ -11,7 +11,7 @@
             通用按钮（Button）
           </span>
           <div slot="code">
-            <pre v-highlightjs><code class="html" id="base-code">
+            <pre v-highlightjs><code class="html">
               {{ code.button_base }}
             </code></pre>
           </div>

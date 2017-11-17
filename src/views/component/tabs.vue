@@ -11,7 +11,7 @@
             标签页（Tabs）
           </span>
           <div slot="code">
-            <pre v-highlightjs><code class="html" id="base-code">
+            <pre v-highlightjs><code class="html">
               {{ code.tabs_base }}
             </code></pre>
           </div>
