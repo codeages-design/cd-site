@@ -5,6 +5,8 @@ import router from '@/router';
 import filters from '@/filters';
 import utils from '@/utils';
 import hljs from 'highlight.js';
+import 'jquery';
+import 'codeages-design';
 
 Vue.use(filters);
 Vue.use(utils);

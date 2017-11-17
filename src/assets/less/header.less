@@ -1,14 +1,14 @@
 .site-header {
   position: relative;
   background-color: #fff;
-  margin-bottom: 24px;
   padding: 0 0 0 200px;
   height: 56px;
   .site-box-shadow();
+  z-index: 1;
 }
 
 .site-header__logo {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 30px;
   height: 56px;
@@ -19,8 +19,7 @@
 }
 
 .site-header__nav {
-  // float: right;
-  width: 1000px;
+  width: 90%;
   margin: 0 auto;
   > ul {
     float: right;
@@ -33,15 +32,15 @@
       margin: 0 32px;
       font-size: 14px;
       float: left;
-      color: @cd-gray;
+      color: @site-gray;
       .site-transition();
       &:hover {
         cursor: pointer;
-        color: @cd-gray-dark;
+        color: @site-gray-dark;
         .site-transition();
       }
       &.active {
-        color: @cd-gray-dark;
+        color: @site-gray-dark;
         // border-bottom: 4px solid @site-primary;
       }
     }

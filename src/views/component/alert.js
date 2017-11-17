@@ -8,7 +8,7 @@ export const alert_color = `
 export const alert_close = `
 <div class="cd-alert cd-alert-success">
   可关闭的提示框。
-  <button type="button" class="close" data-dismiss="alert">
+  <button type="button" class="close" data-toggle="cd-alert-close">
     <i class="cd-icon cd-icon-close"></i>
   </button>
 </div>

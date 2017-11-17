@@ -1,6 +1,6 @@
 <template>
   <div class="compontent-button">
-    <div class="site-content-title">Button 按钮</div>
+    <div class="site-content-title">按钮</div>
     <div class="site-content-des">
       按钮是用户界面中使用最为广泛且最为让用户接受和理解的通用组件之一，我们在 Codeages Design 中引入了多种不同的按钮样式以匹配不同的交互场景使用，我们不推崇使用太多的场景色来定义按钮，而是通过默认按钮和主要按钮的权重来定义操作主次。
     </div>
@@ -34,6 +34,20 @@
             链接按钮相较于通用按钮而言弱化了按钮属性，可以和通用按钮结合使用用以引导用户点击通用按钮，如果两个链接按钮结合使用则可以通过颜色定义操作场景。
           </div>
         </x-panel>
+        <x-panel :code="code.button_deabled">
+          <div slot="title">
+            禁用按钮（Disabled Button）
+          </div>
+          <div slot="code">
+            <pre v-highlightjs><code class="html">
+              {{ code.button_deabled }}
+            </code></pre>
+          </div>
+          <div class="cd-mb16" slot="style" v-html="code.button_deabled"></div>
+          <div class="cd-text-xs" slot="dec">
+            在按钮禁用状态下，我们不再强调按钮的颜色与场景，仅仅以不可用的形式让用户了解即可，在这里去掉了颜色的干扰。
+          </div>
+        </x-panel>
       </div>
       <div class="col-xs-6">
         <x-panel :code="code.button_ghost">
@@ -48,6 +62,20 @@
           <div class="cd-mb16" slot="style" v-html="code.button_ghost"></div>
           <div class="cd-text-xs" slot="dec">
             在一些需要弱化按钮视觉点并且需要不断重复某个组件的场景下，我们可以采用幽灵按钮代替通用按钮（例如设置列表），从而不在视觉流上喧宾夺主。
+          </div>
+        </x-panel>
+        <x-panel :code="code.button_size">
+          <div slot="title">
+            按钮尺寸（Button Size）
+          </div>
+          <div slot="code">
+            <pre v-highlightjs><code class="html">
+              {{ code.button_size }}
+            </code></pre>
+          </div>
+          <div class="cd-mb16" slot="style" v-html="code.button_size"></div>
+          <div class="cd-text-xs" slot="dec">
+            Codeages Design 目前提供了三种按钮尺寸，根据不同场景来选择合适的按钮尺寸能够给设计更多的发挥空间。
           </div>
         </x-panel>
       </div>

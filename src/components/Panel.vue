@@ -1,12 +1,12 @@
 <template>
-  <div class="cd-panel" :class="{'active': isShowCode}">
+  <div class="cd-panel cd-panel-sm" :class="{'active': isShowCode}">
     <div class="cd-panel-heading">
       <div class="cd-panel-title">
         <slot name="title"></slot>
       </div>
       <div class="cd-panel-action">
-        <i class="cd-icon cd-icon-sad copy-code" :data-clipboard-text="code" v-if="isShowCode"></i>
-        <i class="cd-icon cd-icon-sad-o" :class="{'active': isShowCode}" @click="toggleCode"></i>
+        <i class="cd-icon cd-icon-copy copy-code" :data-clipboard-text="code" v-if="isShowCode"></i>
+        <i class="cd-icon cd-icon-code" :class="{'active': isShowCode}" @click="toggleCode"></i>
       </div>
     </div>
     <div class="cd-panel-body">

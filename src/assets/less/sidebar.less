@@ -1,5 +1,5 @@
 .site-sidebar {
-  position: fixed;
+  position: absolute;
   top: 56px;
   left: 0;
   bottom: 0;
@@ -16,7 +16,7 @@
 }
 
 .site-sidebar__nav-item {
-  padding: 8px 16px;
+  padding: 16px;
   display: block;
   .site-sidebar__nav-item__title {
     font-size: 12px;
@@ -26,6 +26,7 @@
     font-size: 14px;
     padding-left: 8px;
     line-height: 20px;
+    color: rgba(0, 0, 0, 0.56);
     &.active,
     &:hover {
       color: @site-primary;
@@ -33,9 +34,9 @@
     &:hover {
       cursor: pointer;
     }
-    span + span {
-      margin-left: 8px;
-      font-size: 12px
-    }
+    // span + span {
+    //   margin-left: 8px;
+    //   font-size: 12px
+    // }
   }
 }

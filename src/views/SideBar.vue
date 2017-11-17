@@ -18,27 +18,87 @@
 const navData = [
   {
     isItem: false,
-    text: 'Base'
+    text: '基础'
   },
   {
     isItem: true,
-    text_en: 'Button',
+    // text_en: 'Color',
+    text_zh: '色彩',
+    name: 'base_color'
+  },
+  {
+    isItem: true,
+    // text_en: 'Font',
+    text_zh: '字体',
+    name: 'base_font'
+  },
+  {
+    isItem: true,
+    // text_en: 'Grid',
+    text_zh: '排版',
+    name: 'base_grid'
+  },
+  {
+    isItem: true,
+    // text_en: 'Layout',
+    text_zh: '布局',
+    name: 'base_layout'
+  },
+  {
+    isItem: false,
+    text: '通用'
+  },
+  {
+    isItem: true,
+    // text_en: 'Button',
     text_zh: '按钮',
     name: 'component_button'
   },
   {
+    isItem: true,
+    // text_en: 'Icon',
+    text_zh: '图标',
+    name: 'other_icon'
+  },
+  {
     isItem: false,
-    text: 'Feedback'
+    text: '表单'
   },
   {
     isItem: true,
-    text_en: 'Alert',
+    // text_en: 'Radio',
+    text_zh: '单选框',
+    name: 'component_radio'
+  },
+  {
+    isItem: false,
+    text: '通知'
+  },
+  {
+    isItem: true,
+    // text_en: 'Alert',
     text_zh: '提示框',
     name: 'component_alert'
   },
   {
     isItem: true,
-    text_en: 'Model',
+    // text_en: 'Tabs',
+    text_zh: '标签页',
+    name: 'component_tabs'
+  },
+  {
+    isItem: true,
+    // text_en: 'Loading',
+    text_zh: '加载',
+    name: 'component_loading'
+  },
+  {
+    isItem: false,
+    text: '其他'
+  },
+  {
+    isItem: true,
+    // text_en: 'Model',
     text_zh: '模态框',
     name: 'component_model'
   },
