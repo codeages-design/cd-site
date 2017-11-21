@@ -19,7 +19,6 @@
       </div>
     </x-panel>
     <div class="site-content-subtitle">API</div>
-
     <pre v-highlightjs><code class="js">
       {{ code.confirm_js }}
     </code></pre>
@@ -27,7 +26,7 @@
       <table class="cd-table">
         <thead>
           <tr>
-            <th>参数</th>
+            <th>属性</th>
             <th>说明</th>
             <th>类型</th>
             <th>默认值</th>

@@ -25,3 +25,16 @@ export const button_size = `
 <button class="cd-btn cd-btn-primary">中等按钮</button>
 <button class="cd-btn cd-btn-primary cd-btn-sm">最小按钮</button>
 `;
+
+export const button_loading = `
+const btn = cd.btn({
+  el: '#btn',
+  text: '加载中...'
+});
+
+btn.loading();
+
+setTimeout(() => {
+  btn.reset();
+}, 3000);
+`;
