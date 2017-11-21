@@ -17,8 +17,7 @@ export const alert_close = `
 export const alert_js = `
 cd.alert({
   closeEl: '#alert-close',
-  cb() {
-    console.log('回调函数')
-  }
-})
+}).close(() => {
+  console.log('这是关闭后的回调方法');
+});
 `;

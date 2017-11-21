@@ -29,7 +29,14 @@
               {{ code.alert_close }}
             </code></pre>
           </div>
-          <div class="cd-mb16" slot="style" v-html="code.alert_close"></div>
+          <div class="cd-mb16" slot="style">
+            <div class="cd-alert cd-alert-success">
+              可关闭的提示框。
+              <button type="button" class="close" id="alert-close">
+                <i class="cd-icon cd-icon-close"></i>
+              </button>
+            </div>
+          </div>
           <div class="cd-text-xs" slot="dec">
             针对可关闭的提示框的描述
           </div>
@@ -59,12 +66,23 @@
             <td>无</td>
             <td>--</td>
           </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="cd-table-responsive">
+      <table class="cd-table">
+        <thead>
           <tr>
-            <td>cb</td>
-            <td>回调函数</td>
-            <td>Function</td>
-            <td>无</td>
-            <td>--</td>
+            <th>方法</th>
+            <th>参数</th>
+            <th>说明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>close</td>
+            <td>callback</td>
+            <td>关闭alert，可添加回调</td>
           </tr>
         </tbody>
       </table>
@@ -84,6 +102,13 @@ export default {
     return {
       code,
     }
+  },
+  created() {
+    cd.alert({
+      closeEl: '#alert-close'
+    }).close(() => {
+      console.log('这是关闭后的回调函数');
+    })
   }
 }
 </script>

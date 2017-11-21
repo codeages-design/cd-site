@@ -116,7 +116,7 @@
         <tbody>
           <tr>
             <td>el</td>
-            <td>操作的Dom元素</td>
+            <td>要绑定的Dom元素</td>
             <td>String</td>
             <td>无</td>
             <td>event.currentTarget 或 '#btn'等Dom选择器</td>

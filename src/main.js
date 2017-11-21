@@ -6,7 +6,10 @@ import filters from '@/filters';
 import utils from '@/utils';
 import hljs from 'highlight.js';
 import 'jquery';
-import 'codeages-design';
+import * as cd from 'codeages-design';
+import 'codeages-design/dist/codeages-design.css';
+
+window.cd = cd;
 
 Vue.use(filters);
 Vue.use(utils);
