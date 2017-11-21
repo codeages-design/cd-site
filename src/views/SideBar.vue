@@ -81,6 +81,12 @@ const navData = [
     name: 'component_alert'
   },
   {
+    isItem: true,
+    // text_en: 'Confirm',
+    text_zh: '确认框',
+    name: 'component_confirm'
+  },
+  {
     isItem: false,
     text: '导航'
   },

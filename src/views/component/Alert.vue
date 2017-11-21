@@ -36,6 +36,39 @@
         </x-panel>
       </div>
     </div>
+    <div class="site-content-subtitle">API</div>
+    <pre v-highlightjs><code class="js">
+      {{ code.alert_js }}
+    </code></pre>
+    <div class="cd-table-responsive">
+      <table class="cd-table">
+        <thead>
+          <tr>
+            <th>参数</th>
+            <th>说明</th>
+            <th>类型</th>
+            <th>默认值</th>
+            <th>可选值</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>closeEl</td>
+            <td>要绑定的关闭Dom元素</td>
+            <td>String</td>
+            <td>无</td>
+            <td>--</td>
+          </tr>
+          <tr>
+            <td>cb</td>
+            <td>回调函数</td>
+            <td>Function</td>
+            <td>无</td>
+            <td>--</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 

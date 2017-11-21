@@ -13,3 +13,12 @@ export const alert_close = `
   </button>
 </div>
 `;
+
+export const alert_js = `
+cd.alert({
+  closeEl: '#alert-close',
+  cb() {
+    console.log('回调函数')
+  }
+})
+`;

@@ -34,4 +34,8 @@ export default [{
   path: 'steps',
   name: 'component_steps',
   component: (resolve) => require(['@/views/component/Steps.vue'], resolve),
+}, {
+  path: 'confirm',
+  name: 'component_confirm',
+  component: (resolve) => require(['@/views/component/Confirm.vue'], resolve),
 }];
