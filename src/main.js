@@ -7,7 +7,7 @@ import utils from '@/utils';
 import hljs from 'highlight.js';
 import 'jquery';
 import * as cd from 'codeages-design';
-import 'codeages-design/dist/codeages-design.css';
+import 'codeages-design/src/less/codeages-design.less';
 
 window.cd = cd;
 

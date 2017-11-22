@@ -66,23 +66,12 @@
             <td>无</td>
             <td>--</td>
           </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>方法</th>
-            <th>参数</th>
-            <th>说明</th>
-          </tr>
-        </thead>
-        <tbody>
           <tr>
             <td>close</td>
-            <td>callback</td>
-            <td>关闭alert，可添加回调</td>
+            <td>关闭提示框后的回调方法</td>
+            <td>Function</td>
+            <td>无</td>
+            <td>--</td>
           </tr>
         </tbody>
       </table>
@@ -105,9 +94,10 @@ export default {
   },
   created() {
     cd.alert({
-      closeEl: '#alert-close'
-    }).close(() => {
-      console.log('这是关闭后的回调函数');
+      closeEl: '#alert-close',
+      close() {
+        console.log('这是关闭后的回调函数');
+      }
     })
   }
 }

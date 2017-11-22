@@ -70,14 +70,14 @@
         <tbody>
           <tr>
             <td>el</td>
-            <td>要绑定的Dom元素</td>
+            <td>要绑定的Dom元素（第一个Object参数中）</td>
             <td>String</td>
             <td>无</td>
             <td>--</td>
           </tr>
           <tr>
-            <td>cb</td>
-            <td>回调函数</td>
+            <td>callback</td>
+            <td>点击后的回调函数（第二个参数）</td>
             <td>Function</td>
             <td>无</td>
             <td>--</td>

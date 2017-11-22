@@ -51,8 +51,7 @@ export const radio_size = `
 export const radio_js = `
 cd.radio({
   el: '#radio',
-  cb() {
-    console.log('这是回调函数')
-  }
+}, (event) => {
+  console.log('这是点击后的回调')
 });
 `;
