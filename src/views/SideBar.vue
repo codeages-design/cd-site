@@ -66,6 +66,12 @@ const navData = [
     text_zh: '按钮',
     name: 'component_button'
   },
+  {
+    isItem: true,
+    // text_en: 'Tag',
+    text_zh: '标签',
+    name: 'component_tag'
+  },
   // {
   //   isItem: true,
   //   // text_en: 'Icon',

@@ -50,4 +50,8 @@ export default [{
   path: 'card',
   name: 'component_card',
   component: (resolve) => require(['@/views/component/Card.vue'], resolve),
+}, {
+  path: 'tag',
+  name: 'component_tag',
+  component: (resolve) => require(['@/views/component/Tag.vue'], resolve),
 }];
