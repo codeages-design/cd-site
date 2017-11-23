@@ -46,4 +46,8 @@ export default [{
   path: 'panel',
   name: 'component_panel',
   component: (resolve) => require(['@/views/component/Panel.vue'], resolve),
+}, {
+  path: 'card',
+  name: 'component_card',
+  component: (resolve) => require(['@/views/component/Card.vue'], resolve),
 }];

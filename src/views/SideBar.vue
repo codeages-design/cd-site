@@ -48,11 +48,17 @@ const navData = [
     isItem: false,
     text: '通用'
   },
-   {
+  {
     isItem: true,
     // text_en: 'Panel',
     text_zh: '面板',
     name: 'component_panel'
+  },
+  {
+    isItem: true,
+    // text_en: 'Card',
+    text_zh: '卡片',
+    name: 'component_card'
   },
   {
     isItem: true,
