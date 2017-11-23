@@ -1,5 +1,5 @@
 <template>
-  <div class="compontent-alert">
+  <div>
     <div class="site-content-title">确认框</div>
     <div class="site-content-des">确认框的描述</div>
     <x-panel :code="code.confirm_js|trim">

@@ -1,5 +1,5 @@
 <template>
-  <div class="compontent-alert">
+  <div>
     <div class="site-content-title">标签页</div>
     <div class="site-content-des">
       标签页描述

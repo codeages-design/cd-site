@@ -1,5 +1,5 @@
 <template>
-  <div class="compontent-modal">
+  <div>
     
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-  <div class="compontent-alert">
+  <div>
     <div class="site-content-title">面板</div>
     <div class="site-content-des">
       面板是界面布局中常用的容器，能够帮助设计师更为合理地梳理界面信息架构。你可以根据实际情况在面板中添加图片、文字及其他相关界面元素。

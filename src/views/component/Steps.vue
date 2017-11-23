@@ -1,5 +1,5 @@
 <template>
-  <div class="compontent-alert">
+  <div>
     <div class="site-content-title">步骤条</div>
     <div class="site-content-des">
       步骤条描述

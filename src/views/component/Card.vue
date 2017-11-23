@@ -1,5 +1,5 @@
 <template>
-  <div class="compontent-alert">
+  <div>
     <div class="site-content-title">卡片</div>
     <div class="site-content-des">
       你可以把卡片理解成一张空白的容器，在这里你可以装入任何你想要装入的界面元素，卡片并没有严格意义上内容与容器的间距限制。

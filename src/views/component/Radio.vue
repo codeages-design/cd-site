@@ -1,5 +1,5 @@
 <template>
-  <div class="compontent-alert">
+  <div>
     <div class="site-content-title">单选框</div>
     <div class="site-content-des">
       单选框描述

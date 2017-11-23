@@ -1,5 +1,5 @@
 <template>
-  <div class="compontent-alert">
+  <div>
     <div class="site-content-title">头像</div>
     <div class="site-content-des">
       通过头像能够快速识别用户，并且给某些特定场景提供足够的丰富度。

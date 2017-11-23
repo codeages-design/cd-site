@@ -1,5 +1,5 @@
 <template>
-  <div class="compontent-alert">
+  <div>
     <div class="site-content-title">加载</div>
     <div class="site-content-des">
       加载描述

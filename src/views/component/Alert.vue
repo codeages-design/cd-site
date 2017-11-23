@@ -1,5 +1,5 @@
 <template>
-  <div class="compontent-alert">
+  <div>
     <div class="site-content-title">提示框</div>
     <div class="site-content-des">提示框用于开始一个即时操作</div>
     <div class="cd-row">
