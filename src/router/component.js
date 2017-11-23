@@ -42,4 +42,8 @@ export default [{
   path: 'message',
   name: 'component_message',
   component: (resolve) => require(['@/views/component/Message.vue'], resolve),
+}, {
+  path: 'panel',
+  name: 'component_panel',
+  component: (resolve) => require(['@/views/component/Panel.vue'], resolve),
 }];
