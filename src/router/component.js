@@ -38,4 +38,8 @@ export default [{
   path: 'confirm',
   name: 'component_confirm',
   component: (resolve) => require(['@/views/component/Confirm.vue'], resolve),
+}, {
+  path: 'message',
+  name: 'component_message',
+  component: (resolve) => require(['@/views/component/Message.vue'], resolve),
 }];

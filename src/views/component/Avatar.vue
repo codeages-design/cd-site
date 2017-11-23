@@ -60,5 +60,7 @@ export default {
 </script>
 
 <style lang="less">
-
+.cd-avatar + .cd-avatar {
+  margin-left: 24px;
+}
 </style>

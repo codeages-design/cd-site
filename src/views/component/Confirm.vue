@@ -12,7 +12,7 @@
         </code></pre>
       </div>
       <div class="cd-mb16" slot="style">
-        <button class="cd-btn cd-btn-primary" id="cofirm-btn" @click="confirm">点击触发</button>
+        <button class="cd-btn cd-btn-primary" id="cofirm-btn" @click="onConfirm">点击触发</button>
       </div>
       <div class="cd-text-xs" slot="dec">
         描述
@@ -49,7 +49,7 @@
             <td>--</td>
           </tr>
           <tr>
-            <td>confirmText</td>
+            <td>okText</td>
             <td>确定按钮的文案</td>
             <td>String</td>
             <td>Confirm</td>
@@ -64,27 +64,13 @@
           </tr>
           <tr>
             <td>confirmClass</td>
-            <td>确定按钮的Class</td>
-            <td>String</td>
-            <td><code>cd-btn cd-btn-link-danger cd-btn-lg</code></td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>cancelClass</td>
-            <td>取消按钮的Class</td>
-            <td>String</td>
-            <td><code>cd-btn cd-btn-link-default cd-btn-lg</code></td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>dialogClass</td>
             <td>confirm组件的Class</td>
             <td>String</td>
             <td>无</td>
             <td>--</td>
           </tr>
           <tr>
-            <td>confirm</td>
+            <td>ok</td>
             <td>点击确定后的回调函数</td>
             <td>Function</td>
             <td>无</td>
@@ -117,20 +103,18 @@ export default {
     }
   },
   methods: {
-    confirm() {
+    onConfirm() {
       cd.confirm({
         title: '标题',
         content: '确定要这么做吗？',
-        confirmText: '确定',
+        okText: '确定',
         cancelText: '取消',
-        confirmClass: 'cd-btn cd-btn-link-danger cd-btn-lg',
-        cancelClass: 'cd-btn cd-btn-link-default cd-btn-lg',
-        dialogClass: 'cd-modal-dialog-sm',
-        confirm(event, $confirm) {
-          console.log('点击确定按钮后的回调函数');
+        confirmClass: '',
+        ok(event, $confirm) {
+          console.log('点击确定按钮后的回调函数')
         },
-        cancel(event) {
-          console.log('点击取消按钮后的回调函数');
+        close(event) {
+          console.log('点击取消按钮后的回调函数')
         }
       })
     }
