@@ -2,13 +2,13 @@
   <div>
     <div class="site-content-title">确认框</div>
     <div class="site-content-des">确认框的描述</div>
-    <x-panel :code="code.confirm_js|trim">
+    <x-panel :code="code.confirm_api|trim">
       <div slot="title">
         基础
       </div>
       <div slot="code">
         <pre v-highlightjs><code class="js">
-          {{ code.confirm_js }}
+          {{ code.confirm_api }}
         </code></pre>
       </div>
       <div class="cd-mb16" slot="style">
@@ -20,7 +20,7 @@
     </x-panel>
     <div class="site-content-subtitle">API</div>
     <pre v-highlightjs><code class="js">
-      {{ code.confirm_js }}
+      {{ code.confirm_api }}
     </code></pre>
     <div class="cd-table-responsive">
       <table class="cd-table">

@@ -48,7 +48,7 @@ export const radio_size = `
 </div>
 `;
 
-export const radio_js = `
+export const radio_api = `
 cd.radio({
   el: '#radio',
 }, (event) => {

@@ -26,7 +26,7 @@
       API
     </div>
     <pre v-highlightjs><code class="js">
-      {{ code.loading_js }}
+      {{ code.loading_api }}
     </code></pre>
     <div class="cd-table-responsive">
       <table class="cd-table">

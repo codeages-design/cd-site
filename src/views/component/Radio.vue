@@ -54,7 +54,7 @@
     </div>
     <div class="site-content-subtitle">API</div>
     <pre v-highlightjs><code class="js">
-      {{ code.radio_js }}
+      {{ code.radio_api }}
     </code></pre>
     <div class="cd-table-responsive">
       <table class="cd-table">

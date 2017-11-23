@@ -8,7 +8,7 @@ export const loading_base = `
 </div>
 `;
 
-export const loading_js = `
+export const loading_api = `
 let loading = cd.loading({
   isFixed: false
 });

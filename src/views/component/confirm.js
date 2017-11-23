@@ -1,4 +1,4 @@
-export const confirm_js = `
+export const confirm_api = `
 cd.confirm({
   title: '标题',
   content: '确定要这么做吗？',

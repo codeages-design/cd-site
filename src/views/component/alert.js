@@ -14,7 +14,7 @@ export const alert_close = `
 </div>
 `;
 
-export const alert_js = `
+export const alert_api = `
 cd.alert({
   closeEl: '#alert-close',
   close() {
