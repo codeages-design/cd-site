@@ -16,33 +16,33 @@
 
 <script>
 const navData = [
-  // {
-  //   isItem: false,
-  //   text: '基础'
-  // },
-  // {
-  //   isItem: true,
-  //   // text_en: 'Color',
-  //   text_zh: '色彩',
-  //   name: 'base_color'
-  // },
-  // {
-  //   isItem: true,
-  //   // text_en: 'Font',
-  //   text_zh: '字体',
-  //   name: 'base_font'
-  // },
-  // {
-  //   isItem: true,
-  //   // text_en: 'Grid',
-  //   text_zh: '排版',
-  //   name: 'base_grid'
-  // },
+  {
+    isItem: false,
+    text: '基础'
+  },
+  {
+    isItem: true,
+    // text_en: 'Color',
+    text_zh: '色彩',
+    name: 'component_color'
+  },
+  {
+    isItem: true,
+    // text_en: 'Font',
+    text_zh: '字体',
+    name: 'component_font'
+  },
+  {
+    isItem: true,
+    // text_en: 'Typography',
+    text_zh: '排版',
+    name: 'component_typo'
+  },
   // {
   //   isItem: true,
   //   // text_en: 'Layout',
   //   text_zh: '布局',
-  //   name: 'base_layout'
+  //   name: 'component_layout'
   // },
   {
     isItem: false,

@@ -3,6 +3,18 @@ export default [{
   name: 'component_index',
   component: (resolve) => require(['@/views/component/Index.vue'], resolve),
 }, {
+  path: 'color',
+  name: 'component_color',
+  component: (resolve) => require(['@/views/component/Color.vue'], resolve),
+}, {
+  path: 'font',
+  name: 'component_font',
+  component: (resolve) => require(['@/views/component/Font.vue'], resolve),
+}, {
+  path: 'typo',
+  name: 'component_typo',
+  component: (resolve) => require(['@/views/component/Typo.vue'], resolve),
+}, {
   path: 'button',
   name: 'component_button',
   component: (resolve) => require(['@/views/component/Button.vue'], resolve),
