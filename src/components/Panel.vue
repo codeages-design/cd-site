@@ -5,8 +5,9 @@
         <slot name="title"></slot>
       </div>
       <div class="cd-panel-action">
-        <i class="cd-icon cd-icon-copy copy-code" :data-clipboard-text="code" v-if="isShowCode"></i>
-        <i class="cd-icon cd-icon-code" :class="{'active': isShowCode}" @click="toggleCode"></i>
+        <i class="cd-icon cd-icon-copy js-copy-code" :data-clipboard-text="code" v-if="isShowCode"></i>
+        <i class="cd-icon cd-icon-close active" @click="toggleCode" v-if="isShowCode"></i>
+        <i class="cd-icon cd-icon-code" @click="toggleCode" v-else></i>
       </div>
     </div>
     <div class="cd-panel-body">
@@ -33,7 +34,7 @@ export default {
     },
   },
   mounted() {
-    new Clipboard('.copy-code');
+    new Clipboard('.js-copy-code');
   }
 }
 </script>
