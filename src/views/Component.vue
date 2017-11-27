@@ -10,6 +10,7 @@
         </keep-alive>
         <router-view v-if="!$route.meta.keepAlive">
         </router-view>
+        <x-pager></x-pager>
       </div>
     </main>
   </div>
@@ -18,6 +19,7 @@
 <script>
 import XSideBar from '@/views/SideBar';
 import XHeader from '@/views/Header';
+import XPager from '@/components/Pager';
 import 'highlight.js/styles/googlecode.css';
 
 export default {
@@ -30,7 +32,8 @@ export default {
   },
   components: {
     XSideBar,
-    XHeader
+    XHeader,
+    XPager
   },
   methods: {
     sidebarToggle() {
