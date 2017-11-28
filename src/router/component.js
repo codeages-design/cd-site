@@ -43,6 +43,10 @@ export default [{
   name: 'component_radio',
   component: (resolve) => require(['@/views/component/Radio.vue'], resolve),
 }, {
+  path: 'checkbox',
+  name: 'component_checkbox',
+  component: (resolve) => require(['@/views/component/Checkbox.vue'], resolve),
+}, {
   path: 'select',
   name: 'component_select',
   component: (resolve) => require(['@/views/component/Select.vue'], resolve),

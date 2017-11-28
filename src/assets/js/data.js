@@ -79,6 +79,12 @@ export const navData = [
   },
   {
     isItem: true,
+    // text_en: 'Checkbox',
+    text_zh: '多选框',
+    name: 'component_checkbox'
+  },
+  {
+    isItem: true,
     // text_en: 'Select',
     text_zh: '选择框',
     name: 'component_select'
