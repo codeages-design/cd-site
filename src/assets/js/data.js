@@ -90,6 +90,12 @@ export const navData = [
     name: 'component_select'
   },
   {
+    isItem: true,
+    // text_en: 'Switch',
+    text_zh: '开关',
+    name: 'component_switch'
+  },
+  {
     isItem: false,
     text: '通知'
   },

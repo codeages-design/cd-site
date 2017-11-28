@@ -51,6 +51,10 @@ export default [{
   name: 'component_select',
   component: (resolve) => require(['@/views/component/Select.vue'], resolve),
 }, {
+  path: 'switch',
+  name: 'component_switch',
+  component: (resolve) => require(['@/views/component/Switch.vue'], resolve),
+}, {
   path: 'avatar',
   name: 'component_avatar',
   component: (resolve) => require(['@/views/component/Avatar.vue'], resolve),
