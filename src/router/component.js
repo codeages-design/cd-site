@@ -35,6 +35,10 @@ export default [{
   name: 'component_model',
   component: (resolve) => require(['@/views/component/Model.vue'], resolve),
 }, {
+  path: 'input',
+  name: 'component_input',
+  component: (resolve) => require(['@/views/component/Input.vue'], resolve),
+}, {
   path: 'radio',
   name: 'component_radio',
   component: (resolve) => require(['@/views/component/Radio.vue'], resolve),

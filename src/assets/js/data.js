@@ -67,6 +67,12 @@ export const navData = [
   },
   {
     isItem: true,
+    // text_en: 'Input',
+    text_zh: '输入框',
+    name: 'component_input'
+  },
+  {
+    isItem: true,
     // text_en: 'Radio',
     text_zh: '单选框',
     name: 'component_radio'
