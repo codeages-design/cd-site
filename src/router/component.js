@@ -43,6 +43,10 @@ export default [{
   name: 'component_radio',
   component: (resolve) => require(['@/views/component/Radio.vue'], resolve),
 }, {
+  path: 'select',
+  name: 'component_select',
+  component: (resolve) => require(['@/views/component/Select.vue'], resolve),
+}, {
   path: 'avatar',
   name: 'component_avatar',
   component: (resolve) => require(['@/views/component/Avatar.vue'], resolve),

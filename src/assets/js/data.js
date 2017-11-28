@@ -78,6 +78,12 @@ export const navData = [
     name: 'component_radio'
   },
   {
+    isItem: true,
+    // text_en: 'Select',
+    text_zh: '选择框',
+    name: 'component_select'
+  },
+  {
     isItem: false,
     text: '通知'
   },
