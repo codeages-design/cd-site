@@ -59,6 +59,10 @@ export default [{
   name: 'component_avatar',
   component: (resolve) => require(['@/views/component/Avatar.vue'], resolve),
 }, {
+  path: 'badge',
+  name: 'component_badge',
+  component: (resolve) => require(['@/views/component/Badge.vue'], resolve),
+}, {
   path: 'steps',
   name: 'component_steps',
   component: (resolve) => require(['@/views/component/Steps.vue'], resolve),

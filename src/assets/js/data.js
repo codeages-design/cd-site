@@ -135,6 +135,16 @@ export const navData = [
   },
   {
     isItem: false,
+    text: '提示'
+  },
+  {
+    isItem: true,
+    // text_en: 'Badge',
+    text_zh: '徽章',
+    name: 'component_badge'
+  },
+  {
+    isItem: false,
     text: '其他'
   },
   {
