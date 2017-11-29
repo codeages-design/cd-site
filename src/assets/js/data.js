@@ -57,6 +57,12 @@ export const navData = [
   },
   {
     isItem: true,
+    // text_en: 'Status',
+    text_zh: '状态',
+    name: 'component_status'
+  },
+  {
+    isItem: true,
     // text_en: 'Avatar',
     text_zh: '头像',
     name: 'component_avatar'

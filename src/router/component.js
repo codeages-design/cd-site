@@ -71,6 +71,10 @@ export default [{
   name: 'component_setting',
   component: (resolve) => require(['@/views/component/Setting.vue'], resolve),
 }, {
+  path: 'status',
+  name: 'component_status',
+  component: (resolve) => require(['@/views/component/Status.vue'], resolve),
+}, {
   path: 'steps',
   name: 'component_steps',
   component: (resolve) => require(['@/views/component/Steps.vue'], resolve),
