@@ -144,6 +144,12 @@ export const navData = [
     name: 'component_badge'
   },
   {
+    isItem: true,
+    // text_en: 'Security',
+    text_zh: '安全性',
+    name: 'component_security'
+  },
+  {
     isItem: false,
     text: '其他'
   },
