@@ -55,6 +55,12 @@ export const navData = [
     text_zh: '标签',
     name: 'component_tag'
   },
+  {
+    isItem: true,
+    // text_en: 'Avatar',
+    text_zh: '头像',
+    name: 'component_avatar'
+  },
   // {
   //   isItem: true,
   //   // text_en: 'Icon',
@@ -150,20 +156,20 @@ export const navData = [
     name: 'component_security'
   },
   {
-    isItem: false,
-    text: '其他'
-  },
-  {
-    isItem: true,
-    // text_en: 'Avatar',
-    text_zh: '头像',
-    name: 'component_avatar'
-  },
-  {
     isItem: true,
     // text_en: 'Loading',
-    text_zh: '加载',
+    text_zh: '加载中',
     name: 'component_loading'
+  },
+  {
+    isItem: false,
+    text: '数据'
+  },
+  {
+    isItem: true,
+    // text_en: 'Setting',
+    text_zh: '设置',
+    name: 'component_setting'
   },
   // {
   //   isItem: true,
