@@ -9,3 +9,9 @@ export const setting_base = `
   </span>
 </div>
 `;
+
+export const setting_status = `
+<span class="cd-setting-status cd-setting-status-done">已设置</span>
+<br>
+<span class="cd-setting-status">未设置</span>
+`;
