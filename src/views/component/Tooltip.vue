@@ -33,7 +33,7 @@
           </div>
           <div class="cd-mb16" slot="style">
             <div style="margin-left: 60px; margin-bottom: 20px">
-              <button class="cd-btn cd-btn-ghost-default" data-toggle="cd-tooltip" data-title="tooltip in top left" data-placement="topLeft1" style="width: 120px">topLeft</button>
+              <button class="cd-btn cd-btn-ghost-default" data-toggle="cd-tooltip" data-title="tooltip in top left" data-placement="topLeft" style="width: 120px">topLeft</button>
               <button class="cd-btn cd-btn-ghost-default" data-toggle="cd-tooltip" data-title="tooltip in top center" data-placement="top" style="width: 120px">top</button>
               <button class="cd-btn cd-btn-ghost-default" data-toggle="cd-tooltip" data-title="tooltip in top right" data-placement="topRight" style="width: 120px">topRight</button>
             </div>
