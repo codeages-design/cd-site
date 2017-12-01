@@ -151,6 +151,12 @@ export const navData = [
   },
   {
     isItem: true,
+    // text_en: 'Tooltip',
+    text_zh: '文字提示',
+    name: 'component_tooltip'
+  },
+  {
+    isItem: true,
     // text_en: 'Badge',
     text_zh: '徽章',
     name: 'component_badge'

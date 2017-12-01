@@ -98,4 +98,8 @@ export default [{
   path: 'tag',
   name: 'component_tag',
   component: (resolve) => require(['@/views/component/Tag.vue'], resolve),
+}, {
+  path: 'tooltip',
+  name: 'component_tooltip',
+  component: (resolve) => require(['@/views/component/Tooltip.vue'], resolve),
 }];
