@@ -12,3 +12,14 @@ export const tooltip_base = `
   Tooltip on the left
 </div>
 `;
+
+export const tooltip_api = `
+cd.tooltip({
+  el: '[data-toggle="cd-tooltip"]',
+  title: 'Plase add title',
+  placement: 'top',
+  offset: 10,
+  delay: 0,
+  container: document.body,
+})
+`;
