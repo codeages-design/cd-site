@@ -136,6 +136,12 @@ export const navData = [
     name: 'component_feedback'
   },
   {
+    isItem: true,
+    // text_en: 'Progress',
+    text_zh: '进度条',
+    name: 'component_progress'
+  },
+  {
     isItem: false,
     text: '导航'
   },
