@@ -146,6 +146,12 @@ export const navData = [
     name: 'component_steps'
   },
   {
+    isItem: true,
+    // text_en: 'Pagination',
+    text_zh: '分页',
+    name: 'component_pagination'
+  },
+  {
     isItem: false,
     text: '提示'
   },

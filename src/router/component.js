@@ -27,6 +27,10 @@ export default [{
   name: 'component_tabs',
   component: (resolve) => require(['@/views/component/Tabs.vue'], resolve),
 }, {
+  path: 'pagination',
+  name: 'component_pagination',
+  component: (resolve) => require(['@/views/component/Pagination.vue'], resolve),
+}, {
   path: 'loading',
   name: 'component_loading',
   component: (resolve) => require(['@/views/component/Loading.vue'], resolve),
