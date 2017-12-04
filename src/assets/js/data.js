@@ -130,6 +130,12 @@ export const navData = [
     name: 'component_message'
   },
   {
+    isItem: true,
+    // text_en: 'Feedback',
+    text_zh: '反馈',
+    name: 'component_feedback'
+  },
+  {
     isItem: false,
     text: '导航'
   },

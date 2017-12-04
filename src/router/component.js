@@ -91,6 +91,10 @@ export default [{
   name: 'component_message',
   component: (resolve) => require(['@/views/component/Message.vue'], resolve),
 }, {
+  path: 'feedback',
+  name: 'component_feedback',
+  component: (resolve) => require(['@/views/component/Feedback.vue'], resolve),
+}, {
   path: 'panel',
   name: 'component_panel',
   component: (resolve) => require(['@/views/component/Panel.vue'], resolve),
