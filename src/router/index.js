@@ -15,10 +15,11 @@ const routes = [{
   ],
 }, {
   path: '/',
-  name: 'home',
-  redirect: {
-    name: 'component_button'
-  }
+  name: 'homepage',
+  component: (resolve) => require(['@/views/Homepage.vue'], resolve),
+  // redirect: {
+  //   name: 'component_button'
+  // }
 }];
 
 const router = new Router({

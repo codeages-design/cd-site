@@ -1,6 +1,10 @@
 <template>
   <header class="site-header">
-    <div class="site-header__logo"><img src="/static/img/logo@2x.png" srcset="/static/img/logo.png 1x, /static/img/logo@2x.png 2x" alt=""></div>
+    <div class="site-header__logo">
+      <router-link :to="{name: 'homepage'}">
+        <img src="/static/img/logo@2x.png" srcset="/static/img/logo.png 1x, /static/img/logo@2x.png 2x" alt="">
+      </router-link>
+    </div>
     <div class="site-header__nav site-clearfix">
       <ul class="">
         <li :class="{ active: routeName === nav.name }" @click="switchNav(nav.name)" v-for="(nav, index) in navData" :key="index">
