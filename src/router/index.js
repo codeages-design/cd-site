@@ -17,9 +17,6 @@ const routes = [{
   path: '/',
   name: 'homepage',
   component: (resolve) => require(['@/views/Homepage.vue'], resolve),
-  // redirect: {
-  //   name: 'component_button'
-  // }
 }];
 
 const router = new Router({
@@ -29,7 +26,7 @@ const router = new Router({
 router.beforeEach((to, from, next) => {
   // 设置页面标题
   if (to.meta.title) {
-    document.title = to.meta.title;
+    document.title = to.meta.title + ' - Codeages Design';
   }
 
   next();

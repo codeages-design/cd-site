@@ -1,7 +1,9 @@
 export default [{
   path: 'index',
   name: 'component_index',
-  component: (resolve) => require(['@/views/component/Index.vue'], resolve),
+  redirect: {
+    name: 'component_color'
+  }
 }, {
   path: 'color',
   name: 'component_color',
