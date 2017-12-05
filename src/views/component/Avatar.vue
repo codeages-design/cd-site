@@ -17,7 +17,7 @@
           </div>
           <div class="cd-mb16" slot="style" v-html="code.avatar_circle"></div>
           <div class="cd-text-xs" slot="dec">
-            通过头像能够快速识别用户，并且给某些特定场景提供足够的丰富度。
+            在列表等场景中，默认采用圆形头像，更为灵活轻便。
           </div>
         </x-panel>
       </div>
