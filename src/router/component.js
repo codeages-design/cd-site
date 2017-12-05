@@ -114,4 +114,8 @@ export default [{
   path: 'tooltip',
   name: 'component_tooltip',
   component: (resolve) => require(['@/views/component/Tooltip.vue'], resolve),
+}, {
+  path: 'table',
+  name: 'component_table',
+  component: (resolve) => require(['@/views/component/Table.vue'], resolve),
 }];

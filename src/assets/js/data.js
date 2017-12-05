@@ -43,6 +43,12 @@ export const navData = [
     text_zh: '卡片',
     name: 'component_card'
   },
+  // {
+  //   isItem: true,
+  //   // text_en: 'Icon',
+  //   text_zh: '图标',
+  //   name: 'other_icon'
+  // },
   {
     isItem: true,
     // text_en: 'Button',
@@ -67,12 +73,7 @@ export const navData = [
     text_zh: '头像',
     name: 'component_avatar'
   },
-  // {
-  //   isItem: true,
-  //   // text_en: 'Icon',
-  //   text_zh: '图标',
-  //   name: 'other_icon'
-  // },
+  
   {
     isItem: false,
     text: '表单'
@@ -200,6 +201,12 @@ export const navData = [
     // text_en: 'Setting',
     text_zh: '设置',
     name: 'component_setting'
+  },
+  {
+    isItem: true,
+    // text_en: 'Table',
+    text_zh: '表格',
+    name: 'component_table'
   },
   // {
   //   isItem: true,
