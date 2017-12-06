@@ -7,14 +7,23 @@
         <h2>让你快速搭建自己的中后台应用</h2>
         <button class="cd-btn cd-btn-primary" @click="getMore">了解更多</button>
       </div>
-      <div class="site-homepage-banner__pic">
-        <img class="site-homepage-banner__boss" src="/static/img/homepage/boss.png" srcset="/static/img/homepage/boss@2x.png 2x" alt="">
-        <img class="site-homepage-banner__designer" src="/static/img/homepage/designer.png" srcset="/static/img/homepage/designer@2x.png 2x" alt="">
-        <img class="site-homepage-banner__engineer" src="/static/img/homepage/engineer.png" srcset="/static/img/homepage/engineer@2x.png 2x" alt="">
-        <img class="site-homepage-banner__component" src="/static/img/homepage/component.png" srcset="/static/img/homepage/component@2x.png 2x" alt="">
-        <img class="site-homepage-banner__vase" src="/static/img/homepage/vase.png" srcset="/static/img/homepage/vase@2x.png 2x" alt="">
-        <img class="site-homepage-banner__computer" src="/static/img/homepage/computer.png" srcset="/static/img/homepage/computer@2x.png 2x" alt="">
-        <img class="site-homepage-banner__desktop" src="/static/img/homepage/desktop.png" srcset="/static/img/homepage/desktop@2x.png 2x" alt="">
+      <div class="site-homepage-banner__pic" 
+        :style="{transform: `perspective(${banner.perspective}px) rotateX(${banner.rotateX}deg) rotateY(${banner.rotateY}deg)`}" 
+        @mousemove="mousemove" @mouseleave="mouseleave" ref="banner">
+        <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.boss.rotateX}, ${banner.boss.rotateY}`}"
+          :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__boss" src="/static/img/homepage/boss.png" srcset="/static/img/homepage/boss@2x.png 2x" alt="">
+        <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.designer.rotateX}, ${banner.designer.rotateY}`}"
+          :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__designer" src="/static/img/homepage/designer.png" srcset="/static/img/homepage/designer@2x.png 2x" alt="">
+        <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.engineer.rotateX}, ${banner.engineer.rotateY}`}"
+          :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__engineer" src="/static/img/homepage/engineer.png" srcset="/static/img/homepage/engineer@2x.png 2x" alt="">
+        <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.component.rotateX}, ${banner.component.rotateY}`}"
+          :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__component" src="/static/img/homepage/component.png" srcset="/static/img/homepage/component@2x.png 2x" alt="">
+        <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.vase.rotateX}, ${banner.vase.rotateY}`}"
+          :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__vase" src="/static/img/homepage/vase.png" srcset="/static/img/homepage/vase@2x.png 2x" alt="">
+        <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.computer.rotateX}, ${banner.computer.rotateY}`}"
+          :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__computer" src="/static/img/homepage/computer.png" srcset="/static/img/homepage/computer@2x.png 2x" alt="">
+        <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.desktop.rotateX}, ${banner.desktop.rotateY}`}"
+          :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__desktop" src="/static/img/homepage/desktop.png" srcset="/static/img/homepage/desktop@2x.png 2x" alt="">
       </div>
     </section>
     <section class="site-homepage-feature">
@@ -83,7 +92,114 @@ export default {
   components: {
     XHeader,
   },
+  data() {
+    return {
+      banner: {
+        rotateX: 0,
+        rotateY: 0,
+        perspective: 250,
+        ratio: 1.5,
+        boss: {
+          rotateX: 0,
+          rotateY: 0,
+          ratio: -3,
+        },
+        designer: {
+          rotateX: 0,
+          rotateY: 0,
+          ratio: 4,
+        },
+        engineer: {
+          rotateX: 0,
+          rotateY: 0,
+          ratio: 4,
+        },
+        component: {
+          rotateX: 0,
+          rotateY: 0,
+          ratio: 2,
+        },
+        vase: {
+          rotateX: 0,
+          rotateY: 0,
+          ratio: -3,
+        },
+        computer: {
+          rotateX: 0,
+          rotateY: 0,
+          ratio: 3,
+        },
+        desktop: {
+          rotateX: 0,
+          rotateY: 0,
+          ratio: 1,
+        },
+      },
+      isProhibit: false,
+      isActive: false
+    }
+  },
+  created() {
+    setTimeout(() => {
+      this.isActive = true
+    }, 500);
+
+    setTimeout(() => {
+      this.isProhibit = true;
+    }, 1400)
+  },
   methods: {
+    mousemove(event) {
+      const e = event || window.event;
+      const rect = this.$refs['banner'].getBoundingClientRect();
+
+      const middlePoint = {
+        x: parseInt(rect.x + rect.width / 2),
+        y: parseInt(rect.y + rect.height / 2)
+      };
+
+      const mouse = {
+        x: e.clientX,
+        y: e.clientY
+      };
+
+      function getRotateX(ratio) {
+        return parseFloat((middlePoint.x - mouse.x) / (middlePoint.x - rect.x) * ratio).toFixed(2);
+      }
+
+      function getRotateY(ratio) {
+        return parseFloat((mouse.y - middlePoint.y) / (middlePoint.y - rect.y) * ratio).toFixed(2);
+      }
+
+      this.banner.rotateX = getRotateY(this.banner.ratio);
+      this.banner.rotateY = getRotateX(this.banner.ratio);
+
+      this.banner.boss.rotateX = getRotateX(this.banner.boss.ratio);
+      this.banner.boss.rotateY = getRotateY(this.banner.boss.ratio);
+
+      this.banner.designer.rotateX = getRotateX(this.banner.designer.ratio);
+      this.banner.designer.rotateY = getRotateY(this.banner.designer.ratio);
+
+      this.banner.engineer.rotateX = getRotateX(this.banner.engineer.ratio);
+      this.banner.engineer.rotateY = getRotateY(this.banner.engineer.ratio);
+
+      this.banner.component.rotateX = getRotateX(this.banner.component.ratio);
+      this.banner.component.rotateY = getRotateY(this.banner.component.ratio);
+
+      this.banner.vase.rotateX = getRotateX(this.banner.vase.ratio);
+      this.banner.vase.rotateY = getRotateY(this.banner.vase.ratio);
+
+      this.banner.computer.rotateX = getRotateX(this.banner.computer.ratio);
+      this.banner.computer.rotateY = getRotateY(this.banner.computer.ratio);
+
+      this.banner.desktop.rotateX = getRotateX(this.banner.desktop.ratio);
+      this.banner.desktop.rotateY = getRotateY(this.banner.desktop.ratio);
+
+    },
+    mouseleave() {
+      this.banner.rotateX = 0;
+      this.banner.rotateY = 0;
+    },
     getMore() {
       this.$router.push({ 'name': 'component_index' })
     }

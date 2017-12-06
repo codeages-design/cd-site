@@ -27,58 +27,124 @@
   width: 920px;
   height: 480px;
   float: left;
+  .site-transition();
+}
+
+.site-homepage-banner__boss {
+  position: absolute;
+  z-index: 2;
+  bottom: 60px;
+  left: 180px;
+  opacity: 0;
+  &.active {
+    opacity: 1;
+    bottom: 70px;
+    left: 190px;
+    transition: all 0.3s 0.6s ease;
+    &.prohibit {
+      transition: none;
+    }
+  }
+}
+
+.site-homepage-banner__designer {
+  position: absolute;
+  z-index: 3;
+  bottom: 150px;
+  left: 425px;
+  opacity: 0;
+  &.active {
+    opacity: 1;
+    bottom: 160px;
+    transition: all 0.3s ease;
+    &.prohibit {
+      transition: none;
+    }
+  }
+}
+
+.site-homepage-banner__engineer {
+  position: absolute;
+  z-index: 3;
+  bottom: 88px;
+  left: 600px;
+  opacity: 0;
+  &.active {
+    opacity: 1;
+    bottom: 98px;
+    transition: all 0.3s 0.3s ease;
+    &.prohibit {
+      transition: none;
+    }
+  }
 }
 
 .site-homepage-banner__computer {
   position: absolute;
   z-index: 1;
-  bottom: 46px;
+  bottom: 56px;
   left: 115px;
   width: 697px;
   height: 435px;
+  opacity: 0;
+  &.active {
+    bottom: 46px;
+    opacity: 1;
+    transition: all 0.3s ease;
+    &.prohibit {
+      transition: none;
+    }
+  }
 }
 
 .site-homepage-banner__vase {
   position: absolute;
   z-index: 1;
   left: 125px;
-  bottom: 180px;
+  bottom: 190px;
+  opacity: 0;
+  &.active {
+    bottom: 180px;
+    opacity: 1;
+    transition: all 0.3s ease;
+    &.prohibit {
+      transition: none;
+    }
+  }
 }
 
-.site-homepage-banner__boss {
-  position: absolute;
-  z-index: 2;
-  bottom: 70px;
-  left: 190px;
-}
-
-.site-homepage-banner__designer {
-  position: absolute;
-  z-index: 3;
-  bottom: 160px;
-  left: 425px;
-}
-
-.site-homepage-banner__engineer {
-  position: absolute;
-  z-index: 3;
-  bottom: 98px;
-  left: 600px;
-}
 
 .site-homepage-banner__component {
   position: absolute;
   z-index: 2;
   left: 380px;
-  bottom: 180px;
+  bottom: 190px;
+  opacity: 0;
+  &.active {
+    bottom: 180px;
+    opacity: 1;
+    transition: all 0.3s ease;
+    &.prohibit {
+      transition: none;
+    }
+  }
 }
 
 .site-homepage-banner__desktop {
   position: absolute;
   left: 0;
   right: 0;
-  bottom: 0;
+  bottom: -10px;
   z-index: 0;
+  opacity: 0;
+  &.active {
+    bottom: 0;
+    opacity: 1;
+    transition: all 0.3s ease;
+    &.prohibit {
+      transition: none;
+    }
+  }
 }
 
 .site-homepage-feature {
