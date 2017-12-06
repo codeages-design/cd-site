@@ -20,7 +20,7 @@
     <section class="site-homepage-feature">
       <div class="site-homepage-feature__item">
         <div class="site-homepage-feature__thumb">
-          <img src="/static/img/homepage/feature_1.png" secset="/static/img/homepage/feature_1@2x.png 2x" alt="">
+          <img src="/static/img/homepage/feature_1.png" srcset="/static/img/homepage/feature_1@2x.png 2x" alt="">
         </div>
         <div class="site-homepage-feature__title">
           帮助产品经理搭建原型
@@ -34,7 +34,7 @@
       </div>
       <div class="site-homepage-feature__item" style="margin: 0 180px;">
         <div class="site-homepage-feature__thumb">
-          <img src="/static/img/homepage/feature_2.png" secset="/static/img/homepage/feature_2@2x.png 2x" alt="">
+          <img src="/static/img/homepage/feature_2.png" srcset="/static/img/homepage/feature_2@2x.png 2x" alt="">
         </div>
         <div class="site-homepage-feature__title">
           帮助开发复用代码和组件元素
@@ -48,7 +48,7 @@
       </div>
       <div class="site-homepage-feature__item">
         <div class="site-homepage-feature__thumb">
-          <img src="/static/img/homepage/feature_3.png" secset="/static/img/homepage/feature_3@2x.png 2x" alt="">
+          <img src="/static/img/homepage/feature_3.png" srcset="/static/img/homepage/feature_3@2x.png 2x" alt="">
         </div>
         <div class="site-homepage-feature__title">
           帮助设计减少重复劳动力
