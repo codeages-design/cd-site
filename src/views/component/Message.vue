@@ -95,7 +95,7 @@
             <td>类型</td>
             <td>String</td>
             <td>info</td>
-            <td>info、success、warning、danger</td>
+            <td><code>info</code> <code>success</code> <code>warning</code> <code>danger</code></td>
           </tr>
           <tr>
             <td>message</td>

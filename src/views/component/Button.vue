@@ -181,7 +181,7 @@ export default {
 
       setTimeout(() => {
         btn.reset();
-      }, 3000);
+      }, 1000);
     }
   }
 }
