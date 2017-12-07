@@ -19,7 +19,7 @@
 <script>
 import XSideBar from '@/views/SideBar';
 import XHeader from '@/views/Header';
-import XPager from '@/components/Pager';
+import XPager from '@/views/Pager';
 import 'highlight.js/styles/googlecode.css';
 
 export default {
