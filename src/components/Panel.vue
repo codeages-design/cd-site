@@ -5,9 +5,9 @@
         <slot name="title"></slot>
       </div>
       <div class="cd-panel-action">
-        <i class="cd-icon cd-icon-copy js-copy-code" :data-clipboard-text="code" v-if="isShowCode"></i>
-        <i class="cd-icon cd-icon-close active" @click="toggleCode" v-if="isShowCode"></i>
-        <i class="cd-icon cd-icon-code" @click="toggleCode" v-else></i>
+        <i class="cd-icon cd-icon-copy js-copy-code" data-toggle="code-tooltip" data-title="复制代码" :data-clipboard-text="code" v-if="isShowCode"></i>
+        <i class="cd-icon cd-icon-close active" data-toggle="code-tooltip" data-title="隐藏代码" @click="toggleCode" v-show="isShowCode"></i>
+        <i class="cd-icon cd-icon-code" data-toggle="code-tooltip" data-title="显示代码" @click="toggleCode"  v-show="!isShowCode"></i>
       </div>
     </div>
     <div class="cd-panel-body">
@@ -33,8 +33,19 @@ export default {
       this.isShowCode = !this.isShowCode;
     },
   },
+  created() {
+    cd.tooltip({
+      el: '[data-toggle="code-tooltip"]'
+    });
+  },
   mounted() {
-    new Clipboard('.js-copy-code');
+    const clipboard = new Clipboard('.js-copy-code');
+    clipboard.on('success', function(e) {
+      cd.message({
+        type: 'success',
+        message: '复制成功'
+      })
+    })
   }
 }
 </script>
