@@ -98,7 +98,7 @@ export const navData = [
   },
   {
     isItem: true,
-    text_zh: '选择框',
+    text_zh: '选择器',
     text_en: 'Select',
     name: 'component_select'
   },
@@ -120,15 +120,15 @@ export const navData = [
   },
   {
     isItem: true,
-    text_zh: '确认框',
-    text_en: 'Confirm',
-    name: 'component_confirm'
-  },
-  {
-    isItem: true,
     text_zh: '信息框',
     text_en: 'Message',
     name: 'component_message'
+  },
+  {
+    isItem: true,
+    text_zh: '确认框',
+    text_en: 'Confirm',
+    name: 'component_confirm'
   },
   {
     isItem: true,
@@ -176,7 +176,7 @@ export const navData = [
   },
   {
     isItem: true,
-    text_zh: '徽章',
+    text_zh: '徽标数',
     text_en: 'Badge',
     name: 'component_badge'
   },
