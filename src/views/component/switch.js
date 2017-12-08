@@ -1,8 +1,7 @@
 export const switch_base = `
 <label class="cd-switch">
   <input type="checkbox" data-toggle="cd-switch" value="1" />
-</label>
-<label class="cd-switch checked">
+</label><label class="cd-switch checked">
   <input type="checkbox" data-toggle="cd-switch" value="2" checked />
 </label>
 `;
@@ -10,8 +9,7 @@ export const switch_base = `
 export const switch_disabled = `
 <label class="cd-switch disabled">
   <input type="checkbox" data-toggle="cd-switch" value="1" disabled />
-</label>
-<label class="cd-switch checked disabled">
+</label><label class="cd-switch checked disabled">
   <input type="checkbox" data-toggle="cd-switch" value="2" checked disabled />
 </label>
 `;

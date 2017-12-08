@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="security-page">
     <div class="site-content-title">安全性</div>
     <div class="site-content-des">
       安全性描述
@@ -44,5 +44,7 @@ export default {
 </script>
 
 <style lang="less">
-
+.security-page .cd-security {
+  margin-bottom: 16px;
+}
 </style>

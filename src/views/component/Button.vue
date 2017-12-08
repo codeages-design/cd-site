@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="button-page">
     <div class="site-content-title">按钮</div>
     <div class="site-content-des">
       按钮是用户界面中使用最为广泛且最为让用户接受和理解的通用组件之一，我们在 Codeages Design 中引入了多种不同的按钮样式以匹配不同的交互场景使用，我们不推崇使用太多的场景色来定义按钮，而是通过默认按钮和主要按钮的权重来定义操作主次。
@@ -88,7 +88,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style">
-            <button class="cd-btn cd-btn-primary cd-btn-lg" @click="loading">按钮加载</button>
+            <button class="cd-btn cd-btn-primary cd-btn-md" @click="loading">按钮加载</button>
           </div>
           <div class="cd-text-xs" slot="dec">
             
@@ -188,8 +188,7 @@ export default {
 </script>
 
 <style lang="less">
-.compontent-button .cd-btn {
-  margin-right: 8px;
-  margin-bottom: 8px;
+.button-page .cd-btn {
+  margin-right: 16px;
 }
 </style>
