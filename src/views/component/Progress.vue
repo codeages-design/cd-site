@@ -1,14 +1,14 @@
 <template>
   <div>
-    <div class="site-content-title">反馈</div>
+    <div class="site-content-title">进度条</div>
     <div class="site-content-des">
-      反馈描述
+      进度条主要用来动态呈现数据进度，目前使用到的以线性进度条最为常见。
     </div>
     <div class="cd-row">
       <div class="col-xs-6">
         <x-panel :code="code.progress_base|trim">
           <span slot="title">
-            基础
+            基础进度条
           </span>
           <div slot="code">
             <pre v-highlightjs><code class="html">
@@ -22,7 +22,7 @@
         </x-panel>
         <x-panel :code="code.progress_min|trim">
           <span slot="title">
-            最小值
+            进度条尺寸
           </span>
           <div slot="code">
             <pre v-highlightjs><code class="html">
@@ -38,7 +38,7 @@
       <div class="col-xs-6">
         <x-panel :code="code.progress_color|trim">
           <span slot="title">
-            颜色
+            场景进度条
           </span>
           <div slot="code">
             <pre v-highlightjs><code class="html">
@@ -46,20 +46,6 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.progress_color"></div>
-          <div class="cd-text-xs" slot="dec">
-              
-          </div>
-        </x-panel>
-        <x-panel :code="code.progress_outside|trim">
-          <span slot="title">
-            百分比外显
-          </span>
-          <div slot="code">
-            <pre v-highlightjs><code class="html">
-              {{ code.progress_outside }}
-            </code></pre>
-          </div>
-          <div class="cd-mb16" slot="style" v-html="code.progress_outside"></div>
           <div class="cd-text-xs" slot="dec">
               
           </div>
