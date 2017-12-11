@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="message-page">
     <div class="site-content-title">信息框</div>
     <div class="site-content-des">
       
@@ -48,9 +48,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style">
-            <button class="cd-btn cd-btn-ghost-default" @click="onSuccessType">成功信息</button>
-            <button class="cd-btn cd-btn-ghost-default" @click="onWarningType">警告信息</button>
-            <button class="cd-btn cd-btn-ghost-default" @click="onDangerType">危险信息</button>
+            <button class="cd-btn cd-btn-ghost-default" @click="onSuccessType">成功信息</button><button class="cd-btn cd-btn-ghost-default" @click="onWarningType">警告信息</button><button class="cd-btn cd-btn-ghost-default" @click="onDangerType">危险信息</button>
           </div>
           <div class="cd-text-xs" slot="dec">
           </div>
@@ -240,5 +238,7 @@ export default {
 </script>
 
 <style lang="less">
-
+.message-page .cd-btn {
+  margin-right: 16px;
+}
 </style>

@@ -2,7 +2,7 @@
   <div>
     <div class="site-content-title">多选框</div>
     <div class="site-content-des">
-      多选框描述
+      多选框主要用于多项设置逻辑的选择，一次可以选择多个值。
     </div>
     <div class="cd-row">
       <div class="col-xs-6">

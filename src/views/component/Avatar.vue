@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="avatar-page">
     <div class="site-content-title">头像</div>
     <div class="site-content-des">
       通过头像能够快速识别用户，并且给某些特定场景提供足够的丰富度。
@@ -60,7 +60,7 @@ export default {
 </script>
 
 <style lang="less">
-.cd-avatar + .cd-avatar {
-  margin-left: 24px;
+.avatar-page .cd-avatar {
+  margin-right: 16px;
 }
 </style>

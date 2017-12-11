@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="switch-page">
     <div class="site-content-title">开关</div>
     <div class="site-content-des">
       开关描述
@@ -95,5 +95,7 @@ export default {
 </script>
 
 <style lang="less">
-
+.switch-page .cd-switch {
+  margin-right: 16px;
+}
 </style>

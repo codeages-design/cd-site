@@ -4,7 +4,8 @@
       <li class="site-sidebar__nav-item" v-for="(nav, index) in navData" :key="index">
         <span class="site-sidebar__nav-item__subtitle" v-if="nav.isItem" 
           :class="{ active: routeName === nav.name }" @click="switchNav(nav.name)">
-          <span>{{ nav.text_en }}</span><span>{{nav.text_zh}}</span>
+          <span>{{nav.text_zh}}</span>
+          <span class="nav-en">{{ nav.text_en }}</span>
         </span>
         <span class="site-sidebar__nav-item__title" v-else>
           {{ nav.text }}

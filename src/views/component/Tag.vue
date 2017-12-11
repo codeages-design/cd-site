@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="tag-page">
     <div class="site-content-title">标签</div>
     <div class="site-content-des">
       标签主要用来标注某个对象在特定维度的不同属性，这种属性应该尽量脱离场景本身，通过颜色的多样性进行区分，所以在标签组件中，我们引入了更多颜色。
@@ -32,15 +32,9 @@
             </code></pre>
           </div>
           <div slot="style">
-            <span class="cd-tag cd-tag-default">默认标签</span>
-            <span class="cd-tag cd-tag-green">绿色标签</span>
-            <span class="cd-tag cd-tag-red">红色标签</span>
-            <span class="cd-tag cd-tag-orange">橙色标签</span>
+            <span class="cd-tag cd-tag-default">默认标签</span><span class="cd-tag cd-tag-green">绿色标签</span><span class="cd-tag cd-tag-red">红色标签</span><span class="cd-tag cd-tag-orange">橙色标签</span>
             <br>
-            <span class="cd-tag cd-tag-blue">蓝色标签</span>
-            <span class="cd-tag cd-tag-purple">紫色标签</span>
-            <span class="cd-tag cd-tag-pink">粉色标签</span>
-            <span class="cd-tag cd-tag-yellow">黄色标签</span>
+            <span class="cd-tag cd-tag-blue">蓝色标签</span><span class="cd-tag cd-tag-purple">紫色标签</span><span class="cd-tag cd-tag-pink">粉色标签</span><span class="cd-tag cd-tag-yellow">黄色标签</span>
           </div>
           <div class="cd-text-xs" slot="dec">
             标签更多的是作为一种属性使用，通过颜色的区分增加多样性，尽量不要将标签的颜色作为状态场景色来使用。
@@ -111,10 +105,8 @@ export default {
 </script>
 
 <style lang="less">
-.cd-tag {
-  margin-bottom: 24px;
-  + .cd-tag {
-    margin-left: 24px;
-  }
+.tag-page .cd-tag {
+  margin-bottom: 16px;
+  margin-right: 16px;
 }
 </style>

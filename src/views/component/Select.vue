@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="site-content-title">选择框</div>
+    <div class="site-content-title">选择器</div>
     <div class="site-content-des">
-      选择框描述
+      选择器描述
     </div>
     <div class="cd-row">
       <div class="col-xs-6">
