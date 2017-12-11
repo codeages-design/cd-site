@@ -64,3 +64,8 @@ const html = `
 `;
 
 Mock.mock('/demo/table', html);
+
+Mock.mock(/\/demo\/tabs\/[0-9]+/, {
+  'message': '这是随机的ajax内容',
+  'id|1-100': 100 
+});
