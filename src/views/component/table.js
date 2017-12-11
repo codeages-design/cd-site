@@ -8,7 +8,7 @@ export const table_base = `
         <th>流水号</th>
         <th>订单号</th>
         <th>状态</th>
-        <th>收支</th>
+        <th style="text-align:right">收支</th>
         <th>操作</th>
       </tr>
     </thead>
@@ -19,7 +19,7 @@ export const table_base = `
         <td>2017042121144446163</td>
         <td>V2017042121141876634</td>
         <td><span class="cd-status cd-status-info">待付款</span></td>
-        <td>+200.00</td>
+        <td style="text-align:right">+200.00</td>
         <td><a href="javascript:;" class="cd-link-primary">付款</a></td>
       </tr>
       <tr>
@@ -28,7 +28,7 @@ export const table_base = `
         <td>2017042121144446164</td>
         <td>V2017042121141876635</td>
         <td><span class="cd-status cd-status-warning">退款中</span></td>
-        <td>+100.00</td>
+        <td style="text-align:right">+100.00</td>
         <td><a href="javascript:;" class="cd-link-primary">付款</a></td>
       </tr>
       <tr>
@@ -37,7 +37,7 @@ export const table_base = `
         <td>2017042121144446166</td>
         <td>V2017042121141876637</td>
         <td><span class="cd-status cd-status-disabled">已关闭</span></td>
-        <td>+50.00</td>
+        <td style="text-align:right">+50.00</td>
         <td><a href="javascript:;" class="cd-link-primary">付款</a></td>
       </tr>
     </tbody>
@@ -90,7 +90,7 @@ export const table_sort_filter = `
             </ul>
           </div>
         </th>
-        <th>收支</th>
+        <th style="text-align:right">收支</th>
         <th>操作</th>
       </tr>
     </thead>
@@ -101,7 +101,7 @@ export const table_sort_filter = `
         <td>2017042121144446163</td>
         <td>V2017042121141876634</td>
         <td><span class="cd-status cd-status-info">待付款</span></td>
-        <td>+200.00</td>
+        <td style="text-align:right">+200.00</td>
         <td><a href="javascript:;" class="cd-link-primary">付款</a></td>
       </tr>
       <tr>
@@ -110,7 +110,7 @@ export const table_sort_filter = `
         <td>2017042121144446164</td>
         <td>V2017042121141876635</td>
         <td><span class="cd-status cd-status-warning">退款中</span></td>
-        <td>+100.00</td>
+        <td style="text-align:right">+100.00</td>
         <td><a href="javascript:;" class="cd-link-primary">付款</a></td>
       </tr>
       <tr>
@@ -119,7 +119,7 @@ export const table_sort_filter = `
         <td>2017042121144446166</td>
         <td>V2017042121141876637</td>
         <td><span class="cd-status cd-status-disabled">已关闭</span></td>
-        <td>+50.00</td>
+        <td style="text-align:right">+50.00</td>
         <td><a href="javascript:;" class="cd-link-primary">付款</a></td>
       </tr>
     </tbody>
