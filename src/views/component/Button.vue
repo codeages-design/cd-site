@@ -88,7 +88,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style">
-            <button class="cd-btn cd-btn-primary cd-btn-lg" @click="loading">按钮加载</button>
+            <button class="cd-btn cd-btn-primary" @click="loading">按钮加载</button>
           </div>
           <div class="cd-text-xs" slot="dec">
             

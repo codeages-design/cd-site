@@ -19,6 +19,7 @@
     "jquery": "^3.2.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "mockjs": "^1.0.1-beta3",
     "moment": "^2.18.1",
     "qs": "^6.5.0",
     "vue": "^2.3.3",
@@ -70,9 +71,12 @@
   },
   "babel": {
     "presets": [
-      ["env", {
-        "modules": false
-      }],
+      [
+        "env",
+        {
+          "modules": false
+        }
+      ],
       "stage-0"
     ],
     "plugins": [],
