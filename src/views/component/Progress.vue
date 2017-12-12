@@ -17,21 +17,21 @@
           </div>
           <div class="cd-mb16" slot="style" v-html="code.progress_base"></div>
           <div class="cd-text-xs" slot="dec">
-              
+            基础进度条只采用主色调，并不包含不同数据进度的场景色变化。
           </div>
         </x-panel>
-        <x-panel :code="code.progress_min|trim">
+        <x-panel :code="code.progress_size|trim">
           <span slot="title">
             进度条尺寸
           </span>
           <div slot="code">
             <pre v-highlightjs><code class="html">
-              {{ code.progress_min }}
+              {{ code.progress_size }}
             </code></pre>
           </div>
-          <div class="cd-mb16" slot="style" v-html="code.progress_min"></div>
+          <div class="cd-mb16" slot="style" v-html="code.progress_size"></div>
           <div class="cd-text-xs" slot="dec">
-            为了防止数字看不清，可以设置最小值
+            通过引入不同的进度条尺寸来适配不同使用场景。
           </div>
         </x-panel>
       </div>
@@ -47,7 +47,7 @@
           </div>
           <div class="cd-mb16" slot="style" v-html="code.progress_color"></div>
           <div class="cd-text-xs" slot="dec">
-              
+            场景进度条根据业务诉求对进度条的不同阶段做了场景定义，并且使用不同的场景色来表现，给用户更好的心理感知。
           </div>
         </x-panel>
       </div>
