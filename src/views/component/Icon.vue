@@ -44,7 +44,7 @@ export default {
     float: left;
     list-style: none;
     text-align: center;
-    padding: 32px 16px 16px 16px;
+    padding: 24px 16px 16px 16px;
     width: 160px;
     font-size: 12px;
     border: 1px solid #eee;
@@ -59,6 +59,7 @@ export default {
       margin-bottom: 8px;
     }
     .fontclass {
+      display: none;
       height: 36px;
     }
   }
