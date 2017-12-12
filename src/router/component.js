@@ -17,6 +17,10 @@ export default [{
   name: 'component_typo',
   component: (resolve) => require(['@/views/component/Typo.vue'], resolve),
 }, {
+  path: 'icon',
+  name: 'component_icon',
+  component: (resolve) => require(['@/views/component/Icon.vue'], resolve),
+}, {
   path: 'button',
   name: 'component_button',
   component: (resolve) => require(['@/views/component/Button.vue'], resolve),

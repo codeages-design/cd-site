@@ -43,12 +43,12 @@ export const navData = [
     text_en: 'Card',
     name: 'component_card'
   },
-  // {
-  //   isItem: true,
-  //   // text_en: 'Icon',
-  //   text_zh: '图标',
-  //   name: 'other_icon'
-  // },
+  {
+    isItem: true,
+    text_zh: '图标',
+    text_en: 'Icon',
+    name: 'component_icon'
+  },
   {
     isItem: true,
     text_zh: '按钮',
