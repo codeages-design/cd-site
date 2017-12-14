@@ -37,6 +37,10 @@ export default [{
   name: 'component_pagination',
   component: (resolve) => require(['@/views/component/Pagination.vue'], resolve),
 }, {
+  path: 'dropdown',
+  name: 'component_dropdown',
+  component: (resolve) => require(['@/views/component/Dropdown.vue'], resolve),
+}, {
   path: 'loading',
   name: 'component_loading',
   component: (resolve) => require(['@/views/component/Loading.vue'], resolve),

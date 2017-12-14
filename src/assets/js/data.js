@@ -154,6 +154,12 @@ export const navData = [
   },
   {
     isItem: true,
+    text_zh: '下拉菜单',
+    text_en: 'Dropdown',
+    name: 'component_dropdown'
+  },
+  {
+    isItem: true,
     text_zh: '步骤条',
     text_en: 'Steps',
     name: 'component_steps'
