@@ -34,16 +34,16 @@
             链接按钮相较于通用按钮而言弱化了按钮属性，可以和通用按钮结合使用用以引导用户点击通用按钮，如果两个链接按钮结合使用则可以通过颜色定义操作场景。
           </div>
         </x-panel>
-        <x-panel :code="code.button_deabled|trim">
+        <x-panel :code="code.button_disabled|trim">
           <div slot="title">
             禁用按钮（Disabled Button）
           </div>
           <div slot="code">
             <pre v-highlightjs><code class="html">
-              {{ code.button_deabled }}
+              {{ code.button_disabled }}
             </code></pre>
           </div>
-          <div class="cd-mb16" slot="style" v-html="code.button_deabled"></div>
+          <div class="cd-mb16" slot="style" v-html="code.button_disabled"></div>
           <div class="cd-text-xs" slot="dec">
             在按钮禁用状态下，我们不再强调按钮的颜色与场景，仅仅以不可用的形式让用户了解即可，在这里去掉了颜色的干扰。
           </div>
