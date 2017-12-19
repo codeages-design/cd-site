@@ -29,7 +29,8 @@
               {{ code.button_link }}
             </code></pre>
           </div>
-          <div class="cd-mb16" slot="style" v-html="code.button_link"></div>
+          <div class="cd-mb16" slot="style" v-html="code.button_link">
+          </div>
           <div class="cd-text-xs" slot="dec">
             链接按钮相较于通用按钮而言弱化了按钮属性，可以和通用按钮结合使用用以引导用户点击通用按钮，如果两个链接按钮结合使用则可以通过颜色定义操作场景。
           </div>
@@ -59,7 +60,13 @@
               {{ code.button_ghost }}
             </code></pre>
           </div>
-          <div class="cd-mb16" slot="style" v-html="code.button_ghost"></div>
+          <div class="cd-mb16" slot="style">
+            <button class="cd-btn cd-btn-ghost-primary">主要按钮</button>
+            <button class="cd-btn cd-btn-ghost-default">默认按钮</button>
+            <span style="background: #313131; padding: 8px; display:inline-block;">
+              <button class="cd-btn cd-btn-ghost-light" style="margin-right:0">白色按钮</button>
+            </span>
+          </div>
           <div class="cd-text-xs" slot="dec">
             在一些需要弱化按钮视觉点并且需要不断重复某个组件的场景下，我们可以采用幽灵按钮代替通用按钮（例如设置列表），从而不在视觉流上喧宾夺主。
           </div>
