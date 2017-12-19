@@ -15,8 +15,25 @@
               {{ code.select_base }}
             </code></pre>
           </div>
-          <div class="cd-row cd-mb16" slot="style">
-            <div class="col-xs-8" v-html="code.select_base"></div>
+          <div class="cd-mb16" slot="style">
+            <div style="width: 200px;" v-html="code.select_base"></div>
+          </div>
+          <div class="cd-text-xs" slot="dec">
+          </div>
+        </x-panel>
+      </div>
+      <div class="col-xs-6">
+        <x-panel :code="code.select_multi|trim">
+          <span slot="title">
+            多选
+          </span>
+          <div slot="code">
+            <pre v-highlightjs><code class="html">
+              {{ code.select_multi }}
+            </code></pre>
+          </div>
+          <div class="cd-mb16" slot="style">
+            <div style="width: 200px;" v-html="code.select_multi"></div>
           </div>
           <div class="cd-text-xs" slot="dec">
           </div>
@@ -38,6 +55,14 @@ export default {
     return {
       code,
     }
+  },
+  created() {
+    
+  },
+  mounted() {
+cd.select({
+      el: '#select-single',
+    })
   },
   methods: {
   }
