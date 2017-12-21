@@ -18,6 +18,22 @@
           <div class="cd-mb16" slot="style" v-html="code.checkbox_base">
           </div>
           <div class="cd-text-xs" slot="dec">
+            最基础的 Checkbox 样式。
+          </div>
+        </x-panel>
+        <x-panel :code="code.checkbox_disabled|trim">
+          <span slot="title">
+            禁用
+          </span>
+          <div slot="code">
+            <pre v-highlightjs><code class="html">
+              {{ code.checkbox_disabled }}
+            </code></pre>
+          </div>
+          <div class="cd-mb16" slot="style" v-html="code.checkbox_disabled">
+          </div>
+          <div class="cd-text-xs" slot="dec">
+            Checkbox 的禁用样式。
           </div>
         </x-panel>
       </div>
@@ -34,6 +50,7 @@
           <div class="cd-mb16" slot="style" v-html="code.checkbox_group">
           </div>
           <div class="cd-text-xs" slot="dec">
+            多个 Checkbox 组合使用。
           </div>
         </x-panel>
       </div>
