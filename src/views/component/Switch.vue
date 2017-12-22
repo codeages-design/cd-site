@@ -2,7 +2,7 @@
   <div class="switch-page">
     <div class="site-content-title">开关</div>
     <div class="site-content-des">
-      开关描述
+      开关组件主要用于设置场景，用来控制某个逻辑的开启与关闭，切勿采用 Radio 来代替开关的交互角色。
     </div>
     <div class="cd-row">
       <div class="col-xs-6">

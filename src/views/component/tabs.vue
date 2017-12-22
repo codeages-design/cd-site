@@ -2,7 +2,7 @@
   <div>
     <div class="site-content-title">标签页</div>
     <div class="site-content-des">
-      标签页描述
+      标签页是最为常见的用来对页面级别内容作信息架构分割梳理的组件。
     </div>
     <div class="cd-row">
       <div class="col-xs-6">
