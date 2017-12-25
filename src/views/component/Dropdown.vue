@@ -8,7 +8,7 @@
       <div class="col-xs-6">
         <x-panel :code="code.dropdown_base|trim">
           <span slot="title">
-           基础
+           基础下拉
           </span>
           <div slot="code">
             <pre v-highlightjs><code class="html">
@@ -42,7 +42,7 @@
       <div class="col-xs-6">
         <x-panel :code="code.dropdown_click|trim">
           <span slot="title">
-            click触发
+            点击下拉
           </span>
           <div slot="code">
             <pre v-highlightjs><code class="html">
