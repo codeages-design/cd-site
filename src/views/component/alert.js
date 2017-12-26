@@ -7,7 +7,25 @@ export const alert_color = `
 
 export const alert_close = `
 <div class="cd-alert cd-alert-success">
-  可关闭的提示框。
+  可关闭的成功提示框。
+  <button type="button" class="close" data-toggle="cd-alert-close">
+    <i class="cd-icon cd-icon-close"></i>
+  </button>
+</div>
+<div class="cd-alert cd-alert-danger">
+  可关闭的错误提示框。
+  <button type="button" class="close" data-toggle="cd-alert-close">
+    <i class="cd-icon cd-icon-close"></i>
+  </button>
+</div>
+<div class="cd-alert cd-alert-warning">
+  可关闭的警告提示框。
+  <button type="button" class="close" data-toggle="cd-alert-close">
+    <i class="cd-icon cd-icon-close"></i>
+  </button>
+</div>
+<div class="cd-alert cd-alert-info">
+  可关闭的信息提示框。
   <button type="button" class="close" data-toggle="cd-alert-close">
     <i class="cd-icon cd-icon-close"></i>
   </button>
