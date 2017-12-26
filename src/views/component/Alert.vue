@@ -29,13 +29,7 @@
               {{ code.alert_close }}
             </code></pre>
           </div>
-          <div class="cd-mb16" slot="style">
-            <div class="cd-alert cd-alert-success">
-              可关闭的提示框。
-              <button type="button" class="close" id="alert-close">
-                <i class="cd-icon cd-icon-close"></i>
-              </button>
-            </div>
+          <div class="cd-mb16" slot="style" v-html="code.alert_close">
           </div>
           <div class="cd-text-xs" slot="dec">
             针对可关闭的提示框的描述
