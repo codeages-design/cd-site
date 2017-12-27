@@ -19,18 +19,19 @@
 const navData = [
   {
     text: '首页',
-    name: 'index'
+    name: 'homepage'
   }, 
   {
     text: '组件',
-    name: 'component_index'
+    name: 'component'
   }
 ];
 
 export default {
   data() {
     return {
-      navData: navData
+      navData: navData,
+      routeName: null
     }
   },
   watch: {
@@ -41,7 +42,7 @@ export default {
   },
   methods: {
     getRoute() {
-      this.routeName = this.$route.name;
+      this.routeName = this.$route.matched[0].name;
     },
     switchNav(name) {
       this.$router.push({ name: name });

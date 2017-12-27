@@ -30,6 +30,7 @@
     margin: 0 auto;
     padding: 0 40px;
     > li {
+      position: relative;
       line-height: 20px;
       padding: 18px 0;
       margin: 0 32px;
@@ -37,6 +38,16 @@
       float: left;
       color: @site-gray;
       .site-transition();
+      &:before {
+        display: block;
+        content: '';
+        background: transparent;
+        width: 100%;
+        height: 2px;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+      }
       &:hover {
         cursor: pointer;
         color: @site-gray-dark;
@@ -44,7 +55,18 @@
       }
       &.active {
         color: @site-gray-dark;
-        // border-bottom: 4px solid @site-primary;
+        &:before {
+          display: block;
+          content: '';
+          background: @site-primary;
+          width: 100%;
+          height: 2px;
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          animation-name: tabs-line;
+          animation-duration: .25s;
+        }
       }
     }
   }

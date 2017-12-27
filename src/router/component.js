@@ -1,6 +1,6 @@
 export default [{
-  path: 'index',
-  name: 'component_index',
+  path: 'component',
+  name: 'component',
   redirect: {
     name: 'component_color'
   }
