@@ -4,8 +4,6 @@
   left: 0;
   bottom: 0;
   width: 200px;
-  // border-right: 1px solid rgba(0, 0, 0, 0.08);
-  // height: 100%;
   overflow: auto;
   box-shadow: 0 0 4px 0 rgba(0,0,0,0.01), 0 4px 4px 0 rgba(0,0,0,0.04);
 }
@@ -30,8 +28,10 @@
     &.active,
     &:hover {
       color: @site-primary;
+      .site-transition;
       .nav-en {
         color: @site-primary;
+        .site-transition;
       }
     }
     &:hover {

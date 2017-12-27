@@ -54,19 +54,16 @@ pre {
 .site-content {
   position: relative;
   width: 90%;
-  // min-width: 1200px;
-  min-height: 800px;
+  min-height: 480px;
   margin: 0 auto;
   border-radius: 4px;
   background-color: #fff;
-  padding: 48px 24px;
-  // overflow: hidden;
+  padding: 48px 0;
 }
 
 .site-content-title {
   font-size: 32px;
   font-weight: 500;
-  // color: rgba(0, 0, 0, 0.88);
   color: @site-primary;
   margin-bottom: 32px;
 }
@@ -113,11 +110,14 @@ pre {
 }
 
 .site-pager {
-  padding: 48px 0;
+  width: 90%;
+  margin: 0 auto 48px auto;
   .site-page {
+    .site-transition;
     &:hover {
       cursor: pointer;
       color: @site-primary;
+      .site-transition;
     }
     &.site-page-right {
       float: right;

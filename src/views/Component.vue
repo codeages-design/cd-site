@@ -10,8 +10,8 @@
         </keep-alive>
         <router-view v-if="!$route.meta.keepAlive">
         </router-view>
-        <x-pager></x-pager>
       </div>
+      <x-pager></x-pager>
     </main>
   </div>
 </template>
