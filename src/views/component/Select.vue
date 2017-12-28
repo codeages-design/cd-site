@@ -40,6 +40,39 @@
         </x-panel>
       </div>
     </div>
+    <div class="site-content-subtitle">API</div>
+    <pre v-highlightjs><code class="js">
+      {{ code.select_api }}
+    </code></pre>
+    <div class="cd-table-responsive">
+      <table class="cd-table">
+        <thead>
+          <tr>
+            <th>属性</th>
+            <th>说明</th>
+            <th>类型</th>
+            <th>默认值</th>
+            <th>可选值</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>el</td>
+            <td>要绑定的Dom元素</td>
+            <td>String</td>
+            <td>无</td>
+            <td>--</td>
+          </tr>
+          <tr>
+            <td>type</td>
+            <td>类型</td>
+            <td>String</td>
+            <td>single</td>
+            <td>single、multi</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </div>
 </template>
 
@@ -60,8 +93,13 @@ export default {
     
   },
   mounted() {
-cd.select({
+    cd.select({
       el: '#select-single',
+    });
+
+    cd.select({
+      el: '#select-multi',
+      type: 'multi'
     })
   },
   methods: {
