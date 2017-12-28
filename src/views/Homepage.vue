@@ -203,7 +203,7 @@ export default {
       this.banner.rotateY = 0;
     },
     getMore() {
-      this.$router.push({ 'name': 'component_index' })
+      this.$router.push({ 'name': 'component' })
     }
   }
 }
