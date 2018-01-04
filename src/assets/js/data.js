@@ -23,13 +23,50 @@ export const componentData = [
   },
   // {
   //   isItem: true,
-  //   // text_en: 'Layout',
+  //   text_zh: '栅格',
+  //   text_en: 'Grid',
+  //   name: 'component_grid'
+  // },
+  // {
+  //   isItem: true,
   //   text_zh: '布局',
+  //   text_en: 'Layout',
   //   name: 'component_layout'
   // },
   {
     isItem: false,
     text: '通用 Common'
+  },
+  {
+    isItem: true,
+    text_zh: '按钮',
+    text_en: 'Button',
+    name: 'component_button'
+  },
+  {
+    isItem: true,
+    text_zh: '图标',
+    text_en: 'Icon',
+    name: 'component_icon'
+  },
+  {
+    isItem: true,
+    text_zh: '标签',
+    text_en: 'Tag',
+    name: 'component_tag'
+  },
+  
+  {
+    isItem: true,
+    text_zh: '状态',
+    text_en: 'Status',
+    name: 'component_status'
+  },
+  {
+    isItem: true,
+    text_zh: '头像',
+    text_en: 'Avatar',
+    name: 'component_avatar'
   },
   {
     isItem: true,
@@ -42,36 +79,6 @@ export const componentData = [
     text_zh: '卡片',
     text_en: 'Card',
     name: 'component_card'
-  },
-  {
-    isItem: true,
-    text_zh: '图标',
-    text_en: 'Icon',
-    name: 'component_icon'
-  },
-  {
-    isItem: true,
-    text_zh: '按钮',
-    text_en: 'Button',
-    name: 'component_button'
-  },
-  {
-    isItem: true,
-    text_zh: '标签',
-    text_en: 'Tag',
-    name: 'component_tag'
-  },
-  {
-    isItem: true,
-    text_zh: '状态',
-    text_en: 'Status',
-    name: 'component_status'
-  },
-  {
-    isItem: true,
-    text_zh: '头像',
-    text_en: 'Avatar',
-    name: 'component_avatar'
   },
   
   {
@@ -108,6 +115,24 @@ export const componentData = [
     text_en: 'Switch',
     name: 'component_switch'
   },
+  // {
+  //   isItem: true,
+  //   text_zh: '树结构',
+  //   text_en: 'Tree',
+  //   name: 'component_tree'
+  // },
+  // {
+  //   isItem: true,
+  //   text_zh: '日历',
+  //   text_en: 'Calendar',
+  //   name: 'component_calendar'
+  // },
+  // {
+  //   isItem: true,
+  //   text_zh: '上传',
+  //   text_en: 'Upload',
+  //   name: 'component_upload'
+  // },
   {
     isItem: false,
     text: '通知 Notice'
@@ -188,16 +213,28 @@ export const componentData = [
   },
   {
     isItem: true,
-    text_zh: '文字提示',
+    text_zh: '工具提示',
     text_en: 'Tooltip',
     name: 'component_tooltip'
   },
+  // {
+  //   isItem: true,
+  //   text_zh: '气泡提示',
+  //   text_en: 'Popover',
+  //   name: 'component_popover'
+  // },
   {
     isItem: true,
     text_zh: '徽标数',
     text_en: 'Badge',
     name: 'component_badge'
   },
+  // {
+  //   isItem: true,
+  //   text_zh: '评分',
+  //   text_en: 'Rate',
+  //   name: 'component_rate'
+  // },
   {
     isItem: true,
     text_zh: '安全性',
