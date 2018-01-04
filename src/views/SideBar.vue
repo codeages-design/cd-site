@@ -1,14 +1,14 @@
 <template>
   <div class="site-sidebar">
     <ul class="site-sidebar__nav">
-      <li class="site-sidebar__nav-item" v-for="(nav, index) in navData" :key="index">
-        <span class="site-sidebar__nav-item__subtitle" v-if="nav.isItem" 
-          :class="{ active: routeName === nav.name }" @click="switchNav(nav.name)">
-          <span>{{nav.text_zh}}</span>
-          <span class="nav-en">{{ nav.text_en }}</span>
+      <li class="site-sidebar__nav-item" v-for="(component, index) in componentData" :key="index">
+        <span class="site-sidebar__nav-item__subtitle" v-if="component.isItem" 
+          :class="{ active: routeName === component.name }" @click="switchNav(component.name)">
+          <span>{{component.text_zh}}</span>
+          <span class="nav-en">{{ component.text_en }}</span>
         </span>
         <span class="site-sidebar__nav-item__title" v-else>
-          {{ nav.text }}
+          {{ component.text }}
         </span>
       </li>
     </ul>
@@ -16,12 +16,12 @@
 </template>
 
 <script>
-import { navData } from '@/assets/js/data';
+import { componentData } from '@/assets/js/data';
 
 export default {
   data() {
     return {
-      navData: navData,
+      componentData,
       routeName: ''
     }
   },

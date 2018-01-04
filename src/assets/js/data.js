@@ -1,4 +1,4 @@
-export const navData = [
+export const componentData = [
   {
     isItem: false,
     text: '基础 Basic'
@@ -19,7 +19,7 @@ export const navData = [
     isItem: true,
     text_zh: '排版',
     text_en: 'Typography',
-    name: 'component_typo'
+    name: 'component_typography'
   },
   // {
   //   isItem: true,
@@ -151,6 +151,12 @@ export const navData = [
   {
     isItem: false,
     text: '导航 Navigation'
+  },
+  {
+    isItem: true,
+    text_zh: '面包屑',
+    text_en: 'Breadcrumb',
+    name: 'component_breadcrumb'
   },
   {
     isItem: true,

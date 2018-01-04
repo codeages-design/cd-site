@@ -10,10 +10,10 @@
 </template>
 
 <script>
-import { navData } from '@/assets/js/data';
+import { componentData } from '@/assets/js/data';
 
-const newNavData = navData.filter((item) => {
-  return item.isItem == true;
+const newCompData = componentData.filter((item) => {
+  return item.isItem;
 });
 
 export default {
@@ -35,10 +35,10 @@ export default {
   },
   methods: {
     getSibling() {
-      newNavData.map((item, index) => {
+      newCompData.map((item, index) => {
         if(item.name == this.currentName) {
-          this.preName = index - 1 >= 0 ? newNavData[index - 1] : '';
-          this.nextName = index + 1 < newNavData.length ? newNavData[index + 1] : '';
+          this.preName = index - 1 >= 0 ? newCompData[index - 1] : '';
+          this.nextName = index + 1 < newCompData.length ? newCompData[index + 1] : '';
         }
       })
     },

@@ -9,6 +9,9 @@ Vue.use(Router);
 const routes = [{
   path: '/component',
   name: 'component',
+  redirect: {
+    name: 'component_color'
+  },
   component: (resolve) => require(['@/views/Component.vue'], resolve),
   children: [
     ...component,
