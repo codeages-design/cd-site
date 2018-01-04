@@ -132,6 +132,12 @@ export const navData = [
   },
   {
     isItem: true,
+    text_zh: '模态框',
+    text_en: 'Modal',
+    name: 'component_modal'
+  },
+  {
+    isItem: true,
     text_zh: '反馈',
     text_en: 'Feedback',
     name: 'component_feedback'
@@ -214,10 +220,4 @@ export const navData = [
     text_en: 'Table',
     name: 'component_table'
   },
-  // {
-  //   isItem: true,
-  //   // text_en: 'Model',
-  //   text_zh: '模态框',
-  //   name: 'component_model'
-  // },
 ];

@@ -45,10 +45,6 @@ export default [{
   name: 'component_loading',
   component: (resolve) => require(['@/views/component/Loading.vue'], resolve),
 }, {
-  path: 'model',
-  name: 'component_model',
-  component: (resolve) => require(['@/views/component/Model.vue'], resolve),
-}, {
   path: 'input',
   name: 'component_input',
   component: (resolve) => require(['@/views/component/Input.vue'], resolve),
@@ -100,6 +96,10 @@ export default [{
   path: 'message',
   name: 'component_message',
   component: (resolve) => require(['@/views/component/Message.vue'], resolve),
+}, {
+  path: 'modal',
+  name: 'component_modal',
+  component: (resolve) => require(['@/views/component/Modal.vue'], resolve),
 }, {
   path: 'feedback',
   name: 'component_feedback',

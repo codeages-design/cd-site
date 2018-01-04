@@ -13,6 +13,8 @@
       </div>
       <x-pager></x-pager>
     </main>
+    <div id="cd-modal" class="cd-modal cd-fade" v-html="code.modal_base">
+    </div>
   </div>
 </template>
 
@@ -22,10 +24,13 @@ import XHeader from '@/views/Header';
 import XPager from '@/views/Pager';
 import 'highlight.js/styles/googlecode.css';
 
+import * as code from './component/modal';
+
 export default {
   name: 'layout',
   data() {
     return {
+      code,
       isHideSidebar: false,
       isLoading: false
     }
