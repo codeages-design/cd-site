@@ -229,12 +229,12 @@ export const componentData = [
     text_en: 'Badge',
     name: 'component_badge'
   },
-  // {
-  //   isItem: true,
-  //   text_zh: '评分',
-  //   text_en: 'Rate',
-  //   name: 'component_rate'
-  // },
+  {
+    isItem: true,
+    text_zh: '评分',
+    text_en: 'Rate',
+    name: 'component_rate'
+  },
   {
     isItem: true,
     text_zh: '安全性',

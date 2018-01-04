@@ -13,8 +13,7 @@
       </div>
       <x-pager></x-pager>
     </main>
-    <div id="cd-modal" class="cd-modal cd-fade" v-html="code.modal_base">
-    </div>
+    <div id="cd-modal" class="cd-modal cd-fade" v-html="code.modal_base"></div>
   </div>
 </template>
 
