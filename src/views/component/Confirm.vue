@@ -35,6 +35,13 @@
         </thead>
         <tbody>
           <tr>
+            <td>className</td>
+            <td>自定义组件的Class</td>
+            <td>String</td>
+            <td>无</td>
+            <td>--</td>
+          </tr>
+          <tr>
             <td>title</td>
             <td>标题</td>
             <td>String</td>
@@ -60,13 +67,6 @@
             <td>取消按钮的文案</td>
             <td>String</td>
             <td>Cancel</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>confirmClass</td>
-            <td>confirm组件的Class</td>
-            <td>String</td>
-            <td>无</td>
             <td>--</td>
           </tr>
           <tr>

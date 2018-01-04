@@ -4,7 +4,7 @@ cd.confirm({
   content: '确定要这么做吗？',
   okText: '确定',
   cancelText: '取消',
-  customClass: '',
+  className: '',
   ok(event, $confirm) {
     console.log('点击确定按钮后的回调函数')
   },
