@@ -19,13 +19,13 @@ export const rate_static = `
 `;
 
 export const rate_base = `
-<input type="hidden" data-toggle="cd-rate" data-score="3" name="rate" value="3" />
+<input type="hidden" id="cd-rate" name="rate" />
 `;
 
 export const rate_api = `
 cd.rate({
-  el: '[data-toggle="cd-rate"]',
-  score: 5,
+  el: '#cd-rate',
+  score: 3,
 }, (score) => {
   console.log(score);
 })

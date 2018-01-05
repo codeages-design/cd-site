@@ -2,7 +2,7 @@
   <div>
     <div class="site-content-title">评分</div>
     <div class="site-content-des">
-      单选框主要用于单项设置逻辑的选择，一次只能选择一个值，切勿将单选框用于是非逻辑的切换。
+      
     </div>
     <div class="cd-row">
       <div class="col-xs-6">
@@ -39,7 +39,7 @@
       </div>
     </div>
     <div class="site-content-subtitle">API</div>
-    <!-- <pre v-highlightjs><code class="js">
+    <pre v-highlightjs><code class="js">
       {{ code.rate_api }}
     </code></pre>
     <div class="cd-table-responsive">
@@ -56,9 +56,16 @@
         <tbody>
           <tr>
             <td>el</td>
-            <td>要绑定的Dom元素（第一个Object参数中）</td>
+            <td>要绑定的Dom元素</td>
             <td>String</td>
             <td>无</td>
+            <td>--</td>
+          </tr>
+          <tr>
+            <td>score</td>
+            <td>初始化评分</td>
+            <td>Number</td>
+            <td>0</td>
             <td>--</td>
           </tr>
           <tr>
@@ -70,7 +77,7 @@
           </tr>
         </tbody>
       </table>
-    </div> -->
+    </div>
   </div>
 </template>
 
@@ -89,8 +96,8 @@ export default {
   },
   mounted() {
     cd.rate({
-      el: '[data-toggle="cd-rate"]',
-      score: 2,
+      el: '#cd-rate',
+      score: 3,
     }, (score) => {
       console.log(score);
     })
