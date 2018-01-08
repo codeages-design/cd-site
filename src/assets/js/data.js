@@ -127,12 +127,12 @@ export const componentData = [
   //   text_en: 'Calendar',
   //   name: 'component_calendar'
   // },
-  // {
-  //   isItem: true,
-  //   text_zh: '上传',
-  //   text_en: 'Upload',
-  //   name: 'component_upload'
-  // },
+  {
+    isItem: true,
+    text_zh: '上传',
+    text_en: 'Upload',
+    name: 'component_upload'
+  },
   {
     isItem: false,
     text: '通知 Notice'
@@ -251,12 +251,12 @@ export const componentData = [
     isItem: false,
     text: '数据 Data'
   },
-  {
-    isItem: true,
-    text_zh: '设置',
-    text_en: 'Setting',
-    name: 'component_setting'
-  },
+  // {
+  //   isItem: true,
+  //   text_zh: '设置',
+  //   text_en: 'Setting',
+  //   name: 'component_setting'
+  // },
   {
     isItem: true,
     text_zh: '表格',
