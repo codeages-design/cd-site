@@ -38,7 +38,7 @@
         </x-panel> -->
       </div>
     </div>
-    <div class="site-content-subtitle">API</div>
+    <!-- <div class="site-content-subtitle">API</div> -->
     <!-- <pre v-highlightjs><code class="js">
       {{ code.tabs_api }}
     </code></pre>
