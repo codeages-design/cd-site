@@ -14,10 +14,10 @@ export const modal_base = `
       </div>
       <div class="modal-footer">
         <button class="cd-btn cd-btn-link-default cd-btn-lg" type="button" data-toggle="cd-modal-cancel">
-          关闭
+          取消
         </button>
-        <button class="cd-btn cd-btn-link-primary cd-btn-lg" type="button" data-toggle="cd-modal-ok">
-          确定
+        <button class="cd-btn cd-btn-primary cd-btn-lg" type="button" data-toggle="cd-modal-ok">
+          确认
         </button>
       </div>
     </div>
