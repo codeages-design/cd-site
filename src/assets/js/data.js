@@ -55,13 +55,12 @@ export const componentData = [
     text_en: 'Tag',
     name: 'component_tag'
   },
-  
-  {
-    isItem: true,
-    text_zh: '状态',
-    text_en: 'Status',
-    name: 'component_status'
-  },
+  // {
+  //   isItem: true,
+  //   text_zh: '状态',
+  //   text_en: 'Status',
+  //   name: 'component_status'
+  // },
   {
     isItem: true,
     text_zh: '头像',
