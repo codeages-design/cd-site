@@ -21,12 +21,12 @@ export const componentData = [
     text_en: 'Typography',
     name: 'component_typography'
   },
-  // {
-  //   isItem: true,
-  //   text_zh: '栅格',
-  //   text_en: 'Grid',
-  //   name: 'component_grid'
-  // },
+  {
+    isItem: true,
+    text_zh: '栅格',
+    text_en: 'Grid',
+    name: 'component_grid'
+  },
   // {
   //   isItem: true,
   //   text_zh: '布局',
