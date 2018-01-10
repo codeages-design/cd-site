@@ -26,17 +26,20 @@
     padding-left: 8px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.56);
-    &.active,
     &:hover {
-      color: @site-primary;
+      cursor: pointer;
+      .site-hover-light;
       .site-transition;
       .nav-en {
-        color: @site-primary;
+        .site-hover-light;
         .site-transition;
       }
     }
-    &:hover {
-      cursor: pointer;
+    &.active {
+      color: @site-primary;
+      .nav-en {
+        color: @site-primary;
+      }
     }
     .nav-en {
       font-size: 12px;
