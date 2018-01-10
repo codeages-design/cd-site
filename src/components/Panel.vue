@@ -5,9 +5,9 @@
         <slot name="title"></slot>
       </div>
       <div class="cd-panel-action">
-        <i class="cd-icon cd-icon-copy js-copy-code" @click="copy" data-toggle="code-tooltip" data-title="复制代码" :data-clipboard-text="code" v-if="isShowCode"></i>
-        <i class="cd-icon cd-icon-close active" data-toggle="code-tooltip" data-title="隐藏代码" @click="toggleCode" v-show="isShowCode"></i>
-        <i class="cd-icon cd-icon-code" data-toggle="code-tooltip" data-title="显示代码" @click="toggleCode"  v-show="!isShowCode"></i>
+        <i class="cd-icon cd-icon-copy js-copy-code js-code-tooltip" @click="copy" data-title="复制代码" :data-clipboard-text="code" v-if="isShowCode"></i>
+        <i class="cd-icon cd-icon-close active js-code-tooltip" data-title="隐藏代码" @click="toggleCode" v-show="isShowCode"></i>
+        <i class="cd-icon cd-icon-code js-code-tooltip" data-title="显示代码" @click="toggleCode"  v-show="!isShowCode"></i>
       </div>
     </div>
     <div class="cd-panel-body">
@@ -46,7 +46,7 @@ export default {
   },
   created() {
     cd.tooltip({
-      el: '[data-toggle="code-tooltip"]'
+      el: '.js-code-tooltip'
     });
   }
 }

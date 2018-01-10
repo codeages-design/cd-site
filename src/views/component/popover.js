@@ -43,8 +43,8 @@ export const popover_base = `
 `;
 
 export const popover_type = `
-<button class="cd-btn cd-btn-ghost-default" data-toggle="cd-popover" data-trigger="click" data-title="click" data-content="popover content<br>popover content" data-placement="top" style="width: 120px">click</button>
-<button class="cd-btn cd-btn-ghost-default" data-toggle="cd-popover" data-trigger="hover" data-title="hover" data-content="popover content<br>popover content" data-placement="top" style="width: 120px">hover</button>
+<button type="button" class="cd-btn cd-btn-ghost-default" data-toggle="cd-popover" data-trigger="click" data-title="click" data-content="popover content<br>popover content" data-placement="top" style="width: 120px">click</button>
+<button type="button" class="cd-btn cd-btn-ghost-default" data-toggle="cd-popover" data-trigger="hover" data-title="hover" data-content="popover content<br>popover content" data-placement="top" style="width: 120px">hover</button>
 `;
 
 export const popover_api = `

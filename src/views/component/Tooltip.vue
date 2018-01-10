@@ -86,6 +86,13 @@
             <td>--</td>
           </tr>
           <tr>
+            <td>trigger</td>
+            <td>触发方式；可在元素上添加<code>data-trigger</code>来代替</td>
+            <td>String</td>
+            <td>hover</td>
+            <td>hover、click</td>
+          </tr>
+          <tr>
             <td>title</td>
             <td>tooltip里的内容，可在元素上添加<code>data-title</code>来代替</td>
             <td>String | Html</td>
@@ -143,9 +150,6 @@ export default {
     return {
       code,
     }
-  },
-  created() {
-    // cd.tooltip();
   },
   mounted() {
     cd.tooltip();
