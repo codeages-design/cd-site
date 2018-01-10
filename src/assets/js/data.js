@@ -216,12 +216,12 @@ export const componentData = [
     text_en: 'Tooltip',
     name: 'component_tooltip'
   },
-  // {
-  //   isItem: true,
-  //   text_zh: '气泡提示',
-  //   text_en: 'Popover',
-  //   name: 'component_popover'
-  // },
+  {
+    isItem: true,
+    text_zh: '气泡提示',
+    text_en: 'Popover',
+    name: 'component_popover'
+  },
   {
     isItem: true,
     text_zh: '徽标数',

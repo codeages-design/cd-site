@@ -145,6 +145,9 @@ export default {
     }
   },
   created() {
+    // cd.tooltip();
+  },
+  mounted() {
     cd.tooltip();
   },
   methods: {
