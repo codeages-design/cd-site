@@ -10,99 +10,298 @@
 	  <div class="cd-md-8">
 	    <div class="color-palette">
 	    	<div class="palette-primary">
-	    		<span class="text-left-top">Primary</span>
+	    		<span class="text-left-top">主色调（Primary）</span>
 	    		<span class="text-right-bottom">#43BC60</span>
 	    	</div>
-	    	<div class="palette-primary-dark">
-	    		<span class="text-left">P-Dark</span>
+	    	<div class="palette-primary-50">
+	    		<span class="text-left">P 50</span>
 	    		<span class="text-right">#36964D</span>
 	    	</div>
-	    	<div class="palette-primary-light">
-	    		<span class="text-left">P-Light</span>
+	    	<div class="palette-primary-100">
+	    		<span class="text-left">P 100</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-primary-200">
+	    		<span class="text-left">P 200</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-primary-300">
+	    		<span class="text-left">P 300</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-primary-400">
+	    		<span class="text-left">P 400</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-primary-500">
+	    		<span class="text-left">P 500</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-primary-600">
+	    		<span class="text-left">P 600</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-primary-700">
+	    		<span class="text-left">P 700</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-primary-800">
+	    		<span class="text-left">P 800</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-primary-900">
+	    		<span class="text-left">P 900</span>
 	    		<span class="text-right">#D9F2DF</span>
 	    	</div>
 	    </div>
 	  </div>
 	  <div class="cd-md-8">
-	   <div class="color-palette">
+	  </div>
+	  <div class="cd-md-8">
+	  </div>
+	</div>
+	<div class="cd-row">
+ 	  <div class="cd-md-8">
+	    <div class="color-palette">
 	    	<div class="palette-info">
-	    		<span class="text-left-top">Info</span>
+	    		<span class="text-left-top">信息色（Info）</span>
 	    		<span class="text-right-bottom">#43BC60</span>
 	    	</div>
-	    	<div class="palette-info-dark">
-	    		<span class="text-left">I-Dark</span>
-	    		<span class="text-right">#43BC60</span>
+	    	<div class="palette-info-50">
+	    		<span class="text-left">I 50</span>
+	    		<span class="text-right">#36964D</span>
 	    	</div>
-	    	<div class="palette-info-light">
-	    		<span class="text-left">I-Light</span>
-	    		<span class="text-right">#43BC60</span>
+	    	<div class="palette-info-100">
+	    		<span class="text-left">I 100</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-info-200">
+	    		<span class="text-left">I 200</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-info-300">
+	    		<span class="text-left">I 300</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-info-400">
+	    		<span class="text-left">I 400</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-info-500">
+	    		<span class="text-left">I 500</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-info-600">
+	    		<span class="text-left">I 600</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-info-700">
+	    		<span class="text-left">I 700</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-info-800">
+	    		<span class="text-left">I 800</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-info-900">
+	    		<span class="text-left">I 900</span>
+	    		<span class="text-right">#D9F2DF</span>
 	    	</div>
 	    </div>
 	  </div>
 	  <div class="cd-md-8">
-	   <div class="color-palette">
+	    <div class="color-palette">
 	    	<div class="palette-danger">
-	    		<span class="text-left-top">Danger</span>
+	    		<span class="text-left-top">危险色（Danger）</span>
 	    		<span class="text-right-bottom">#43BC60</span>
 	    	</div>
-	    	<div class="palette-danger-dark">
-	    		<span class="text-left">D-Dark</span>
-	    		<span class="text-right">#43BC60</span>
+	    	<div class="palette-danger-50">
+	    		<span class="text-left">D 50</span>
+	    		<span class="text-right">#36964D</span>
 	    	</div>
-	    	<div class="palette-danger-light">
-	    		<span class="text-left">D-Light</span>
-	    		<span class="text-right">#43BC60</span>
+	    	<div class="palette-danger-100">
+	    		<span class="text-left">D 100</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-danger-200">
+	    		<span class="text-left">D 200</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-danger-300">
+	    		<span class="text-left">D 300</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-danger-400">
+	    		<span class="text-left">D 400</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-danger-500">
+	    		<span class="text-left">D 500</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-danger-600">
+	    		<span class="text-left">D 600</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-danger-700">
+	    		<span class="text-left">D 700</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-danger-800">
+	    		<span class="text-left">D 800</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-danger-900">
+	    		<span class="text-left">D 900</span>
+	    		<span class="text-right">#D9F2DF</span>
 	    	</div>
 	    </div>
 	  </div>
 	  <div class="cd-md-8">
 	    <div class="color-palette">
 	    	<div class="palette-warning">
-	    		<span class="text-left-top">Warning</span>
+	    		<span class="text-left-top">警告色（Warning）</span>
 	    		<span class="text-right-bottom">#43BC60</span>
 	    	</div>
-	    	<div class="palette-warning-dark">
-	    		<span class="text-left">W-Dark</span>
-	    		<span class="text-right">#43BC60</span>
+	    	<div class="palette-warning-50">
+	    		<span class="text-left">W 50</span>
+	    		<span class="text-right">#36964D</span>
 	    	</div>
-	    	<div class="palette-warning-light">
-	    		<span class="text-left">W-Light</span>
-	    		<span class="text-right">#43BC60</span>
+	    	<div class="palette-warning-100">
+	    		<span class="text-left">W 100</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-warning-200">
+	    		<span class="text-left">W 200</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-warning-300">
+	    		<span class="text-left">W 300</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-warning-400">
+	    		<span class="text-left">W 400</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-warning-500">
+	    		<span class="text-left">W 500</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-warning-600">
+	    		<span class="text-left">W 600</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-warning-700">
+	    		<span class="text-left">W 700</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-warning-800">
+	    		<span class="text-left">W 800</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-warning-900">
+	    		<span class="text-left">W 900</span>
+	    		<span class="text-right">#D9F2DF</span>
 	    	</div>
 	    </div>
 	  </div>
 	  <div class="cd-md-8">
-	   <div class="color-palette">
+	    <div class="color-palette">
 	    	<div class="palette-success">
-	    		<span class="text-left-top">Success</span>
+	    		<span class="text-left-top">成功色（Success）</span>
 	    		<span class="text-right-bottom">#43BC60</span>
 	    	</div>
-	    	<div class="palette-success-dark">
-	    		<span class="text-left">S-Dark</span>
-	    		<span class="text-right">#43BC60</span>
+	    	<div class="palette-success-50">
+	    		<span class="text-left">S 50</span>
+	    		<span class="text-right">#36964D</span>
 	    	</div>
-	    	<div class="palette-success-light">
-	    		<span class="text-left">S-Light</span>
-	    		<span class="text-right">#43BC60</span>
+	    	<div class="palette-success-100">
+	    		<span class="text-left">S 100</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-success-200">
+	    		<span class="text-left">S 200</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-success-300">
+	    		<span class="text-left">S 300</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-success-400">
+	    		<span class="text-left">S 400</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-success-500">
+	    		<span class="text-left">S 500</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-success-600">
+	    		<span class="text-left">S 600</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-success-700">
+	    		<span class="text-left">S 700</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-success-800">
+	    		<span class="text-left">S 800</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-success-900">
+	    		<span class="text-left">S 900</span>
+	    		<span class="text-right">#D9F2DF</span>
 	    	</div>
 	    </div>
 	  </div>
 	  <div class="cd-md-8">
-	   <div class="color-palette">
-	    	<div class="palette-background">
-	    		<span class="text-left-top">Background</span>
+	    <div class="color-palette">
+	    	<div class="palette-neutral">
+	    		<span class="text-left-top">中性色（Neutral)</span>
 	    		<span class="text-right-bottom">#43BC60</span>
 	    	</div>
-	    	<div class="palette-background-dark">
-	    		<span class="text-left">B-Dark</span>
-	    		<span class="text-right">#43BC60</span>
+	    	<div class="palette-neutral-50">
+	    		<span class="text-left">N 50</span>
+	    		<span class="text-right">#36964D</span>
 	    	</div>
-	    	<div class="palette-background-light">
-	    		<span class="text-left">B-Light</span>
-	    		<span class="text-right">#43BC60</span>
+	    	<div class="palette-neutral-100">
+	    		<span class="text-left">N 100</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-neutral-200">
+	    		<span class="text-left">N 200</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-neutral-300">
+	    		<span class="text-left">N 300</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-neutral-400">
+	    		<span class="text-left">N 400</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-neutral-500">
+	    		<span class="text-left">N 500</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-neutral-600">
+	    		<span class="text-left">N 600</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-neutral-700">
+	    		<span class="text-left">N 700</span>
+	    		<span class="text-right">#D9F2DF</span>
+	    	</div>
+	    	<div class="palette-neutral-800">
+	    		<span class="text-left">N 800</span>
+	    		<span class="text-right">#36964D</span>
+	    	</div>
+	    	<div class="palette-neutral-900">
+	    		<span class="text-left">N 900</span>
+	    		<span class="text-right">#D9F2DF</span>
 	    	</div>
 	    </div>
 	  </div>
+
 	</div>
 
   </div>
@@ -114,11 +313,12 @@
 
 .color-palette {
 	position: relative;
-	margin: 0 16px 24px 0px;
-	height: 160px;
+	margin: 0 16px 40px 0px;
 	font-size: 14px;
+	line-height: 14px;
 	color: white;
 	border-radius: 4px;
+	.site-transition;
 	.text-left-top {
 		position: absolute;
 		top: 16px;
@@ -126,116 +326,157 @@
 	}
 	.text-right-bottom {
 		position: absolute;
-		bottom: 96px;
+		top: 48px;
 		right: 16px;
 	}
 	.text-left {
 		display: inline-block;
-		padding: 13px 0 0 16px;
+		padding: 13px 16px;
 	}
 	.text-right {
+		opacity: 0;
 		float: right;
 		display: inline-block;
-		padding: 13px 16px 0 0;
+		padding: 13px 16px;
+		.site-transition;
+	}
+	& div:last-child {
+		border-radius: 0 0 4px 4px;
 	}
 }
-.palette-primary {
-	height: 80px;
-	background: @site-primary;
-	border-radius: 4px 4px 0 0;
+
+/* Palette Scheme Arithmetic */
+
+.palette-scheme(@color; @key) {
+	.palette-50(@color) {
+		color: @site-dark-major;
+		background: tint(@color, 88%);
+	}
+
+	.palette-100(@color) {
+		color: @site-dark-major;
+		background: tint(@color, 70%);
+	}
+
+	.palette-200(@color) {
+		color: @site-dark-major;
+		background: tint(@color, 50%);
+	}
+
+	.palette-300(@color) {
+		color: @site-dark-major;
+		background: tint(@color, 30%);
+	}
+
+	.palette-400(@color) {
+		color: @site-dark-major;
+		background: tint(@color, 15%);
+	}
+
+	.palette-500(@color) {
+		color: @site-light-major;
+		background: @color;
+	}
+
+	.palette-600(@color) {
+		color: @site-light-major;
+		background: shade(@color, 10%);
+	}
+
+	.palette-700(@color) {
+		color: @site-light-major;
+		background: shade(@color, 30%);
+	}
+
+	.palette-800(@color) {
+		color: @site-light-major;
+		background: shade(@color, 50%);
+	}
+
+	.palette-900(@color) {
+		color: @site-light-major;
+		background: shade(@color, 70%);
+	}
+
+	.palette-@{key}-50 {
+		.palette-50(@color);
+	}
+
+	.palette-@{key}-100 {
+		.palette-100(@color);
+	}
+
+	.palette-@{key}-200 {
+		.palette-200(@color);
+	}
+
+	.palette-@{key}-300 {
+		.palette-300(@color);
+	}
+
+	.palette-@{key}-400 {
+		.palette-400(@color);
+	}
+
+	.palette-@{key}-500 {
+		.palette-500(@color);
+	}
+
+	.palette-@{key}-600 {
+		.palette-600(@color);
+	}
+
+	.palette-@{key}-700 {
+		.palette-700(@color);
+	}
+
+	.palette-@{key}-800 {
+		.palette-800(@color);
+	}
+
+	.palette-@{key}-900 {
+		.palette-900(@color);
+	}
+
+	.palette-@{key}-50,
+	.palette-@{key}-100,
+	.palette-@{key}-200,
+	.palette-@{key}-300,
+	.palette-@{key}-400,
+	.palette-@{key}-500,
+	.palette-@{key}-600,
+	.palette-@{key}-700,
+	.palette-@{key}-800,
+	.palette-@{key}-900 {
+		.site-transition;
+		&:hover {
+			transform: scale(1.03);
+			.site-box-shadow(24px);
+			.site-transition;
+			.text-right {
+				opacity: 1;
+				.site-transition;
+			}
+		}
+	}
+}
+/* End of Palette Scheme Arithmetic */
+
+.palette-levels(@color; @key) {
+	.palette-@{key} {
+		height: 80px;
+		background: @color;
+		border-radius: 4px 4px 0 0;
+	}
+	.palette-scheme(@color; @key);
+
 }
 
-.palette-primary-dark {
-	.palette-dark(@site-primary);
-}
-
-.palette-primary-light {
-	.palette-light(@site-primary);
-}
-
-.palette-info {
-	height: 80px;
-	background: @site-info;
-	border-radius: 4px 4px 0 0;
-}
-
-.palette-info-dark {
-	.palette-dark(@site-info);
-}
-
-.palette-info-light {
-	.palette-light(@site-info);
-}
-
-.palette-danger {
-	height: 80px;
-	background: @site-danger;
-	border-radius: 4px 4px 0 0;
-}
-
-.palette-danger-dark {
-	.palette-dark(@site-danger);
-}
-
-.palette-danger-light {
-	.palette-light(@site-danger);
-}
-
-.palette-warning {
-	height: 80px;
-	background: @site-warning;
-	border-radius: 4px 4px 0 0;
-}
-
-.palette-warning-dark {
-	.palette-dark(@site-warning);
-}
-
-.palette-warning-light {
-	.palette-light(@site-warning);
-}
-
-.palette-success {
-	height: 80px;
-	background: @site-success;
-	border-radius: 4px 4px 0 0;
-}
-
-.palette-success-dark {
-	.palette-dark(@site-success);
-}
-
-.palette-success-light {
-	.palette-light(@site-success);
-}
-
-.palette-background {
-	color: @site-gray-dark;
-	height: 80px;
-	background: @site-bg;
-	border-radius: 4px 4px 0 0;
-}
-
-.palette-background-dark {
-	color: @site-gray-dark;
-	.palette-dark(@site-bg);
-}
-
-.palette-background-light {
-	.palette-light(@site-bg);
-	color: @site-gray-dark;
-}
-
-.palette-dark(@color) {
-	height: 40px;
-	background: darken(@color, 10%);
-}
-
-.palette-light(@color) {
-	color: @color;
-	height: 40px;
-	border-radius: 0 0 4px 4px;
-	background: fade(@color, 20%);
-}
+.palette-levels(@site-primary, primary);
+.palette-levels(@site-info, info);
+.palette-levels(@site-danger, danger);
+.palette-levels(@site-warning, warning);
+.palette-levels(@site-success, success);
+.palette-levels(@site-neutral, neutral);
 
 </style>
