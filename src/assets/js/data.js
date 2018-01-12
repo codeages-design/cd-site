@@ -133,6 +133,12 @@ export const componentData = [
     name: 'component_upload'
   },
   {
+    isItem: true,
+    text_zh: '补全',
+    text_en: 'AutoComplete',
+    name: 'component_autocomplete'
+  },
+  {
     isItem: false,
     text: '通知 Notice'
   },
