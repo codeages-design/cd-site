@@ -67,7 +67,7 @@
 	    		<span class="text-right-bottom">{{ successColors[5].color }}</span>
 	    	</div>
 	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in successColors" :key="index">
-	    		<span class="text-left">W {{color.name}}</span>
+	    		<span class="text-left">S {{color.name}}</span>
 	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
@@ -111,7 +111,7 @@ const baseColor = {
     hex: '#43bc60'
   },
   'neutral': {
-    hex: '#cccccc'
+    hex: '#808080'
   }
 };
 
@@ -119,27 +119,27 @@ const palette = [
   {
     type: 'tint',
     name: '50',
-    value: 0.88
+    value: 0.8
   },
   {
     type: 'tint',
     name: '100',
-    value: 0.7
+    value: 0.64
   },
   {
     type: 'tint',
     name: '200',
-    value: 0.5
+    value: 0.48
   },
   {
     type: 'tint',
     name: '300',
-    value: 0.3
+    value: 0.32
   },
   {
     type: 'tint',
     name: '400',
-    value: 0.15
+    value: 0.16
   },
   {
     type: 'tint',
@@ -149,22 +149,22 @@ const palette = [
   {
     type: 'shade',
     name: '600',
-    value: 0.1
+    value: 0.16
   },
   {
     type: 'shade',
     name: '700',
-    value: 0.3
+    value: 0.32
   },
   {
     type: 'shade',
     name: '800',
-    value: 0.5
+    value: 0.48
   },
   {
     type: 'shade',
     name: '900',
-    value: 0.6
+    value: 0.64
   },
 ]
 
