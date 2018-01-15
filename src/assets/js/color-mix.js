@@ -1,7 +1,7 @@
 export const tint = (color, amount) => {
 
   if (amount === 0) {
-    return `#${color}`;
+    return `#${color}`.toLowerCase();
   }
 
   let red = parseInt(color.slice(0, 2), 16)
