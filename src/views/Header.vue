@@ -11,11 +11,14 @@
           {{nav.text}}
         </li>
       </ul>
+      <!-- <theme-picker></theme-picker> -->
     </div>
   </header>
 </template>
 
 <script>
+import ThemePicker from '@/components/ThemePicker';
+
 const navData = [
   {
     text: '首页',
@@ -28,6 +31,9 @@ const navData = [
 ];
 
 export default {
+  components: {
+    ThemePicker,
+  },
   data() {
     return {
       navData: navData,

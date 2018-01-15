@@ -9,53 +9,18 @@
     <div class="cd-row">
 	  <div class="cd-md-8">
 	    <div class="color-palette">
-	    	<div class="palette-primary">
+	    	<div class="palette-primary" :style="{background: primaryColors[5].color}">
 	    		<span class="text-left-top">主色调（Primary）</span>
-	    		<span class="text-right-bottom">#43BC60</span>
+	    		<span class="text-right-bottom">{{ primaryColors[5].color }}</span>
 	    	</div>
-	    	<div class="palette-primary-50">
-	    		<span class="text-left">P 50</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-primary-100">
-	    		<span class="text-left">P 100</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-primary-200">
-	    		<span class="text-left">P 200</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-primary-300">
-	    		<span class="text-left">P 300</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-primary-400">
-	    		<span class="text-left">P 400</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-primary-500">
-	    		<span class="text-left">P 500</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-primary-600">
-	    		<span class="text-left">P 600</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-primary-700">
-	    		<span class="text-left">P 700</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-primary-800">
-	    		<span class="text-left">P 800</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-primary-900">
-	    		<span class="text-left">P 900</span>
-	    		<span class="text-right">#D9F2DF</span>
+	      <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in primaryColors" :key="index">
+	    		<span class="text-left">P {{color.name}}</span>
+	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
 	  </div>
 	  <div class="cd-md-8">
+      <chrome-picker :value="mainColor" @input="updateValue"></chrome-picker>
 	  </div>
 	  <div class="cd-md-8">
 	  </div>
@@ -65,47 +30,11 @@
 	    <div class="color-palette">
 	    	<div class="palette-info">
 	    		<span class="text-left-top">信息色（Info）</span>
-	    		<span class="text-right-bottom">#43BC60</span>
+	    		<span class="text-right-bottom">{{ infoColors[5].color }}</span>
 	    	</div>
-	    	<div class="palette-info-50">
-	    		<span class="text-left">I 50</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-info-100">
-	    		<span class="text-left">I 100</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-info-200">
-	    		<span class="text-left">I 200</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-info-300">
-	    		<span class="text-left">I 300</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-info-400">
-	    		<span class="text-left">I 400</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-info-500">
-	    		<span class="text-left">I 500</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-info-600">
-	    		<span class="text-left">I 600</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-info-700">
-	    		<span class="text-left">I 700</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-info-800">
-	    		<span class="text-left">I 800</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-info-900">
-	    		<span class="text-left">I 900</span>
-	    		<span class="text-right">#D9F2DF</span>
+	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in infoColors" :key="index">
+	    		<span class="text-left">I {{color.name}}</span>
+	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
 	  </div>
@@ -113,47 +42,11 @@
 	    <div class="color-palette">
 	    	<div class="palette-danger">
 	    		<span class="text-left-top">危险色（Danger）</span>
-	    		<span class="text-right-bottom">#43BC60</span>
+	    		<span class="text-right-bottom">{{ dangerColors[5].color }}</span>
 	    	</div>
-	    	<div class="palette-danger-50">
-	    		<span class="text-left">D 50</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-danger-100">
-	    		<span class="text-left">D 100</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-danger-200">
-	    		<span class="text-left">D 200</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-danger-300">
-	    		<span class="text-left">D 300</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-danger-400">
-	    		<span class="text-left">D 400</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-danger-500">
-	    		<span class="text-left">D 500</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-danger-600">
-	    		<span class="text-left">D 600</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-danger-700">
-	    		<span class="text-left">D 700</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-danger-800">
-	    		<span class="text-left">D 800</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-danger-900">
-	    		<span class="text-left">D 900</span>
-	    		<span class="text-right">#D9F2DF</span>
+	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in dangerColors" :key="index">
+	    		<span class="text-left">D {{color.name}}</span>
+	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
 	  </div>
@@ -161,47 +54,11 @@
 	    <div class="color-palette">
 	    	<div class="palette-warning">
 	    		<span class="text-left-top">警告色（Warning）</span>
-	    		<span class="text-right-bottom">#43BC60</span>
+	    		<span class="text-right-bottom">{{ warningColors[5].color }}</span>
 	    	</div>
-	    	<div class="palette-warning-50">
-	    		<span class="text-left">W 50</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-warning-100">
-	    		<span class="text-left">W 100</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-warning-200">
-	    		<span class="text-left">W 200</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-warning-300">
-	    		<span class="text-left">W 300</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-warning-400">
-	    		<span class="text-left">W 400</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-warning-500">
-	    		<span class="text-left">W 500</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-warning-600">
-	    		<span class="text-left">W 600</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-warning-700">
-	    		<span class="text-left">W 700</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-warning-800">
-	    		<span class="text-left">W 800</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-warning-900">
-	    		<span class="text-left">W 900</span>
-	    		<span class="text-right">#D9F2DF</span>
+	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in warningColors" :key="index">
+	    		<span class="text-left">W {{color.name}}</span>
+	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
 	  </div>
@@ -209,47 +66,11 @@
 	    <div class="color-palette">
 	    	<div class="palette-success">
 	    		<span class="text-left-top">成功色（Success）</span>
-	    		<span class="text-right-bottom">#43BC60</span>
+	    		<span class="text-right-bottom">{{ successColors[5].color }}</span>
 	    	</div>
-	    	<div class="palette-success-50">
-	    		<span class="text-left">S 50</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-success-100">
-	    		<span class="text-left">S 100</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-success-200">
-	    		<span class="text-left">S 200</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-success-300">
-	    		<span class="text-left">S 300</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-success-400">
-	    		<span class="text-left">S 400</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-success-500">
-	    		<span class="text-left">S 500</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-success-600">
-	    		<span class="text-left">S 600</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-success-700">
-	    		<span class="text-left">S 700</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-success-800">
-	    		<span class="text-left">S 800</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-success-900">
-	    		<span class="text-left">S 900</span>
-	    		<span class="text-right">#D9F2DF</span>
+	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in successColors" :key="index">
+	    		<span class="text-left">W {{color.name}}</span>
+	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
 	  </div>
@@ -257,47 +78,11 @@
 	    <div class="color-palette">
 	    	<div class="palette-neutral">
 	    		<span class="text-left-top">中性色（Neutral)</span>
-	    		<span class="text-right-bottom">#43BC60</span>
+	    		<span class="text-right-bottom">{{ neutralColors[5].color }}</span>
 	    	</div>
-	    	<div class="palette-neutral-50">
-	    		<span class="text-left">N 50</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-neutral-100">
-	    		<span class="text-left">N 100</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-neutral-200">
-	    		<span class="text-left">N 200</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-neutral-300">
-	    		<span class="text-left">N 300</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-neutral-400">
-	    		<span class="text-left">N 400</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-neutral-500">
-	    		<span class="text-left">N 500</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-neutral-600">
-	    		<span class="text-left">N 600</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-neutral-700">
-	    		<span class="text-left">N 700</span>
-	    		<span class="text-right">#D9F2DF</span>
-	    	</div>
-	    	<div class="palette-neutral-800">
-	    		<span class="text-left">N 800</span>
-	    		<span class="text-right">#36964D</span>
-	    	</div>
-	    	<div class="palette-neutral-900">
-	    		<span class="text-left">N 900</span>
-	    		<span class="text-right">#D9F2DF</span>
+        <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in neutralColors" :key="index">
+	    		<span class="text-left">N {{color.name}}</span>
+	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
 	  </div>
@@ -307,9 +92,131 @@
   </div>
 </template>
 
+<script>
+import { Chrome } from 'vue-color';
+import * as colorMix from '@/assets/js/color-mix';
+
+const baseColor = {
+  'primary': {
+    hex: '#43bc60'
+  },
+  'info': {
+    hex: '#278bf5',
+  },
+  'danger': {
+    hex: '#ed3e3e',
+  },
+  'warning': {
+    hex: 'ffa51f',
+  },
+  'success': {
+    hex: '#43bc60'
+  },
+  'neutral': {
+    hex: '#cccccc'
+  }
+};
+
+const palette = [
+  {
+    type: 'tint',
+    name: '50',
+    value: 0.88
+  },
+  {
+    type: 'tint',
+    name: '100',
+    value: 0.7
+  },
+  {
+    type: 'tint',
+    name: '200',
+    value: 0.5
+  },
+  {
+    type: 'tint',
+    name: '300',
+    value: 0.3
+  },
+  {
+    type: 'tint',
+    name: '400',
+    value: 0.15
+  },
+  {
+    type: 'tint',
+    name: '500',
+    value: 0
+  },
+  {
+    type: 'shade',
+    name: '600',
+    value: 0.1
+  },
+  {
+    type: 'shade',
+    name: '700',
+    value: 0.3
+  },
+  {
+    type: 'shade',
+    name: '800',
+    value: 0.5
+  },
+  {
+    type: 'shade',
+    name: '900',
+    value: 0.6
+  },
+]
+
+export default {
+  components: {
+    'chrome-picker': Chrome
+  },
+  data() {
+    return {
+      primaryColors: [],
+      infoColors: [],
+      dangerColors: [],
+      warningColors: [],
+      successColors: [],
+      neutralColors: [],
+    }
+  },
+  created() {
+    this.primaryColors = this.colorMix(baseColor.primary.hex);
+    this.infoColors = this.colorMix(baseColor.info.hex);
+    this.dangerColors = this.colorMix(baseColor.danger.hex);
+    this.warningColors = this.colorMix(baseColor.warning.hex);
+    this.successColors = this.colorMix(baseColor.success.hex);
+    this.neutralColors = this.colorMix(baseColor.neutral.hex);
+  },
+  methods: {
+    updateValue(color) {
+      console.log(color, 'updateValue');
+
+      this.primaryColors = this.colorMix(color.hex);
+    },
+    colorMix(hex) {
+      const colors = [];
+      palette.map((item) => {
+        let color = colorMix[item.type](hex.replace('#', ''), item.value);
+        colors.push({
+          name: item.name,
+          color: color
+        });
+      });
+      console.log(colors, 'colorMix');
+      return colors;
+    }
+  }
+}
+</script>
+
 <style lang="less">
-@import '../../assets/less/variables.less';
-@import '../../assets/less/mixins.less';
+@import '~@/assets/less/variables.less';
+@import '~@/assets/less/mixins.less';
 
 .color-palette {
 	position: relative;
@@ -345,131 +252,25 @@
 	}
 }
 
-/* Palette Scheme Arithmetic */
-
-.palette-scheme(@color; @key) {
-	.palette-50(@color) {
-		color: @site-dark-major;
-		background: tint(@color, 88%);
-	}
-
-	.palette-100(@color) {
-		color: @site-dark-major;
-		background: tint(@color, 70%);
-	}
-
-	.palette-200(@color) {
-		color: @site-dark-major;
-		background: tint(@color, 50%);
-	}
-
-	.palette-300(@color) {
-		color: @site-dark-major;
-		background: tint(@color, 30%);
-	}
-
-	.palette-400(@color) {
-		color: @site-dark-major;
-		background: tint(@color, 15%);
-	}
-
-	.palette-500(@color) {
-		color: @site-light-major;
-		background: @color;
-	}
-
-	.palette-600(@color) {
-		color: @site-light-major;
-		background: shade(@color, 10%);
-	}
-
-	.palette-700(@color) {
-		color: @site-light-major;
-		background: shade(@color, 30%);
-	}
-
-	.palette-800(@color) {
-		color: @site-light-major;
-		background: shade(@color, 50%);
-	}
-
-	.palette-900(@color) {
-		color: @site-light-major;
-		background: shade(@color, 70%);
-	}
-
-	.palette-@{key}-50 {
-		.palette-50(@color);
-	}
-
-	.palette-@{key}-100 {
-		.palette-100(@color);
-	}
-
-	.palette-@{key}-200 {
-		.palette-200(@color);
-	}
-
-	.palette-@{key}-300 {
-		.palette-300(@color);
-	}
-
-	.palette-@{key}-400 {
-		.palette-400(@color);
-	}
-
-	.palette-@{key}-500 {
-		.palette-500(@color);
-	}
-
-	.palette-@{key}-600 {
-		.palette-600(@color);
-	}
-
-	.palette-@{key}-700 {
-		.palette-700(@color);
-	}
-
-	.palette-@{key}-800 {
-		.palette-800(@color);
-	}
-
-	.palette-@{key}-900 {
-		.palette-900(@color);
-	}
-
-	.palette-@{key}-50,
-	.palette-@{key}-100,
-	.palette-@{key}-200,
-	.palette-@{key}-300,
-	.palette-@{key}-400,
-	.palette-@{key}-500,
-	.palette-@{key}-600,
-	.palette-@{key}-700,
-	.palette-@{key}-800,
-	.palette-@{key}-900 {
-		.site-transition;
-		&:hover {
-			transform: scale(1.03);
-			.site-box-shadow(24px);
-			.site-transition;
-			.text-right {
-				opacity: 1;
-				.site-transition;
-			}
-		}
-	}
+.palette-color {
+  .site-transition;
+  &:hover {
+    transform: scale(1.03);
+    .site-box-shadow(24px);
+    .site-transition;
+    .text-right {
+      opacity: 1;
+      .site-transition;
+    }
+  }
 }
-/* End of Palette Scheme Arithmetic */
 
-.palette-levels(@color; @key) {
+.palette-levels(@color, @key) {
 	.palette-@{key} {
 		height: 80px;
 		background: @color;
 		border-radius: 4px 4px 0 0;
 	}
-	.palette-scheme(@color; @key);
-
 }
 
 .palette-levels(@site-primary, primary);
@@ -478,5 +279,4 @@
 .palette-levels(@site-warning, warning);
 .palette-levels(@site-success, success);
 .palette-levels(@site-neutral, neutral);
-
 </style>
