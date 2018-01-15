@@ -28,9 +28,11 @@ export const shade = (color, amount) => {
   green = Math.round((1 - amount) * green)
   blue = Math.round((1 - amount) * blue)
 
-  red = red.toString(16)
-  green = green.toString(16)
-  blue = blue.toString(16)
+  red = red.toString(16).length < 2 ? '0' + red.toString(16) : red.toString(16)
+  green = green.toString(16).length < 2 ? '0' + green.toString(16) : green.toString(16)
+  blue = blue.toString(16).length < 2 ? '0' + blue.toString(16) : blue.toString(16)
+
+  console.log(red, green, blue);
 
   return `#${red}${green}${blue}`
 };
