@@ -1,8 +1,8 @@
 <template>
   <div class="site-theme-picker">
-    <div class="picker" :style="{background: colors.hex}" @click="select"></div>
+    <div class="picker" :style="{background: color.hex}" @click="select"></div>
     <div class="vc-sketch-warp" v-show="isShow">
-      <sketch-picker :value="colors" @input="updateValue"></sketch-picker>
+      <sketch-picker :value="color.hex" @input="updateValue"></sketch-picker>
       <div class="vc-sketch-action">
         <button class="cd-btn cd-btn-sm cd-btn-ghost-default" @click="cancel">取消</button>
         <button class="cd-btn cd-btn-sm cd-btn-ghost-default" @click="ok">确定</button>
@@ -14,8 +14,14 @@
 <script>
 import { Sketch } from 'vue-color';
 
-const defaultColors = {
-  hex: '#43bc60'
+const defaultColor = {
+  hex: '#43bc60',
+  rgba: {
+    r: 67,
+    g: 188,
+    b: 96,
+    a: 1,
+  }
 };
 
 export default {
@@ -24,8 +30,8 @@ export default {
   },
   data() {
     return {
-      colors: defaultColors,
-      newColors: {},
+      color: window.color || defaultColor,
+      newColor: {},
       isShow: false
     }
   },
@@ -35,16 +41,17 @@ export default {
     },
     cancel() {
       this.isShow = false;
-      this.colors = defaultColors;
     },
     ok() {
-      this.colors = this.newColors;
+      this.isShow = false;
 
-      // const url = ``;
+      this.$emit('ok', this.color, this.newColor);
+      this.color = this.newColor;
+      window.color = this.newColor;
     },
-    updateValue(colors) {
-      this.newColors = colors;
-      console.log(colors, 'colors');
+    updateValue(color) {
+      this.newColor = color;
+      console.log(color, 'updateValue');
     },
   }
 }

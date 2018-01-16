@@ -32,8 +32,6 @@ export const shade = (color, amount) => {
   green = green.toString(16).length < 2 ? '0' + green.toString(16) : green.toString(16)
   blue = blue.toString(16).length < 2 ? '0' + blue.toString(16) : blue.toString(16)
 
-  console.log(red, green, blue);
-
   return `#${red}${green}${blue}`
 };
 

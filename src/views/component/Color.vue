@@ -19,9 +19,9 @@
 	    	</div>
 	    </div>
 	  </div>
-	  <div class="cd-md-8 cd-md-offset-4" style="margin-top: 100px;">
-      <chrome-picker :value="baseColor.primary" @input="updateValue"></chrome-picker>
-	  </div>
+	  <div class="cd-md-8 cd-md-offset-4" style="margin-top: 120px;">
+      <chrome-picker :value="baseColor.primary" @input="updateValue" style="margin: 0 auto;"></chrome-picker>
+    </div>
 	</div>
 	<div class="cd-row">
  	  <div class="cd-md-8">
