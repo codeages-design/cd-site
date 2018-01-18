@@ -103,91 +103,76 @@
         </x-panel>
       </div>
     </div>
-    <div class="site-content-subtitle">
-      API
-    </div>
-    <pre v-highlightjs><code class="js">
-      {{ code.button_loading }}
-    </code></pre>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>类型</th>
-            <th>默认值</th>
-            <th>可选值</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>el</td>
-            <td>要绑定的Dom元素</td>
-            <td>String</td>
-            <td>无</td>
-            <td>event.currentTarget 或 '#btn'等Dom选择器</td>
-          </tr>
-          <tr>
-            <td>text</td>
-            <td>loading的文本</td>
-            <td>String</td>
-            <td>loading...</td>
-            <td>--</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>方法</th>
-            <th>参数</th>
-            <th>说明</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>loading</td>
-            <td>无</td>
-            <td>触发loading效果</td>
-          </tr>
-          <tr>
-            <td>reset</td>
-            <td>无</td>
-            <td>取消loading效果</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+
+    <x-api-table :attrData="attrData" :eventData="eventData" :code="code.button_loading">
+    </x-api-table>
   </div>
 </template>
 
 <script>
 import * as code from './button';
 import XPanel from '@/components/Panel';
+import XApiTable from '@/components/ApiTable';
+
+const attrData = [
+  {
+    name: 'el',
+    dec: '要绑定的Dom元素',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'loadingText',
+    dec: 'loading时显示的文本，DATA属性<code>data-loading-text</code>',
+    type: 'String',
+    value: 'loading...',
+    optional: '--'
+  }
+];
+
+const eventData = [
+  {
+    name: 'loading',
+    dec: '触发loading效果',
+    callback: '--',
+    args: 'args1: 被绑定的Dom元素的jquery对象'
+  },
+  {
+    name: 'reset',
+    dec: '取消loading效果',
+    callback: '--',
+    args: 'args1: 被绑定的Dom元素的jquery对象'
+  }
+];
 
 export default {
   components: {
-    XPanel
+    XPanel,
+    XApiTable
   },
   data() {
     return {
       code,
+      attrData,
+      eventData,
     }
   },
   methods: {
     loading(event) {
       const btn = cd.btn({
         el: event.currentTarget,
-        text: '加载中...'
+        loadingText: '加载中...'
       });
 
-      btn.loading();
+      btn.on('loading', () => {
+        console.log('loading...');
+      });
 
       setTimeout(() => {
-        btn.reset();
+        btn.on('reset', () => {
+          console.log('reset...');
+        });
       }, 1000);
     }
   }

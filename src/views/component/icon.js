@@ -256,19 +256,19 @@ export const icon_list = `
 </li>
 
 <li>
-<i class="icon codeages-icon cd-icon-star-o"></i>
+<i class="icon cd-icon cd-icon-star-o"></i>
     <div class="name">star-o</div>
     <div class="fontclass">.cd-icon-star-o</div>
 </li>
 
 <li>
-<i class="icon codeages-icon cd-icon-star-half"></i>
+<i class="icon cd-icon cd-icon-star-half"></i>
     <div class="name">star-half</div>
     <div class="fontclass">.cd-icon-star-half</div>
 </li>
 
 <li>
-<i class="icon codeages-icon cd-icon-star"></i>
+<i class="icon cd-icon cd-icon-star"></i>
     <div class="name">star</div>
     <div class="fontclass">.cd-icon-star</div>
 </li>

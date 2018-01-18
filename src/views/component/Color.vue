@@ -95,22 +95,22 @@ import { Chrome } from 'vue-color';
 import * as colorMix from '@/assets/js/color-mix';
 
 const baseColor = {
-  'primary': {
+  primary: {
     hex: '#43bc60'
   },
-  'info': {
+  info: {
     hex: '#278bf5',
   },
-  'danger': {
+  danger: {
     hex: '#ed3e3e',
   },
-  'warning': {
-    hex: 'ffa51f',
+  warning: {
+    hex: '#ffa51f',
   },
-  'success': {
+  success: {
     hex: '#43bc60'
   },
-  'neutral': {
+  neutral: {
     hex: '#808080'
   }
 };

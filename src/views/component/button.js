@@ -27,13 +27,17 @@ export const button_size = `
 
 export const button_loading = `
 const btn = cd.btn({
-  el: '#btn',
-  text: '加载中...'
+  el: event.currentTarget,
+  loadingText: '加载中...'
 });
 
-btn.loading();
+btn.on('loading', () => {
+  console.log('loading...');
+});
 
 setTimeout(() => {
-  btn.reset();
-}, 3000);
+  btn.on('reset', () => {
+    console.log('reset...');
+  });
+}, 1000);
 `;
