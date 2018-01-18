@@ -58,8 +58,8 @@ export const radio_size = `
 
 export const radio_api = `
 cd.radio({
-  el: '#radio',
-}, (event) => {
-  console.log('这是点击后的回调')
+  el: '#cd-radio',
+}).on('click', ($radioItem) => {
+  console.log('点击后触发');
 });
 `;

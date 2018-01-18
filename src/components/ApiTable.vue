@@ -1,6 +1,31 @@
 <template>
   <div class="site-api">
     <div class="site-content-subtitle">
+      DATA-API
+    </div>
+    <div class="site-content-des" v-if="dataApiData && dataApiData.length">
+      注：DATA-API为在html上添加data属性，从而自动触发JS，实现零JS调用
+    </div>
+
+    <div class="cd-table-responsive" v-if="dataApiData && dataApiData.length">
+      <table class="cd-table">
+        <thead>
+          <tr>
+            <th v-for="(item, index) in dataApiThead" :key="index">{{item}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item, index) in dataApiData" :key="index">
+            <td>{{item.name}}</td>
+            <td v-html="item.dec"></td>
+            <td>{{item.type}}</td>
+            <td>{{item.value}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="site-content-subtitle">
       API
     </div>
     <pre v-highlightjs><code class="js">
@@ -90,14 +115,16 @@
 </template>
 
 <script>
+const dataApiThead = ['data属性', '说明', '类型', '固定值'];
 const attrThead = ['属性名', '说明', '类型', '默认值', '可选值'];
 const eventThead = ['事件名', '说明', '回调函数', '回调函数参数说明'];
 const hookThead = ['钩子名', '说明', '回调函数', '回调函数参数说明'];
 
 export default {
-  props: ['code', 'attrData', 'eventData', 'hookData'],
+  props: ['code', 'dataApiData', 'attrData', 'eventData', 'hookData'],
   data() {
     return {
+      dataApiThead,
       attrThead,
       eventThead,
       hookThead
