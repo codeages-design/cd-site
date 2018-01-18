@@ -25,18 +25,18 @@ export const button_size = `
 <button class="cd-btn cd-btn-primary cd-btn-sm">最小按钮</button>
 `;
 
-export const button_loading = `
+export const button_api = `
 const btn = cd.btn({
   el: event.currentTarget,
   loadingText: '加载中...'
 });
 
-btn.on('loading', () => {
+btn.trigger('loading', () => {
   console.log('loading...');
 });
 
 setTimeout(() => {
-  btn.on('reset', () => {
+  btn.trigger('reset', () => {
     console.log('reset...');
   });
 }, 1000);

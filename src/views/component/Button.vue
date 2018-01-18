@@ -85,13 +85,13 @@
             Codeages Design 目前提供了三种按钮尺寸，根据不同场景来选择合适的按钮尺寸能够给设计更多的发挥空间。
           </div>
         </x-panel>
-        <x-panel :code="code.button_loading|trim">
+        <x-panel :code="code.button_api|trim">
           <div slot="title">
             按钮加载（Button Loading）
           </div>
           <div slot="code">
             <pre v-highlightjs><code class="js">
-              {{ code.button_loading }}
+              {{ code.button_api }}
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style">
@@ -104,7 +104,7 @@
       </div>
     </div>
 
-    <x-api-table :attrData="attrData" :eventData="eventData" :code="code.button_loading">
+    <x-api-table :attrData="attrData" :eventData="eventData" :code="code.button_api">
     </x-api-table>
   </div>
 </template>
@@ -136,13 +136,13 @@ const eventData = [
     name: 'loading',
     dec: '触发loading效果',
     callback: '--',
-    args: 'args1: 被绑定的Dom元素的jquery对象'
+    args: 'args1: $el，被绑定的Dom元素的jquery对象'
   },
   {
     name: 'reset',
     dec: '取消loading效果',
     callback: '--',
-    args: 'args1: 被绑定的Dom元素的jquery对象'
+    args: 'args1: $el，被绑定的Dom元素的jquery对象'
   }
 ];
 
@@ -165,12 +165,12 @@ export default {
         loadingText: '加载中...'
       });
 
-      btn.on('loading', () => {
+      btn.trigger('loading', () => {
         console.log('loading...');
       });
 
       setTimeout(() => {
-        btn.on('reset', () => {
+        btn.trigger('reset', () => {
           console.log('reset...');
         });
       }, 1000);

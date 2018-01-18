@@ -7,15 +7,15 @@
       {{ code }}
     </code></pre>
 
-    <div class="site-content-subtitle" v-if="attrData.length">
+    <div class="site-content-subtitle" v-if="attrData && attrData.length">
       属性
     </div>
 
-    <div class="site-content-des" v-if="attrData.length">
+    <div class="site-content-des" v-if="attrData && attrData.length">
       注：DATA属性为在html上添加的data属性，可替代对应的属性
     </div>
 
-    <div class="cd-table-responsive" v-if="attrData.length">
+    <div class="cd-table-responsive" v-if="attrData && attrData.length">
       <table class="cd-table">
         <thead>
           <tr>
@@ -34,15 +34,15 @@
       </table>
     </div>
 
-    <div class="site-content-subtitle" v-if="eventData.length">
+    <div class="site-content-subtitle" v-if="eventData && eventData.length">
       事件
     </div>
 
-    <div class="site-content-des" v-if="eventData.length">
-      注：事件统一用<code class="code">.on('EVENT_NAME', callback)</code>的方式调用
+    <div class="site-content-des" v-if="eventData && eventData.length">
+      注：事件统一用<code class="code">.trigger('EVENT_NAME', callback)</code>的方式来调用触发
     </div>
 
-    <div class="cd-table-responsive" v-if="eventData.length">
+    <div class="cd-table-responsive" v-if="eventData && eventData.length">
       <table class="cd-table">
         <thead>
           <tr>
@@ -60,19 +60,47 @@
       </table>
     </div>
 
+    <div class="site-content-subtitle" v-if="hookData && hookData.length">
+      钩子方法
+    </div>
+
+    <div class="site-content-des" v-if="hookData && hookData.length">
+      注：钩子方法统一用<code class="code">.on('HOOK_NAME', callback)</code>的方式来书写
+    </div>
+
+    <div class="cd-table-responsive" v-if="hookData && hookData.length">
+      <table class="cd-table">
+        <thead>
+          <tr>
+            <th v-for="(item, index) in hookThead" :key="index">{{item}}</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr v-for="(item, index) in hookData" :key="index">
+            <td>{{item.name}}</td>
+            <td>{{item.dec}}</td>
+            <td>{{item.callback}}</td>
+            <td v-html="item.args"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
   </div>
 </template>
 
 <script>
 const attrThead = ['属性名', '说明', '类型', '默认值', '可选值'];
 const eventThead = ['事件名', '说明', '回调函数', '回调函数参数说明'];
+const hookThead = ['钩子名', '说明', '回调函数', '回调函数参数说明'];
 
 export default {
-  props: ['attrData', 'eventData', 'code'],
+  props: ['code', 'attrData', 'eventData', 'hookData'],
   data() {
     return {
       attrThead,
-      eventThead
+      eventThead,
+      hookThead
     }
   }
 }

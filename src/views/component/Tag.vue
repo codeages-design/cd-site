@@ -42,62 +42,52 @@
         </x-panel>
       </div>
     </div>
-    <div class="site-content-subtitle">API</div>
-    <pre v-highlightjs><code class="js">
-      {{ code.tag_api }}
-    </code></pre>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>类型</th>
-            <th>默认值</th>
-            <th>可选值</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>closeEl</td>
-            <td>要绑定的关闭Dom元素</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>close</td>
-            <td>关闭标签后的回调方法</td>
-            <td>Function</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <x-api-table :code="code.tag_api" :attrData="attrData" :hookData="hookData"></x-api-table>
   </div>
 </template>
 
 <script>
 import * as code from './tag';
 import XPanel from '@/components/Panel';
+import XApiTable from '@/components/ApiTable';
+
+const attrData = [
+  {
+    name: 'el',
+    dec: '要绑定的Dom元素',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+];
+
+const hookData = [
+  {
+    name: 'close',
+    dec: '关闭tag后触发的钩子',
+    callback: '--',
+    args: 'args1: $close，关闭元素的jquery对象<br>args2: $tag，被绑定的Dom元素的jquery对象'
+  }
+];
 
 export default {
   components: {
-    XPanel
+    XPanel,
+    XApiTable
   },
   data() {
     return {
       code,
+      attrData,
+      hookData
     }
   },
   created() {
     cd.tag({
-      closeEl: '#tag-close',
-      close() {
-        console.log('这是关闭后的回调函数');
-      }
-    })
+      el: '#cd-tag',
+    }).on('close', ($close, $tag) => {
+      console.log('tag', $close, $tag);
+    });
   },
   methods: {
   }

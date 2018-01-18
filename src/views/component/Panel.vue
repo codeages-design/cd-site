@@ -34,6 +34,9 @@ export default {
       code,
     }
   },
+  mounted() {
+    cd.tooltip();
+  },
   methods: {
   }
 }

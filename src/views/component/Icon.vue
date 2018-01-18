@@ -13,31 +13,25 @@
     <div class="site-content-subtitle">
       图标集
     </div>
-    <ul class="site-icon site-clearfix" v-html="code.icon_list">
+    <ul class="icon-list site-clearfix" v-html="code.icon_list">
     </ul>
   </div>
 </template>
 
 <script>
 import * as code from './icon';
-import XPanel from '@/components/Panel';
 
 export default {
-  components: {
-    XPanel
-  },
   data() {
     return {
       code,
     }
-  },
-  methods: {
   }
 }
 </script>
 
 <style lang="less">
-.site-icon {
+.icon-list {
   padding-left: 0;
   margin-top: 0;
   > li {

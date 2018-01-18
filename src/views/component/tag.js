@@ -1,9 +1,9 @@
 export const tag_type = `
 <span class="cd-tag">静态标签</span>
 
-<span class="cd-tag">
+<span class="cd-tag" id="cd-tag">
   可关闭的标签
-  <i class="cd-icon cd-icon-danger" data-toggle="cd-tag-close"></i>
+  <i class="cd-icon cd-icon-danger"></i>
 </span>
 `;
 
@@ -20,9 +20,8 @@ export const tag_color = `
 
 export const tag_api = `
 cd.tag({
-  closeEl: '#tag-close',
-  close() {
-    console.log('这是关闭后的回调函数');
-  }
+  el: '#cd-tag',
+}).on('close', ($close, $tag) => {
+  console.log('tag', $close, $tag);
 })
 `;
