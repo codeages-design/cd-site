@@ -36,15 +36,19 @@
       属性
     </div>
 
-    <div class="site-content-des" v-if="attrData && attrData.length">
-      注：DATA属性为在html上添加的data属性，可替代对应的属性
-    </div>
-
     <div class="cd-table-responsive" v-if="attrData && attrData.length">
       <table class="cd-table">
         <thead>
           <tr>
-            <th v-for="(item, index) in attrThead" :key="index">{{item}}</th>
+            <th v-for="(item, index) in attrThead" :key="index">
+              <span v-if="index == attrThead.length - 1">
+                {{item}} 
+                <i class="cd-icon cd-icon-help-o cd-text-xs cd-dark-minor" data-toggle="cd-tooltip" 
+                  data-title="DATA属性为在html上添加的data属性，可替代对应的属性">
+                </i>
+              </span>
+              <span v-else>{{item}}</span>
+            </th>
           </tr>
         </thead>
         <tbody>
@@ -54,6 +58,7 @@
             <td>{{item.type}}</td>
             <td>{{item.value}}</td>
             <td>{{item.optional}}</td>
+            <td>{{item.data || '无'}}</td>
           </tr>
         </tbody>
       </table>
@@ -116,7 +121,7 @@
 
 <script>
 const dataApiThead = ['data属性', '说明', '类型', '固定值'];
-const attrThead = ['属性名', '说明', '类型', '默认值', '可选值'];
+const attrThead = ['属性名', '说明', '类型', '默认值', '可选值', 'data属性'];
 const eventThead = ['事件名', '说明', '回调函数', '回调函数参数说明'];
 const hookThead = ['钩子名', '说明', '回调函数', '回调函数参数说明'];
 
@@ -129,6 +134,9 @@ export default {
       eventThead,
       hookThead
     }
+  },
+  created() {
+    cd.tooltip();
   }
 }
 </script>

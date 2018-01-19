@@ -90,7 +90,7 @@ const hookData = [
     name: 'click',
     dec: '点击后触发的钩子',
     callback: '--',
-    args: 'args1: $radioItem，被点击元素的jquery对象'
+    args: 'args1: $item，被点击元素的jquery对象'
   }
 ];
 
