@@ -6,7 +6,7 @@ export const upload_avatar = `
       <i class="cd-icon cd-icon-camera"></i>上传图片
     </div>
   </div>
-  <label htmlFor="" class="image-upload-label">
+  <label class="image-upload-label">
     <input id="upload-avatar" type="file" name="file" class="cd-hide" data-target="#cd-avatar" />
   </label>
 </div>

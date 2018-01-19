@@ -38,60 +38,6 @@
         </x-panel> -->
       </div>
     </div>
-    <!-- <div class="site-content-subtitle">API</div> -->
-    <!-- <pre v-highlightjs><code class="js">
-      {{ code.tabs_api }}
-    </code></pre>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>类型</th>
-            <th>默认值</th>
-            <th>可选值</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>el</td>
-            <td>要绑定的元素</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>target</td>
-            <td>要存放的内容元素</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>url</td>
-            <td>初始化要请求的路由</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>success</td>
-            <td>请求数据成功回调函数</td>
-            <td>Function</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>error</td>
-            <td>请求数据失败回调函数</td>
-            <td>Function</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-        </tbody>
-      </table>
-    </div> -->
   </div>
 </template>
 
@@ -123,7 +69,7 @@ export default {
     });
     // cd.upload({
     //   el: '#upload-file',
-    //   fileTypes: ['application/msword', 'text/csv'],
+    //   fileTypes: ['application/msword', 'text/csv', 'application/vnd.openxmlformats-officedocument.wordprocessingml.document'],
     //   success(event, src, $target) {
     //     console.log(event, src);
     //   },
