@@ -38,9 +38,9 @@ cd.autocomplete({
         data: {
           q: value
         }
-      }).then((res) => {
+      }).done((res) => {
         resolve(res);
-      }).catch((res) => {
+      }).fail((res) => {
         console.log(res);
         reject([]);
       })
