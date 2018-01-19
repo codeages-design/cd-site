@@ -1,121 +1,124 @@
 <template>
   <div class="site-api">
-    <div class="site-content-subtitle">
-      DATA-API
-    </div>
-    <div class="site-content-des" v-if="dataApiData && dataApiData.length">
-      注：DATA-API为在html上添加data属性，从而自动触发JS，实现零JS调用
-    </div>
-
-    <div class="cd-table-responsive" v-if="dataApiData && dataApiData.length">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th v-for="(item, index) in dataApiThead" :key="index">{{item}}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(item, index) in dataApiData" :key="index">
-            <td>{{item.name}}</td>
-            <td v-html="item.dec"></td>
-            <td>{{item.type}}</td>
-            <td>{{item.value}}</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="site-content-subtitle">
-      API
-    </div>
-    <pre v-highlightjs><code class="js">
-      {{ code }}
-    </code></pre>
-
-    <div class="site-content-subtitle" v-if="attrData && attrData.length">
-      属性
+    <div v-if="dataApiData && dataApiData.length">
+      <div class="site-content-subtitle" >
+        DATA-API
+      </div>
+      <div class="site-content-des">
+        注：DATA-API为在html上添加data属性，从而自动触发JS，实现零JS调用
+      </div>
+      <div class="cd-table-responsive">
+        <table class="cd-table">
+          <thead>
+            <tr>
+              <th v-for="(item, index) in dataApiThead" :key="index">{{item}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in dataApiData" :key="index">
+              <td>{{item.name}}</td>
+              <td v-html="item.dec"></td>
+              <td>{{item.type}}</td>
+              <td>{{item.value}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <div class="cd-table-responsive" v-if="attrData && attrData.length">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th v-for="(item, index) in attrThead" :key="index">
-              <span v-if="index == attrThead.length - 1">
-                {{item}} 
-                <i class="cd-icon cd-icon-help-o cd-text-xs cd-dark-minor" data-toggle="cd-tooltip" 
-                  data-title="DATA属性为在html上添加的data属性，可替代对应的属性">
-                </i>
-              </span>
-              <span v-else>{{item}}</span>
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(item, index) in attrData" :key="index">
-            <td>{{item.name}}</td>
-            <td v-html="item.dec"></td>
-            <td>{{item.type}}</td>
-            <td>{{item.value}}</td>
-            <td>{{item.optional}}</td>
-            <td>{{item.data || '无'}}</td>
-          </tr>
-        </tbody>
-      </table>
+    <div v-if="code">
+      <div class="site-content-subtitle">
+        API
+      </div>
+      <pre v-highlightjs><code class="js">
+        {{ code }}
+      </code></pre>
     </div>
 
-    <div class="site-content-subtitle" v-if="eventData && eventData.length">
-      事件
+    <div  v-if="attrData && attrData.length">
+      <div class="site-content-subtitle">
+        属性
+      </div>
+      <div class="cd-table-responsive">
+        <table class="cd-table">
+          <thead>
+            <tr>
+              <th v-for="(item, index) in attrThead" :key="index">
+                <span v-if="index == attrThead.length - 1">
+                  {{item}} 
+                  <i class="cd-icon cd-icon-help-o cd-text-xs cd-dark-minor" data-toggle="cd-tooltip" 
+                    data-title="DATA属性为在html上添加的data属性，可替代对应的属性">
+                  </i>
+                </span>
+                <span v-else>{{item}}</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in attrData" :key="index">
+              <td>{{item.name}}</td>
+              <td v-html="item.dec"></td>
+              <td>{{item.type}}</td>
+              <td>{{item.value}}</td>
+              <td v-html="item.optional"></td>
+              <td>{{item.data || '无'}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <div class="site-content-des" v-if="eventData && eventData.length">
-      注：事件统一用<code class="code">.trigger('EVENT_NAME', callback)</code>的方式来调用触发
+    <div v-if="eventData && eventData.length">
+      <div class="site-content-subtitle">
+        事件
+      </div>
+      <div class="site-content-des">
+        注：事件统一用<code class="code">.trigger('EVENT_NAME', callback)</code>的方式来调用触发
+      </div>
+      <div class="cd-table-responsive">
+        <table class="cd-table">
+          <thead>
+            <tr>
+              <th v-for="(item, index) in eventThead" :key="index">{{item}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in eventData" :key="index">
+              <td>{{item.name}}</td>
+              <td>{{item.dec}}</td>
+              <td>{{item.callback}}</td>
+              <td v-html="item.args"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
 
-    <div class="cd-table-responsive" v-if="eventData && eventData.length">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th v-for="(item, index) in eventThead" :key="index">{{item}}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(item, index) in eventData" :key="index">
-            <td>{{item.name}}</td>
-            <td>{{item.dec}}</td>
-            <td>{{item.callback}}</td>
-            <td v-html="item.args"></td>
-          </tr>
-        </tbody>
-      </table>
+    <div v-if="hookData && hookData.length">
+      <div class="site-content-subtitle">
+        钩子方法
+      </div>
+      <div class="site-content-des">
+        注：钩子方法统一用<code class="code">.on('HOOK_NAME', callback)</code>的方式来书写
+      </div>
+      <div class="cd-table-responsive">
+        <table class="cd-table">
+          <thead>
+            <tr>
+              <th v-for="(item, index) in hookThead" :key="index">{{item}}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="(item, index) in hookData" :key="index">
+              <td>{{item.name}}</td>
+              <td>{{item.dec}}</td>
+              <td>{{item.callback}}</td>
+              <td v-html="item.args"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
-
-    <div class="site-content-subtitle" v-if="hookData && hookData.length">
-      钩子方法
-    </div>
-
-    <div class="site-content-des" v-if="hookData && hookData.length">
-      注：钩子方法统一用<code class="code">.on('HOOK_NAME', callback)</code>的方式来书写
-    </div>
-
-    <div class="cd-table-responsive" v-if="hookData && hookData.length">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th v-for="(item, index) in hookThead" :key="index">{{item}}</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr v-for="(item, index) in hookData" :key="index">
-            <td>{{item.name}}</td>
-            <td>{{item.dec}}</td>
-            <td>{{item.callback}}</td>
-            <td v-html="item.args"></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
   </div>
 </template>
 

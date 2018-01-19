@@ -40,53 +40,55 @@
         </x-panel>
       </div>
     </div>
-    <div class="site-content-subtitle">API</div>
-    <pre v-highlightjs><code class="js">
-      {{ code.select_api }}
-    </code></pre>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>类型</th>
-            <th>默认值</th>
-            <th>可选值</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>el</td>
-            <td>要绑定的Dom元素</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>type</td>
-            <td>类型</td>
-            <td>String</td>
-            <td>single</td>
-            <td>single、multi</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <x-api-table 
+      :code="code.select_api" 
+      :attrData="attrData" 
+      :hookData="hookData">
+    </x-api-table>
   </div>
 </template>
 
 <script>
 import * as code from './select';
 import XPanel from '@/components/Panel';
+import XApiTable from '@/components/ApiTable';
+
+const attrData = [
+  {
+    name: 'el',
+    dec: '要绑定的Dom元素',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'type',
+    dec: '选择器的类型',
+    type: 'String',
+    value: 'single',
+    optional: '<code>single</code> <code>multi</code>'
+  }
+];
+
+const hookData = [
+  {
+    name: 'change',
+    dec: '修改选项后触发的钩子',
+    callback: '--',
+    args: 'args1: value，选择器选中的值'
+  }
+];
 
 export default {
   components: {
-    XPanel
+    XPanel,
+    XApiTable
   },
   data() {
     return {
       code,
+      attrData,
+      hookData
     }
   },
   created() {
@@ -95,12 +97,16 @@ export default {
   mounted() {
     cd.select({
       el: '#select-single',
+    }).on('change', (value) => {
+      console.log('single', value);
     });
 
     cd.select({
       el: '#select-multi',
       type: 'multi'
-    })
+    }).on('change', (value) => {
+      console.log('multi', value);
+    });
   },
   methods: {
   }
