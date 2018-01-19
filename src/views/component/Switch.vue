@@ -40,54 +40,67 @@
         </x-panel>
       </div>
     </div>
-    <div class="site-content-subtitle">API</div>
-    <pre v-highlightjs><code class="js">
-      {{ code.switch_api }}
-    </code></pre>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>类型</th>
-            <th>默认值</th>
-            <th>可选值</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>el</td>
-            <td>要绑定的Dom元素（第一个Object参数中）</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>callback</td>
-            <td>点击后的回调函数（第二个参数）</td>
-            <td>Function</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <x-api-table 
+      :code="code.switch_api" 
+      :dataApiData="dataApiData" 
+      :attrData="attrData" 
+      :hookData="hookData">
+    </x-api-table>
   </div>
 </template>
 
 <script>
 import * as code from './switch';
 import XPanel from '@/components/Panel';
+import XApiTable from '@/components/ApiTable';
+
+const dataApiData = [
+  {
+    name: 'data-toggle',
+    dec: '触发JS的属性',
+    type: 'String',
+    value: 'cd-switch'
+  }
+];
+
+const attrData = [
+  {
+    name: 'el',
+    dec: '要绑定的Dom元素',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+];
+
+const hookData = [
+  {
+    name: 'change',
+    dec: '修改后触发的钩子',
+    callback: '--',
+    args: 'args1: value，选中的值'
+  }
+];
 
 export default {
   components: {
-    XPanel
+    XPanel,
+    XApiTable
   },
   data() {
     return {
       code,
+      dataApiData,
+      attrData,
+      hookData
     }
+  },
+  mounted() {
+    cd.onoff({
+  el: '#switch'
+}).on('change', (value) => {
+  console.log('switch', value);
+})
   },
   methods: {
   }
