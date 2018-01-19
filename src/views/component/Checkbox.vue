@@ -90,10 +90,10 @@ const attrData = [
 
 const hookData = [
   {
-    name: 'click',
-    dec: '点击后触发的钩子',
+    name: 'change',
+    dec: '修改后触发的钩子',
     callback: '--',
-    args: 'args1: $item，被点击元素的jquery对象'
+    args: 'args1: value，选中的值'
   }
 ];
 

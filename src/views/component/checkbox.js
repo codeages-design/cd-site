@@ -38,7 +38,7 @@ export const checkbox_disabled = `
 export const checkbox_api = `
 cd.checkbox({
   el: '#cd-checkbox',
-}).on('click', ($item) => {
+}).on('change', (value) => {
   console.log('点击后触发');
 });
 `;
