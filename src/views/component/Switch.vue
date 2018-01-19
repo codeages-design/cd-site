@@ -96,11 +96,7 @@ export default {
     }
   },
   mounted() {
-    cd.onoff({
-  el: '#switch'
-}).on('change', (value) => {
-  console.log('switch', value);
-})
+    
   },
   methods: {
   }
