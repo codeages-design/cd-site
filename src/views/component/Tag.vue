@@ -66,7 +66,7 @@ const hookData = [
     name: 'close',
     dec: '关闭tag后触发的钩子',
     callback: '--',
-    args: 'args1: $close，关闭元素的jquery对象<br>args2: $tag，被绑定的Dom元素的jquery对象'
+    args: 'args1: $tag，被绑定的Dom元素的jquery对象'
   }
 ];
 

@@ -21,7 +21,7 @@ export const tag_color = `
 export const tag_api = `
 cd.tag({
   el: '#cd-tag',
-}).on('close', ($close, $tag) => {
-  console.log('tag', $close, $tag);
+}).on('close', ($tag) => {
+  console.log('tag', $tag);
 })
 `;
