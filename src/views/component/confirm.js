@@ -5,11 +5,9 @@ cd.confirm({
   okText: '确定',
   cancelText: '取消',
   className: '',
-  ok(event, $confirm) {
-    console.log('点击确定按钮后的回调函数')
-  },
-  close(event) {
-    console.log('点击取消按钮后的回调函数')
-  }
+}).on('ok', () => {
+  console.log('点击确定按钮后的回调函数');
+}).on('cancel', () => {
+  console.log('点击取消按钮后的回调函数');
 })
 `;

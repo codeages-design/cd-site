@@ -12,94 +12,89 @@
         </code></pre>
       </div>
       <div class="cd-mb16" slot="style">
-        <button class="cd-btn cd-btn-primary" id="cofirm-btn" @click="onConfirm">点击触发</button>
+        <button class="cd-btn cd-btn-ghost-default" id="cofirm-btn" @click="onConfirm">点击触发</button>
       </div>
       <div class="cd-text-xs" slot="dec">
         描述
       </div>
     </x-panel>
-    <div class="site-content-subtitle">API</div>
-    <pre v-highlightjs><code class="js">
-      {{ code.confirm_api }}
-    </code></pre>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>类型</th>
-            <th>默认值</th>
-            <th>可选值</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>className</td>
-            <td>自定义组件的Class</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>title</td>
-            <td>标题</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>content</td>
-            <td>主体内容</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>okText</td>
-            <td>确定按钮的文案</td>
-            <td>String</td>
-            <td>Confirm</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>cancelText</td>
-            <td>取消按钮的文案</td>
-            <td>String</td>
-            <td>Cancel</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>ok</td>
-            <td>点击确定后的回调函数</td>
-            <td>Function</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>cancel</td>
-            <td>点击取消后的回调函数</td>
-            <td>Function</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+
+    <x-api-table 
+      :code="code.confirm_api" 
+      :attrData="attrData"
+      :hookData="hookData">
+    </x-api-table>
   </div>
 </template>
 
 <script>
 import * as code from './confirm';
 import XPanel from '@/components/Panel';
+import XApiTable from '@/components/ApiTable';
+
+const attrData = [
+  {
+    name: 'title',
+    dec: '标题',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'content',
+    dec: '主体内容',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'okText',
+    dec: '确定按钮的文本',
+    type: 'String',
+    value: 'Confirm',
+    optional: '--'
+  },
+  {
+    name: 'cancelText',
+    dec: '取消按钮的文本',
+    type: 'String',
+    value: 'Cancel',
+    optional: '--'
+  },
+  {
+    name: 'className',
+    dec: '自定义组件的Class',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+];
+
+const hookData = [
+  {
+    name: 'ok',
+    dec: '确定后触发的钩子',
+    callback: '--',
+    args: '无'
+  },
+  {
+    name: 'cancel',
+    dec: '取消后触发的钩子',
+    callback: '--',
+    args: '无'
+  },
+];
 
 export default {
   components: {
-    XPanel
+    XPanel,
+    XApiTable
   },
   data() {
     return {
       code,
+      attrData,
+      hookData
     }
   },
   methods: {
@@ -109,13 +104,11 @@ export default {
         content: '确定要这么做吗？',
         okText: '确定',
         cancelText: '取消',
-        confirmClass: '',
-        ok(event, $confirm) {
-          console.log('点击确定按钮后的回调函数')
-        },
-        close(event) {
-          console.log('点击取消按钮后的回调函数')
-        }
+        className: '',
+      }).on('ok', () => {
+        console.log('点击确定按钮后的回调函数');
+      }).on('cancel', () => {
+        console.log('点击取消按钮后的回调函数');
       })
     }
   },
