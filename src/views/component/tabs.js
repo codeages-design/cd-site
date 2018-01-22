@@ -27,24 +27,22 @@ export const tabs_switch = `
 `;
 
 export const tabs_ajax = `
-<ul class="cd-tabs">
-  <li class="active"><a href="javascript:;" class="js-tabs" data-url="/demo/tabs/1">标签页一</a></li>
-  <li><a href="javascript:;" class="js-tabs" data-url="/demo/tabs/2">标签页二</a></li>
-  <li><a href="javascript:;" class="js-tabs" data-url="/demo/tabs/3">标签页三</a></li>
+<ul class="cd-tabs" id="cd-tabs">
+  <li class="active"><a href="javascript:;" data-url="/demo/tabs/1">标签页一</a></li>
+  <li><a href="javascript:;" data-url="/demo/tabs/2">标签页二</a></li>
+  <li><a href="javascript:;" data-url="/demo/tabs/3">标签页三</a></li>
 </ul>
 <div id="tabs-panel"></div>
 `;
 
 export const tabs_api = `
 cd.tabs({
-  el: '.js-tabs',
+  el: '#cd-tabs a',
   target: '#tabs-panel',
   url: '/demo/tabs/1',
-  success(res) {
-    $('#tabs-panel').html(JSON.parse(res).message);
-  },
-  error(res) {
-    console.log('这是失败的回调函数')
-  }
+}).on('success', (res) => {
+  console.log('success', res);
+}).on('error', (res) => {
+  console.log('error', res);
 })
 `;

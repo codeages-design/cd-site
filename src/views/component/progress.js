@@ -7,6 +7,7 @@ export const progress_base = `
   </div>
   <div class="progress-text">50%</div>
 </div>
+
 <div class="cd-progress cd-progress-success">
   <div class="progress-bar">
     <div class="progress-outer">
@@ -15,6 +16,7 @@ export const progress_base = `
   </div>
   <div class="progress-text"><i class="cd-icon cd-icon-success cd-text-sm cd-text-success"></i></div>
 </div>
+
 <div class="cd-progress cd-progress-danger">
   <div class="progress-bar">
     <div class="progress-outer">

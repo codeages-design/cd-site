@@ -52,91 +52,107 @@
         </x-panel>
       </div>
     </div>
-    <div class="site-content-subtitle">API</div>
-    <pre v-highlightjs><code class="js">
-      {{ code.tabs_api }}
-    </code></pre>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>类型</th>
-            <th>默认值</th>
-            <th>可选值</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>el</td>
-            <td>要绑定的元素</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>target</td>
-            <td>要存放的内容元素</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>url</td>
-            <td>初始化要请求的路由</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>success</td>
-            <td>请求数据成功回调函数</td>
-            <td>Function</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>error</td>
-            <td>请求数据失败回调函数</td>
-            <td>Function</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <x-api-table 
+      :code="code.tabs_api" 
+      :dataApiData="dataApiData" 
+      :attrData="attrData" 
+      :hookData="hookData">
+    </x-api-table>
   </div>
 </template>
 
 <script>
 import * as code from './tabs';
 import XPanel from '@/components/Panel';
+import XApiTable from '@/components/ApiTable';
 import '@/mock';
+
+const dataApiData = [
+  {
+    name: 'data-toggle',
+    dec: '触发JS的属性',
+    type: 'String',
+    value: 'cd-tabs'
+  },
+  {
+    name: 'data-target',
+    dec: '对应的dom元素',
+    type: 'String',
+    value: '--'
+  }
+];
+
+const attrData = [
+  {
+    name: 'el',
+    dec: '要绑定的Dom元素',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'url',
+    dec: 'ajax请求的路由',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'isLoading',
+    dec: 'ajax时是否添加loading效果',
+    type: 'Boolean',
+    value: 'false',
+    optional: '--'
+  },
+  {
+    name: 'target',
+    dec: 'ajax内容存放的目标Dom元素',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  }
+];
+
+const hookData = [
+  {
+    name: 'success',
+    dec: 'ajax成功后触发的钩子',
+    callback: '--',
+    args: 'args1: response, ajax返回的数据'
+  },
+  {
+    name: 'error',
+    dec: 'ajax失败后触发的钩子',
+    callback: '--',
+    args: 'args1: response, ajax返回的错误信息'
+  }
+];
 
 export default {
   components: {
-    XPanel
+    XPanel,
+    XApiTable
   },
   data() {
     return {
       code,
+      dataApiData,
+      attrData,
+      hookData
     }
   },
   methods: {
   },
   mounted() {
     cd.tabs({
-      el: '.js-tabs',
+      el: '#cd-tabs a',
       target: '#tabs-panel',
       url: '/demo/tabs/1',
-      success(res) {
-        let jsonRes = JSON.parse(res);
-        $('#tabs-panel').html(jsonRes.message + jsonRes.id);
-      },
-      error(res) {
-
-      }
+    }).on('success', (res) => {
+      let jsonRes = JSON.parse(res);
+      $('#tabs-panel').html(jsonRes.message + jsonRes.id);
+    }).on('error', (res) => {
+      console.log('error', res);
     })
   }
 }
