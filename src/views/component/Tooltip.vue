@@ -62,93 +62,85 @@
         </x-panel>
       </div>
     </div>
-    <div class="site-content-subtitle">API</div>
-    <pre v-highlightjs><code class="js">
-      {{ code.tooltip_api }}
-    </code></pre>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>类型</th>
-            <th>默认值</th>
-            <th>可选值</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>el</td>
-            <td>要绑定的Dom元素</td>
-            <td>String</td>
-            <td>'[data-toggle="cd-tooltip"]'</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>trigger</td>
-            <td>触发方式；可在元素上添加<code>data-trigger</code>来代替</td>
-            <td>String</td>
-            <td>hover</td>
-            <td>hover、click</td>
-          </tr>
-          <tr>
-            <td>title</td>
-            <td>tooltip里的内容，可在元素上添加<code>data-title</code>来代替</td>
-            <td>String | Html</td>
-            <td>Plase add title</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>placement</td>
-            <td>出现方位,当位置不够时，会出现在合适的位置</td>
-            <td>String</td>
-            <td>top</td>
-            <td><code>top</code><code>bottom</code><code>left</code><code>right</code><code>topLeft</code><code>topRight</code><code>bottomLeft</code>
-              <br>
-              <code>bottomRight</code><code>leftTop</code><code>leftBottom</code><code>rightTop</code><code>rightBottom</code></td>
-          </tr>
-          <tr>
-            <td>offset</td>
-            <td>偏移量，tooltip距离元素的距离</td>
-            <td>Number</td>
-            <td>10</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>delay</td>
-            <td>延迟消失时间</td>
-            <td>Number</td>
-            <td>0</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>container</td>
-            <td>
-              tooltip的父容器，可在元素上添加<code>data-container</code>来代替, <br>
-              如果值为<code>false</code>，则父容器为该元素
-            </td>
-            <td>false | String</td>
-            <td>docment.body</td>
-            <td>--</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <x-api-table 
+      :code="code.tooltip_api" 
+      :attrData="attrData">
+    </x-api-table>
   </div>
 </template>
 
 <script>
 import * as code from './tooltip';
 import XPanel from '@/components/Panel';
+import XApiTable from '@/components/ApiTable';
+
+const attrData = [
+  {
+    name: 'el',
+    dec: '要绑定的Dom元素',
+    type: 'String',
+    value: '[data-toggle="cd-tooltip"]',
+    optional: '--'
+  },
+  {
+    name: 'trigger',
+    dec: '触发方式',
+    type: 'String',
+    value: 'hover',
+    optional: '<code>hover</code> <code>click</code>',
+    data: 'data-trigger'
+  },
+  {
+    name: 'title',
+    dec: 'tooltip内容',
+    type: 'String|Html',
+    value: '无',
+    optional: '--',
+    data: 'data-title'
+  },
+  {
+    name: 'placement',
+    dec: '出现方位,当位置不够时，会出现在合适的位置',
+    type: 'String',
+    value: 'top',
+    optional: `<code>top</code> <code>bottom</code> <code>left</code> <code>right</code> <code>topLeft</code> <code>topRight</code> <code>bottomLeft</code>
+      <br><code>bottomRight</code> <code>leftTop</code> <code>leftBottom</code> <code>rightTop</code> <code>rightBottom</code>`,
+    data: 'data-placement'
+  },
+  {
+    name: 'offset',
+    dec: '偏移量，tooltip出现位置与触发元素之间的距离',
+    type: 'Number',
+    value: '10',
+    optional: '--'
+  },
+  {
+    name: 'delay',
+    dec: '延迟，多少秒后出现tooltip',
+    type: 'Number',
+    value: '0',
+    optional: '--'
+  },
+  {
+    name: 'container',
+    dec: `tooltip的父容器，可在元素上添加<code>data-container</code>来代替, <br>
+      如果值为<code>false</code>，则父容器为该元素`,
+    type: 'false | String',
+    value: 'docment.body',
+    optional: '--'
+  },
+
+];
 
 export default {
   components: {
-    XPanel
+    XPanel,
+    XApiTable
   },
   data() {
     return {
       code,
+      attrData
     }
   },
   mounted() {
