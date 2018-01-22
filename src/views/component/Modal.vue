@@ -24,83 +24,100 @@
         </x-panel>
       </div>
     </div>
-    <div class="site-content-subtitle">API</div>
-    <pre v-highlightjs><code class="js">
-      {{ code.modal_api }}
-    </code></pre>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>类型</th>
-            <th>默认值</th>
-            <th>可选值</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>el</td>
-            <td>要绑定的Dom元素</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>ajax</td>
-            <td>是否是ajax加载数据</td>
-            <td>Boolean</td>
-            <td>false</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>url</td>
-            <td>如果是ajax加载数据，填充url</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>cancel</td>
-            <td>关闭后的回调函数</td>
-            <td>Function</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>ok</td>
-            <td>确定后的回调函数</td>
-            <td>Function</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <x-api-table 
+      :code="code.modal_api" 
+      :attrData="attrData"
+      :eventData="eventData"
+      :hookData="hookData">
+    </x-api-table>
   </div>
 </template>
 
 <script>
 import * as code from './modal';
 import XPanel from '@/components/Panel';
+import XApiTable from '@/components/ApiTable';
+
+const attrData = [
+  {
+    name: 'el',
+    dec: '要绑定的Dom元素',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'ajax',
+    dec: '是否用ajax渲染模态框内容',
+    type: 'Boolean',
+    value: 'false',
+    optional: '--'
+  },
+  {
+    name: 'url',
+    dec: '如果用ajax渲染模态框内容，则添加请求的路由',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'maskClosable',
+    dec: '是否可以通过点击遮罩关闭模态框',
+    type: 'Boolean',
+    value: 'true',
+    optional: '--'
+  },
+];
+
+const hookData = [
+  {
+    name: 'ok',
+    dec: '点击确定按钮后触发的钩子',
+    callback: '--',
+    args: 'args1: $modal，当前模态框的jquery对象，args2: this，当前组件的上下文'
+  },
+  {
+    name: 'cancel',
+    dec: '点击取消按钮后触发的钩子',
+    callback: '--',
+    args: 'args1: $modal，当前模态框的jquery对象，args2: this，当前组件的上下文'
+  },
+];
+
+const eventData = [
+  {
+    name: 'close',
+    dec: '关闭模态框',
+    callback: '无',
+    args: '无',
+  }
+]
 
 export default {
   components: {
     XPanel,
+    XApiTable
   },
   data() {
     return {
       code,
+      attrData,
+      hookData,
+      eventData
     }
   },
   methods: {
     modal() {
       cd.modal({
         el: '#cd-modal',
-        ok(event, $modal, modal) {
-          modal.rmModal();
-        }
+        ajax: false,
+        url: '',
+        maskClosable: true,
+      }).on('ok', ($modal, modal) => {
+        console.log('确定后的回调');
+        modal.trigger('close');
+      }).on('cancel', ($modal, modal) => {
+        console.log('关闭后的回调');
       })
     }
   }

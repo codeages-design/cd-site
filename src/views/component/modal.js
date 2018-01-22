@@ -30,11 +30,10 @@ cd.modal({
   ajax: false,
   url: '',
   maskClosable: true,
-  cancel(event, $modal, modal) {
-    console.log('关闭后的回调')
-  },
-  ok(event, $modal, modal) {
-    modal.rmModal();
-  }
+}).on('ok', ($modal, modal) => {
+  console.log('确定后的回调');
+  modal.trigger('close');
+}).on('cancel', ($modal, modal) => {
+  console.log('关闭后的回调');
 })
 `;
