@@ -41,7 +41,7 @@ cd.message({
 });
 `;
 
-export const message_full = `
+export const message_api = `
 cd.message({
   type: 'danger',
   message: '这是信息主体。',
@@ -50,7 +50,7 @@ cd.message({
   offset: '80',
   action: {
     title: '',
-    href: '',
+    url: '',
     template: ''
   },
   animate: {

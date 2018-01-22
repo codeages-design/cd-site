@@ -63,132 +63,133 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style">
-            <button class="cd-btn cd-btn-ghost-default" @click="onDelay">修改延迟</button>
+            <button class="cd-btn cd-btn-ghost-default" @click="onDelay">延迟10秒</button>
           </div>
           <div class="cd-text-xs" slot="dec">
           </div>
         </x-panel>
       </div>
     </div>
-    <div class="site-content-subtitle">
-      API
-    </div>
-    <pre v-highlightjs><code class="js">
-      {{ code.message_full }}
-    </code></pre>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>类型</th>
-            <th>默认值</th>
-            <th>可选值</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>type</td>
-            <td>类型</td>
-            <td>String</td>
-            <td>info</td>
-            <td><code>info</code> <code>success</code> <code>warning</code> <code>danger</code></td>
-          </tr>
-          <tr>
-            <td>message</td>
-            <td>主体内容</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>delay</td>
-            <td>延迟，单位（豪秒）</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>z_index</td>
-            <td>z轴层级</td>
-            <td>String</td>
-            <td>9999</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>offset</td>
-            <td>偏移，单位（px）</td>
-            <td>String</td>
-            <td>80</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>action</td>
-            <td>操作，包含 title、url、template 3个属性</td>
-            <td>Object</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>action.title</td>
-            <td>操作标题</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>action.url</td>
-            <td>操作链接</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>action.template</td>
-            <td>操作自定义模版，支持html片段</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>animate</td>
-            <td>动画效果，包含入场动画及退场动画</td>
-            <td>Object</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>animate.enter</td>
-            <td>入场动画</td>
-            <td>String</td>
-            <td>cd-animated cd-fadeInDownSmall</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>animate.exit</td>
-            <td>退场动画</td>
-            <td>String</td>
-            <td>cd-animated cd-fadeOutUp</td>
-            <td>--</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <x-api-table 
+      :code="code.message_api" 
+      :attrData="attrData" 
+      :hookData="hookData">
+    </x-api-table>
   </div>
 </template>
 
 <script>
 import * as code from './message';
 import XPanel from '@/components/Panel';
+import XApiTable from '@/components/ApiTable';
+
+const attrData = [
+  {
+    name: 'type',
+    dec: '信息类型',
+    type: 'String',
+    value: '无',
+    optional: '<code>danger</code> <code>success</code> <code>info</code> <code>warning</code>'
+  },
+  {
+    name: 'message',
+    dec: '信息主体',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'action',
+    dec: `操作，属数有：<code>title</code> <code>url</code> <code>template</code>；
+      可通过<code>template</code>自定义html操作模版，也可以通过<code>title</code> <code>url</code>添加要链接文本及链接地址`,
+    type: 'Object',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'action.title',
+    dec: `链接文本`,
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'action.url',
+    dec: `链接地址`,
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'action.template',
+    dec: `自定义模版`,
+    type: 'String|Html',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'delay',
+    dec: '延迟，默认延迟3秒后关闭',
+    type: 'Number',
+    value: '3000',
+    optional: '--'
+  },
+  {
+    name: 'offset',
+    dec: '偏移，信息框出现的位置距离顶部的距离',
+    type: 'Number',
+    value: '80',
+    optional: '--'
+  },
+  {
+    name: 'zIndex',
+    dec: 'z轴层级',
+    type: 'Number',
+    value: '9999',
+    optional: '--'
+  },
+  { 
+    name: 'animate',
+    dec: '动画',
+    type: 'Object',
+    value: '',
+    optional: '--'
+  },
+  { 
+    name: 'animate.enter',
+    dec: '入场动画',
+    type: 'String',
+    value: '<code>cd-animated cd-fadeInDownSmall</code>',
+    optional: '--'
+  },
+  { 
+    name: 'animate.exit',
+    dec: '退场动画',
+    type: 'String',
+    value: '<code>cd-animated cd-fadeOutUp</code>',
+    optional: '--'
+  }
+];
+
+const hookData = [
+  {
+    name: 'close',
+    dec: '关闭后触发的钩子',
+    callback: '--',
+    args: '无'
+  }
+];
 
 export default {
   components: {
-    XPanel
+    XPanel,
+    XApiTable
   },
   data() {
     return {
       code,
+      attrData,
+      hookData
     }
   },
   methods: {
@@ -229,7 +230,7 @@ export default {
     onDelay() {
       cd.message({
         type: 'info',
-        message: '这是普通信息。',
+        message: '这是延迟10秒的信息。',
         delay: '10000'
       });
     }
