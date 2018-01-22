@@ -6,27 +6,27 @@ export const alert_color = `
 `;
 
 export const alert_close = `
-<div class="cd-alert cd-alert-success">
+<div class="cd-alert cd-alert-success js-cd-alert">
   可关闭的成功提示框。
-  <button type="button" class="close" data-toggle="cd-alert-close">
+  <button type="button" class="close">
     <i class="cd-icon cd-icon-close"></i>
   </button>
 </div>
-<div class="cd-alert cd-alert-danger">
+<div class="cd-alert cd-alert-danger js-cd-alert">
   可关闭的错误提示框。
-  <button type="button" class="close" data-toggle="cd-alert-close">
+  <button type="button" class="close">
     <i class="cd-icon cd-icon-close"></i>
   </button>
 </div>
-<div class="cd-alert cd-alert-warning">
+<div class="cd-alert cd-alert-warning js-cd-alert">
   可关闭的警告提示框。
-  <button type="button" class="close" data-toggle="cd-alert-close">
+  <button type="button" class="close">
     <i class="cd-icon cd-icon-close"></i>
   </button>
 </div>
-<div class="cd-alert cd-alert-info">
+<div class="cd-alert cd-alert-info js-cd-alert">
   可关闭的信息提示框。
-  <button type="button" class="close" data-toggle="cd-alert-close">
+  <button type="button" class="close">
     <i class="cd-icon cd-icon-close"></i>
   </button>
 </div>
@@ -34,9 +34,8 @@ export const alert_close = `
 
 export const alert_api = `
 cd.alert({
-  closeEl: '#alert-close',
-  close() {
-    console.log('这是关闭后的回调函数');
-  }
+  el: '#alert',
+}).on('close', ($alert) => {
+  console.log('这是关闭后的回调函数');
 })
 `;
