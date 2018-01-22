@@ -1,6 +1,6 @@
 export const steps_base = `
 <ul class="cd-steps cd-steps-3">
-  <li class="cd-steps-item done  hidden-xs">
+  <li class="cd-steps-item done">
     <div class="cd-steps-tail"><i></i></div>
     <div class="cd-steps-step">
       <div class="step-wrap">
@@ -24,7 +24,7 @@ export const steps_base = `
       </div>
     </div>
   </li>
-  <li class="cd-steps-item  hidden-xs">
+  <li class="cd-steps-item">
     <div class="cd-steps-tail"><i></i></div>
     <div class="cd-steps-step">
       <div class="step-wrap">

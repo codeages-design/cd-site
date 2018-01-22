@@ -1,5 +1,5 @@
 export const dropdown_base = `
-<div class="cd-dropdown" data-toggle="cd-dropdown">
+<div class="cd-dropdown" data-toggle="cd-dropdown" data-trigger="hover">
   <a href="javascript:;" class="cd-link-primary">
     悬浮下拉<i class="cd-icon cd-icon-arrow-down"></i>
   </a>
@@ -45,7 +45,7 @@ export const dropdown_placement = `
 `;
 
 export const dropdown_click = `
-<div class="cd-dropdown" data-toggle="cd-dropdown" data-trigger="click">
+<div class="cd-dropdown" data-toggle="cd-dropdown">
   <a href="javascript:;" class="cd-link-primary">
     点击下拉<i class="cd-icon cd-icon-arrow-down"></i>
   </a>
@@ -62,13 +62,11 @@ export const dropdown_click = `
 
 export const dropdown_api =  `
 cd.dropdown({
-  el: '#dropdown',
+  el: '#cd-dropdown',
   trigger: 'click',
-  hide() {
-    console.log('下拉收起后的回调');
-  },
-  show() {
-    console.log('下拉展开后的回调');
-  }
+}).on('hide', () => {
+  console.log('下拉收起后的回调');
+}).on('show', () => {
+  console.log('下拉展开后的回调');
 })
 `;
