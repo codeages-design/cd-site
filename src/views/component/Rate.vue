@@ -38,68 +38,63 @@
         </x-panel>
       </div>
     </div>
-    <div class="site-content-subtitle">API</div>
-    <pre v-highlightjs><code class="js">
-      {{ code.rate_api }}
-    </code></pre>
-    <div class="cd-table-responsive">
-      <table class="cd-table">
-        <thead>
-          <tr>
-            <th>属性</th>
-            <th>说明</th>
-            <th>类型</th>
-            <th>默认值</th>
-            <th>可选值</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>el</td>
-            <td>要绑定的Dom元素</td>
-            <td>String</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>score</td>
-            <td>初始化评分</td>
-            <td>Number</td>
-            <td>0</td>
-            <td>--</td>
-          </tr>
-          <tr>
-            <td>callback</td>
-            <td>点击后的回调函数（第二个参数）</td>
-            <td>Function</td>
-            <td>无</td>
-            <td>--</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
+    <x-api-table 
+      :code="code.rate_api" 
+      :attrData="attrData" 
+      :hookData="hookData">
+    </x-api-table>
   </div>
 </template>
 
 <script>
 import * as code from './rate';
 import XPanel from '@/components/Panel';
+import XApiTable from '@/components/ApiTable';
+
+const attrData = [
+  {
+    name: 'el',
+    dec: '要绑定的Dom元素',
+    type: 'String',
+    value: '无',
+    optional: '--'
+  },
+  {
+    name: 'rate',
+    dec: '初始评分',
+    type: 'Number',
+    value: '0',
+    optional: '0~5'
+  },
+];
+
+const hookData = [
+  {
+    name: 'click',
+    dec: '点击后触发的钩子',
+    callback: '--',
+    args: 'args1: score，评分值'
+  }
+];
 
 export default {
   components: {
-    XPanel
+    XPanel,
+    XApiTable
   },
   data() {
     return {
       code,
+      attrData,
+      hookData
     }
   },
   mounted() {
     cd.rate({
       el: '#cd-rate',
       score: 3,
-    }, (score) => {
-      console.log(score);
+    }).on('click', (score) => {
+      console.log('score', score);
     })
   },
   methods: {

@@ -20,7 +20,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-12">
+      <!-- <div class="col-xs-12">
         <x-panel :code="code.table_base|trim">
           <span slot="title">
             带排序和筛选
@@ -35,9 +35,9 @@
           <div class="cd-text-xs" slot="dec">
           </div>
         </x-panel>
-      </div>
+      </div> -->
     </div>
-    <div class="site-content-subtitle">API</div>
+    <!-- <div class="site-content-subtitle">API</div>
     <pre v-highlightjs><code class="js">
       {{ code.table_api }}
     </code></pre>
@@ -104,7 +104,7 @@
           </tr>
         </tbody>
       </table>
-    </div>
+    </div> -->
   </div>
 </template>
 

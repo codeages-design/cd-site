@@ -2,7 +2,7 @@
   <div>
     <div class="site-content-title">徽标数</div>
     <div class="site-content-des">
-      徽标数描述
+      
     </div>
     <div class="cd-row">
       <div class="col-xs-6">

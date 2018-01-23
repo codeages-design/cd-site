@@ -26,8 +26,8 @@ export const rate_api = `
 cd.rate({
   el: '#cd-rate',
   score: 3,
-}, (score) => {
-  console.log(score);
+}).on('click', (score) => {
+  console.log('score', score);
 })
 `;
 

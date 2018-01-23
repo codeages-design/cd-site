@@ -129,7 +129,6 @@ const attrData = [
     value: 'docment.body',
     optional: '--'
   },
-
 ];
 
 export default {

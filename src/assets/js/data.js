@@ -240,12 +240,12 @@ export const componentData = [
     text_en: 'Rate',
     name: 'component_rate'
   },
-  {
-    isItem: true,
-    text_zh: '安全性',
-    text_en: 'Security',
-    name: 'component_security'
-  },
+  // {
+  //   isItem: true,
+  //   text_zh: '安全性',
+  //   text_en: 'Security',
+  //   name: 'component_security'
+  // },
   {
     isItem: true,
     text_zh: '加载中',
