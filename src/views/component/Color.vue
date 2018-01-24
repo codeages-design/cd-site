@@ -96,7 +96,7 @@ import * as colorMix from '@/assets/js/color-mix';
 
 const baseColor = {
   primary: {
-    hex: '#43bc60'
+    hex: '#18AD3B'
   },
   info: {
     hex: '#278bf5',
@@ -108,7 +108,7 @@ const baseColor = {
     hex: '#ffa51f',
   },
   success: {
-    hex: '#43bc60'
+    hex: '#18AD3B'
   },
   neutral: {
     hex: '#808080'
