@@ -93,7 +93,7 @@ export default {
     cd.rate({
       el: '#cd-rate',
       score: 3,
-    }).on('click', (score) => {
+    }).on('change', (score) => {
       console.log('score', score);
     })
   },
