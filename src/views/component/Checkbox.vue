@@ -93,7 +93,7 @@ const hookData = [
     name: 'change',
     dec: '修改后触发的钩子',
     callback: '--',
-    args: 'args1: value，选中的值'
+    args: 'args1: event，事件对象<br>args2: value，选中的值'
   }
 ];
 
