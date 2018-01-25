@@ -3,7 +3,7 @@
     <x-header></x-header>
     <x-side-bar @sidebarToggle="sidebarToggle"></x-side-bar>
     <main class="site-main">
-      <div class="site-content" v-loading="isLoading">
+      <div class="site-content">
         <keep-alive>
           <router-view v-if="$route.meta.keepAlive">
           </router-view>
@@ -31,7 +31,6 @@ export default {
     return {
       code,
       isHideSidebar: false,
-      isLoading: false
     }
   },
   components: {
