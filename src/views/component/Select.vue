@@ -2,7 +2,7 @@
   <div>
     <div class="site-content-title">选择器</div>
     <div class="site-content-des">
-      选择器描述
+      
     </div>
     <div class="cd-row">
       <div class="col-xs-6">
@@ -72,10 +72,16 @@ const attrData = [
 
 const hookData = [
   {
+    name: 'beforeChange',
+    dec: '修改选项前触发的钩子',
+    callback: '--',
+    args: 'args1: value，选择器选中的值<br>args2: text，选择器选中的文本'
+  },
+  {
     name: 'change',
     dec: '修改选项后触发的钩子',
     callback: '--',
-    args: 'args1: value，选择器选中的值'
+    args: 'args1: value，选择器选中的值<br>args2: text，选择器选中的文本'
   }
 ];
 
@@ -97,15 +103,19 @@ export default {
   mounted() {
     cd.select({
       el: '#select-single',
-    }).on('change', (value) => {
-      console.log('single', value);
+    }).on('beforeChange', (value, text) => {
+      console.log('beforeChange', value, text);
+    }).on('change', (value, text) => {
+      console.log('change', value, text);
     });
 
     cd.select({
       el: '#select-multi',
       type: 'multi'
-    }).on('change', (value) => {
-      console.log('multi', value);
+    }).on('beforeChange', (value, text) => {
+      console.log('beforeChange', value, text);
+    }).on('change', (value, text) => {
+      console.log('change', value, text);
     });
   },
   methods: {
