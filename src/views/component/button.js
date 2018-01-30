@@ -27,7 +27,7 @@ export const button_size = `
 
 export const button_api = `
 const btn = cd.btn({
-  el: event.currentTarget,
+  el: '#cd-btn',
   loadingText: '加载中...'
 });
 

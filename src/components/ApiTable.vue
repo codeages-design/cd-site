@@ -19,7 +19,7 @@
               <td>{{item.name}}</td>
               <td v-html="item.dec"></td>
               <td>{{item.type}}</td>
-              <td>{{item.value}}</td>
+              <td v-html="item.value"></td>
             </tr>
           </tbody>
         </table>

@@ -124,10 +124,11 @@ const attrData = [
   },
   {
     name: 'loadingText',
-    dec: 'loading时显示的文本，DATA属性<code>data-loading-text</code>',
+    dec: 'loading时显示的文本',
     type: 'String',
     value: 'loading...',
-    optional: '--'
+    optional: '--',
+    data: 'loading-text'
   }
 ];
 
