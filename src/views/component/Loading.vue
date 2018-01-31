@@ -2,7 +2,6 @@
   <div>
     <div class="site-content-title">加载</div>
     <div class="site-content-des">
-      加载描述
     </div>
     <div class="cd-row">
       <div class="col-xs-6">
@@ -17,7 +16,6 @@
           </div>
           <div class="cd-mb16" slot="style" v-html="code.loading_base"></div>
           <div class="cd-text-xs" slot="dec">
-            在大部分场景下，我们采用通用按钮的样式，而且在同一按钮组中，能且只能存在一个主要按钮，从而与默认按钮区分交互权重。
           </div>
         </x-panel>
       </div>

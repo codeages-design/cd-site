@@ -27,12 +27,12 @@ export const componentData = [
     text_en: 'Grid',
     name: 'component_grid'
   },
-  // {
-  //   isItem: true,
-  //   text_zh: '布局',
-  //   text_en: 'Layout',
-  //   name: 'component_layout'
-  // },
+  {
+    isItem: true,
+    text_zh: '布局',
+    text_en: 'Layout',
+    name: 'component_layout'
+  },
   {
     isItem: false,
     text: '通用 Common'
@@ -55,12 +55,6 @@ export const componentData = [
     text_en: 'Tag',
     name: 'component_tag'
   },
-  // {
-  //   isItem: true,
-  //   text_zh: '状态',
-  //   text_en: 'Status',
-  //   name: 'component_status'
-  // },
   {
     isItem: true,
     text_zh: '头像',
@@ -240,12 +234,6 @@ export const componentData = [
     text_en: 'Rate',
     name: 'component_rate'
   },
-  // {
-  //   isItem: true,
-  //   text_zh: '安全性',
-  //   text_en: 'Security',
-  //   name: 'component_security'
-  // },
   {
     isItem: true,
     text_zh: '加载中',
@@ -256,12 +244,6 @@ export const componentData = [
     isItem: false,
     text: '数据 Data'
   },
-  // {
-  //   isItem: true,
-  //   text_zh: '设置',
-  //   text_en: 'Setting',
-  //   name: 'component_setting'
-  // },
   {
     isItem: true,
     text_zh: '表格',

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="site-content-title">确认框</div>
-    <div class="site-content-des">确认框的描述</div>
+    <div class="site-content-des"></div>
     <x-panel :code="code.confirm_api|trim">
       <div slot="title">
         基础
@@ -15,7 +15,6 @@
         <button class="cd-btn cd-btn-ghost-default" id="cofirm-btn" @click="onConfirm">点击触发</button>
       </div>
       <div class="cd-text-xs" slot="dec">
-        描述
       </div>
     </x-panel>
 

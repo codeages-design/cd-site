@@ -2,7 +2,6 @@
   <div>
     <div class="site-content-title">分页</div>
     <div class="site-content-des">
-      分页描述
     </div>
     <div class="cd-row">
       <div class="col-xs-6">

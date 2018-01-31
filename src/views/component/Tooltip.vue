@@ -2,7 +2,6 @@
   <div>
     <div class="site-content-title">文字提示</div>
     <div class="site-content-des">
-      文字提示描述
     </div>
     <div class="cd-row">
       <div class="col-xs-12">
