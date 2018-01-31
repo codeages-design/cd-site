@@ -6,7 +6,7 @@
   background-color: #fff;
   padding: 0 0 0 200px;
   height: 56px;
-  .site-box-shadow();
+  .cd-box-shadow();
   z-index: 99;
 }
 
@@ -18,7 +18,7 @@
   line-height: 32px;
   padding: 12px 40px;
   width: 200px;
-  color: @site-primary;
+  color: @brand-primary;
 }
 
 .site-header__nav {
@@ -36,8 +36,8 @@
       margin: 0 32px;
       font-size: 14px;
       float: left;
-      color: @site-dark-minor;
-      .site-transition();
+      color: @cd-dark-minor;
+      .cd-transition();
       &:before {
         display: block;
         content: '';
@@ -50,15 +50,15 @@
       }
       &:hover {
         cursor: pointer;
-        color: @site-dark-major;
-        .site-transition();
+        color: @cd-dark-major;
+        .cd-transition();
       }
       &.active {
-        color: @site-dark-major;
+        color: @cd-dark-major;
         &:before {
           display: block;
           content: '';
-          background: @site-primary;
+          background: @brand-primary;
           width: 100%;
           height: 4px;
           position: absolute;

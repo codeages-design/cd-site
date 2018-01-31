@@ -80,7 +80,7 @@ export const table_sort_filter = `
         <th>
           <div class="dropdown">
             状态 
-            <a href="javascrip:;" class="cd-link-gray-primary" data-toggle="dropdown">
+            <a href="javascrip:;" class="cd-link-primary" data-toggle="dropdown">
               <i class="cd-icon cd-icon-filter cd-text-xs"></i>
             </a>
             <ul class="dropdown-menu cd-dropdown-menu cd-dropdown-menu-filter" style="display:none">

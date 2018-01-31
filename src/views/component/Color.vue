@@ -214,8 +214,8 @@ export default {
 </script>
 
 <style lang="less">
-@import '~@/assets/less/variables.less';
-@import '~@/assets/less/mixins.less';
+@import '~codeages-design/src/less/variables.less';
+@import '~codeages-design/src/less/mixins.less';
 
 .color-palette {
 	position: relative;
@@ -224,7 +224,7 @@ export default {
 	line-height: 14px;
 	color: white;
 	border-radius: 4px;
-	.site-transition;
+	.cd-transition;
 	.text-left-top {
 		position: absolute;
 		top: 16px;
@@ -244,7 +244,7 @@ export default {
 		float: right;
 		display: inline-block;
 		padding: 13px 16px;
-		.site-transition;
+		.cd-transition;
 	}
 	& div:last-child {
 		border-radius: 0 0 4px 4px;
@@ -252,14 +252,14 @@ export default {
 }
 
 .palette-color {
-  .site-transition;
+  .cd-transition;
   &:hover {
     transform: scale(1.03);
-    .site-box-shadow(24px);
-    .site-transition;
+    .cd-box-shadow(24px);
+    .cd-transition;
     .text-right {
       opacity: 1;
-      .site-transition;
+      .cd-transition;
     }
   }
 }
@@ -272,10 +272,10 @@ export default {
 	}
 }
 
-.palette-levels(@site-primary, primary);
-.palette-levels(@site-info, info);
-.palette-levels(@site-danger, danger);
-.palette-levels(@site-warning, warning);
-.palette-levels(@site-success, success);
-.palette-levels(@site-neutral, neutral);
+.palette-levels(@brand-primary, primary);
+.palette-levels(@brand-info, info);
+.palette-levels(@brand-danger, danger);
+.palette-levels(@brand-warning, warning);
+.palette-levels(@brand-success, success);
+.palette-levels(@brand-neutral, neutral);
 </style>

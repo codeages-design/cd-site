@@ -52,20 +52,21 @@ export default {
 }
 </script>
 
-<style lang="less" scoped>
-@import '~@/assets/less/mixins.less';
+<style lang="less">
+@import '~codeages-design/src/less/variables.less';
+@import '~codeages-design/src/less/mixins.less';
 
 .cd-panel {
-  .site-transition();
+  .cd-transition();
   &:hover {
-    .site-transition();
-    .site-box-shadow-z(8px);
+    .cd-transition();
+    .cd-box-shadow-z(8px);
   }
   .cd-panel-action i {
-    .site-transition();
+    .cd-transition();
     &:hover,
     &.active {
-      .site-transition();
+      .cd-transition();
       cursor: pointer;
       opacity: 0.56;
     }

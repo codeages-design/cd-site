@@ -5,7 +5,7 @@
         <img src="/static/img/logo@2x.png" srcset="/static/img/logo.png 1x, /static/img/logo@2x.png 2x" alt="">
       </router-link>
     </div>
-    <div class="site-header__nav site-clearfix">
+    <div class="site-header__nav cd-clearfix">
       <ul class="">
         <li :class="{ active: routeName === nav.name }" @click="switchNav(nav.name)" v-for="(nav, index) in navData" :key="index">
           {{nav.text}}

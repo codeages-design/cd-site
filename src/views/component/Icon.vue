@@ -13,7 +13,7 @@
     <div class="site-content-subtitle">
       图标集
     </div>
-    <ul class="icon-list site-clearfix" v-html="code.icon_list">
+    <ul class="icon-list cd-clearfix" v-html="code.icon_list">
     </ul>
   </div>
 </template>

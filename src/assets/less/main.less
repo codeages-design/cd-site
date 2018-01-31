@@ -1,5 +1,5 @@
-@import './variables.less';
-@import './mixins.less';
+@import '~codeages-design/src/less/variables.less';
+@import '~codeages-design/src/less/mixins.less';
 @import './components.less';
 @import './header.less';
 @import './sidebar.less';
@@ -66,7 +66,7 @@ pre {
 .site-content-title {
   font-size: 32px;
   font-weight: 500;
-  color: @site-primary;
+  color: @brand-primary;
   margin-bottom: 32px;
 }
 
@@ -115,11 +115,11 @@ pre {
   width: 90%;
   margin: 0 auto 48px auto;
   .site-page {
-    .site-transition;
+    .cd-transition;
     &:hover {
       cursor: pointer;
-      color: @site-primary;
-      .site-transition;
+      color: @brand-primary;
+      .cd-transition;
     }
     &.site-page-right {
       float: right;
