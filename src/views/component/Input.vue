@@ -33,8 +33,8 @@
           </div>
           <div slot="style">
             <form action="" class="cd-form-inline">
-              <div class="form-group cd-form-group cd-form-group-button">
-                <input name="q" type="text" class="form-control form-control form-control-sm" placeholder="搜索框预设内容">
+              <div class="cd-form-group cd-form-group-button">
+                <input name="q" type="text" class="cd-form-control cd-form-control-sm" placeholder="搜索框预设内容">
                 <button><i class="cd-icon cd-icon-search"></i></button>
               </div>
             </form>
