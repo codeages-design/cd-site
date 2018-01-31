@@ -51,6 +51,12 @@ export const componentData = [
   },
   {
     isItem: true,
+    text_zh: '工具类',
+    text_en: 'Tools',
+    name: 'component_tools'
+  },
+  {
+    isItem: true,
     text_zh: '标签',
     text_en: 'Tag',
     name: 'component_tag'
