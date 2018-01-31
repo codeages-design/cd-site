@@ -29,7 +29,6 @@
             
           </div>
         </x-panel>
-
         <x-panel :code="code.tools_spacing|trim">
           <span slot="title">
             间距类

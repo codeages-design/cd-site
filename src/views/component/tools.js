@@ -28,7 +28,7 @@ export const tools_spacing = `
 <div class="cd-pb8">下padding间距8px</div>
 <div class="cd-pl16">下padding间距16px</div>
 <div class="cd-pb24">下padding间距24px</div>
-<div class="cd-pv32">上下padding间距40px</div>
+<div class="cd-pv40">上下padding间距40px</div>
 `;
 
 export const tools_spacing_example = `
