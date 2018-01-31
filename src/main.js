@@ -4,11 +4,8 @@ import router from '@/router';
 import filters from '@/filters';
 import utils from '@/utils';
 import hljs from 'highlight.js';
-import 'jquery';
-import * as cd from 'codeages-design';
+import 'highlight.js/styles/googlecode.css';
 import 'codeages-design/src/less/codeages-design.less';
-
-window.cd = cd;
 
 Vue.use(filters);
 Vue.use(utils);

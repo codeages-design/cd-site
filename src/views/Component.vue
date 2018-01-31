@@ -18,12 +18,16 @@
 </template>
 
 <script>
+import 'jquery';
+import * as cd from 'codeages-design';
+
 import XSideBar from '@/views/SideBar';
 import XHeader from '@/views/Header';
 import XPager from '@/views/Pager';
-import 'highlight.js/styles/googlecode.css';
 
 import * as code from './component/modal';
+
+window.cd = cd;
 
 export default {
   name: 'layout',

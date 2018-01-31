@@ -15,7 +15,7 @@
 import { Sketch } from 'vue-color';
 
 const defaultColor = {
-  hex: '#18AD3B',
+  hex: '#18ad3b',
   rgba: {
     r: 24,
     g: 173,
