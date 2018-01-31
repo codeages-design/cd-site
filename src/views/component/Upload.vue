@@ -5,7 +5,7 @@
       
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.upload_avatar|trim">
           <span slot="title">
             上传图片
@@ -21,7 +21,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <!-- <x-panel :code="code.upload_file|trim">
           <span slot="title">
             上传文件

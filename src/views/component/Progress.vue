@@ -5,7 +5,7 @@
       进度条主要用来动态呈现数据进度，目前使用到的以线性进度条最为常见。
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.progress_base|trim">
           <span slot="title">
             基础进度条
@@ -35,7 +35,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.progress_size|trim">
           <span slot="title">
             进度条尺寸

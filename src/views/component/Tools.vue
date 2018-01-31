@@ -5,7 +5,7 @@
       
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.tools_text_color|trim">
           <span slot="title">
             文字颜色类
@@ -61,7 +61,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.tools_text_size|trim">
           <span slot="title">
             文字大小类

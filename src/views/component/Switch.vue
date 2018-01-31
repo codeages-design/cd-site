@@ -5,7 +5,7 @@
       开关组件主要用于设置场景，用来控制某个逻辑的开启与关闭，切勿采用 Radio 来代替开关的交互角色。
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.switch_base|trim">
           <span slot="title">
             基础
@@ -22,7 +22,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.switch_disabled|trim">
           <span slot="title">
             禁用

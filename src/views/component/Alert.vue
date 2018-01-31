@@ -3,7 +3,7 @@
     <div class="site-content-title">提示框</div>
     <div class="site-content-des">提示框的作用是在页面级别的交互反馈中用以给用户展示场景信息，大部分情况下，提示框都应该是固定在某个具体位置不主动消失。</div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.alert_color|trim">
           <div slot="title">
             场景提示框
@@ -19,7 +19,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.alert_close|trim">
           <div slot="title">
             可关闭提示框

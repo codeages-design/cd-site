@@ -5,7 +5,7 @@
       你可以把卡片理解成一张空白的容器，在这里你可以装入任何你想要装入的界面元素，卡片并没有严格意义上内容与容器的间距限制。
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.card_base|trim">
           <span slot="title">
             图文卡片
@@ -21,7 +21,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.card_cover|trim">
           <span slot="title">
             文字覆盖图片卡片

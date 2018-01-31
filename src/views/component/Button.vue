@@ -5,7 +5,7 @@
       按钮是用户界面中使用最为广泛且最为让用户接受和理解的通用组件之一，我们在 Codeages Design 中引入了多种不同的按钮样式以匹配不同的交互场景使用，我们不推崇使用太多的场景色来定义按钮，而是通过默认按钮和主要按钮的权重来定义操作主次。
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.button_base|trim">
           <span slot="title">
             通用按钮（Button）
@@ -50,7 +50,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.button_ghost|trim">
           <div slot="title">
             幽灵按钮（Ghost Button）

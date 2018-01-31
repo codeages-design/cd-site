@@ -5,7 +5,7 @@
       标签主要用来标注某个对象在特定维度的不同属性，这种属性应该尽量脱离场景本身，通过颜色的多样性进行区分，所以在标签组件中，我们引入了更多颜色。
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.tag_type|trim">
           <span slot="title">
             标签种类
@@ -21,7 +21,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.tag_color|trim">
           <span slot="title">
             标签颜色

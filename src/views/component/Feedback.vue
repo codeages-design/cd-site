@@ -5,7 +5,7 @@
       反馈组件大部分情况下是作为页面级的状态展示，快速告知用户某业务内容的当前状态，可以根据实际情况选择是否显示背景色。
     </div>
     <div class="cd-row">
-      <div class="col-xs-12">
+      <div class="cd-xs-24">
         <x-panel :code="code.feedback_color|trim">
           <span slot="title">
             场景反馈

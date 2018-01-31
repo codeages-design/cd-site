@@ -5,7 +5,7 @@
       
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.badge_base|trim">
           <span slot="title">
             基础

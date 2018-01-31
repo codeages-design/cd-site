@@ -5,7 +5,7 @@
       多选框主要用于多项设置逻辑的选择，一次可以选择多个值。
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.checkbox_base|trim">
           <span slot="title">
             基础
@@ -37,7 +37,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.checkbox_group|trim">
           <span slot="title">
             组合

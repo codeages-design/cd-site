@@ -5,7 +5,7 @@
       
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.message_base|trim">
           <span slot="title">
             基础
@@ -37,7 +37,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.message_type|trim">
           <span slot="title">
             信息框类型

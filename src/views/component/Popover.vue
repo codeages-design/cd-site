@@ -5,7 +5,7 @@
       
     </div>
     <div class="cd-row">
-      <div class="col-xs-12">
+      <div class="cd-xs-24">
         <x-panel :code="code.popover_base|trim">
           <span slot="title">
             基础
@@ -21,7 +21,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-12">
+      <div class="cd-xs-24">
         <x-panel :code="code.popover_type|trim">
           <span slot="title">
             触发方式
@@ -37,7 +37,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-12">
+      <div class="cd-xs-24">
         <x-panel :code="code.popover_api|trim">
           <span slot="title">
             多方位

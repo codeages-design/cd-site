@@ -5,7 +5,7 @@
       
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.breadcrumb_base|trim">
           <span slot="title">
             基础
@@ -21,7 +21,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.breadcrumb_nobg|trim">
           <span slot="title">
             无背景色

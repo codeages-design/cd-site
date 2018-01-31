@@ -5,7 +5,7 @@
       
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.dropdown_base|trim">
           <span slot="title">
            基础下拉
@@ -39,7 +39,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.dropdown_click|trim">
           <span slot="title">
             点击下拉

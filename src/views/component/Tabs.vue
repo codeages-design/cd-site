@@ -5,7 +5,7 @@
       标签页是最为常见的用来对页面级别内容作信息架构分割梳理的组件。
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.tabs_base|trim">
           <span slot="title">
             基础
@@ -35,7 +35,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.tabs_switch|trim">
           <span slot="title">
             带切换效果

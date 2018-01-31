@@ -5,7 +5,7 @@
       单选框主要用于单项设置逻辑的选择，一次只能选择一个值，切勿将单选框用于是非逻辑的切换。
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.radio_base|trim">
           <span slot="title">
             基础
@@ -35,7 +35,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.radio_disabled|trim">
           <span slot="title">
             禁用

@@ -5,7 +5,7 @@
       通过头像能够快速识别用户，并且给某些特定场景提供足够的丰富度。
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.avatar_circle|trim">
           <span slot="title">
             圆形头像
@@ -21,7 +21,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.avatar_square|trim">
           <span slot="title">
             矩形头像

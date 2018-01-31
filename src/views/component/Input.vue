@@ -5,7 +5,7 @@
       输入框是表单结构中最为基本的输入组件。
     </div>
     <div class="cd-row">
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.input_base|trim">
           <span slot="title">
             基础输入框
@@ -60,7 +60,7 @@
           </div>
         </x-panel>
       </div>
-      <div class="col-xs-6">
+      <div class="cd-xs-12">
         <x-panel :code="code.input_size|trim">
           <span slot="title">
             输入框尺寸
