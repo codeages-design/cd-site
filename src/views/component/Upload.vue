@@ -2,7 +2,6 @@
   <div>
     <div class="site-content-title">上传</div>
     <div class="site-content-des">
-      
     </div>
     <div class="cd-row">
       <div class="cd-xs-12">
@@ -43,7 +42,6 @@
       :attrData="attrData" 
       :hookData="hookData"
     ></x-api-table>
-    
   </div>
 </template>
 
