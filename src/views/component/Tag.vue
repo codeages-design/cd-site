@@ -42,7 +42,11 @@
         </x-panel>
       </div>
     </div>
-    <x-api-table :code="code.tag_api" :attrData="attrData" :hookData="hookData"></x-api-table>
+    <x-api-table 
+      :code="code.tag_api" 
+      :attrData="attrData" 
+      :hookData="hookData"
+    ></x-api-table>
   </div>
 </template>
 

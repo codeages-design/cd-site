@@ -126,12 +126,12 @@ export const componentData = [
   //   text_en: 'Calendar',
   //   name: 'component_calendar'
   // },
-  // {
-  //   isItem: true,
-  //   text_zh: '上传',
-  //   text_en: 'Upload',
-  //   name: 'component_upload'
-  // },
+  {
+    isItem: true,
+    text_zh: '上传',
+    text_en: 'Upload',
+    name: 'component_upload'
+  },
   {
     isItem: true,
     text_zh: '补全',
