@@ -25,7 +25,7 @@
         </div>
         <div class="cd-main">
           <div class="cd-main__heading">
-            <div class="cd-main__title">个人信息</div>
+            <div class="cd-main__title">标题</div>
           </div>
           <div class="cd-main__body">主体内容</div>
         </div>
