@@ -244,5 +244,15 @@
             "text_en": "Table",
             "name": "component_table"
         }
+    ],
+    "nav": [
+        {
+            "text": "首页",
+            "name": "homepage"
+        }, 
+        {
+            "text": "组件",
+            "name": "component"
+        }
     ]
 }

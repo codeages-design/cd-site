@@ -19,17 +19,7 @@
 <script>
 import ThemePicker from '@/components/ThemePicker';
 import { version } from 'codeages-design/package.json';
-
-const navData = [
-  {
-    text: '首页',
-    name: 'homepage'
-  }, 
-  {
-    text: '组件',
-    name: 'component'
-  }
-];
+import { nav } from '@/assets/data.json';
 
 export default {
   components: {
@@ -37,7 +27,7 @@ export default {
   },
   data() {
     return {
-      navData: navData,
+      navData: nav,
       routeName: null,
       chalk: window.chalk,
     }

@@ -13,7 +13,9 @@
     <div class="cd-panel-body">
       <slot name="code" v-if="isShowCode"></slot>
       <slot name="style"></slot>
-      <slot name="dec"></slot>
+      <div class="cd-text-sm">
+        <slot name="dec"></slot>
+      </div>
     </div>
   </div>
 </template>

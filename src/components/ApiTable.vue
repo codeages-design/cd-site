@@ -46,7 +46,7 @@
               <th v-for="(item, index) in attrThead" :key="index">
                 <span v-if="index == attrThead.length - 1">
                   {{item}} 
-                  <i class="cd-icon cd-icon-help-o  cd-dark-minor" data-toggle="cd-tooltip" 
+                  <i class="cd-icon cd-icon-help-o cd-text-sm  cd-dark-minor" data-toggle="cd-tooltip" 
                     data-title="DATA属性为在html上添加的data属性，可替代对应的属性">
                   </i>
                 </span>
