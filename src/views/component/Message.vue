@@ -18,7 +18,7 @@
           <div class="cd-mb16" slot="style">
             <button class="cd-btn cd-btn-ghost-default" @click="oninfoType">普通信息</button>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
         <x-panel :code="code.message_action|trim">
@@ -33,7 +33,7 @@
           <div class="cd-mb16" slot="style">
             <button class="cd-btn cd-btn-ghost-default" @click="onAction">带操作的</button>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
       </div>
@@ -50,7 +50,7 @@
           <div class="cd-mb16" slot="style">
             <button class="cd-btn cd-btn-ghost-default" @click="onSuccessType">成功信息</button><button class="cd-btn cd-btn-ghost-default" @click="onWarningType">警告信息</button><button class="cd-btn cd-btn-ghost-default" @click="onDangerType">危险信息</button>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
         <x-panel :code="code.message_delay|trim">
@@ -65,7 +65,7 @@
           <div class="cd-mb16" slot="style">
             <button class="cd-btn cd-btn-ghost-default" @click="onDelay">延迟10秒</button>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
       </div>

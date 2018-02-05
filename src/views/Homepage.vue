@@ -10,27 +10,51 @@
         </div>
         <div class="site-homepage-banner__pic" 
           :style="{transform: `perspective(${banner.perspective}px) rotateX(${banner.rotateX}deg) rotateY(${banner.rotateY}deg)`}" 
-          @mousemove="mousemove" @mouseleave="mouseleave" ref="banner">
+          @mousemove="mousemove" 
+          @mouseleave="mouseleave" 
+          ref="banner">
           <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.boss.rotateX}, ${banner.boss.rotateY}`}"
-            :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__boss" src="/static/img/homepage/boss.png" srcset="/static/img/homepage/boss@2x.png 2x" alt="">
+            :class="{active: isActive, prohibit: isProhibit}" 
+            class="site-homepage-banner__boss" 
+            src="/static/img/homepage/boss.png" 
+            srcset="/static/img/homepage/boss@2x.png 2x" alt="">
           <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.designer.rotateX}, ${banner.designer.rotateY}`}"
-            :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__designer" src="/static/img/homepage/designer.png" srcset="/static/img/homepage/designer@2x.png 2x" alt="">
+            :class="{active: isActive, prohibit: isProhibit}" 
+            class="site-homepage-banner__designer" 
+            src="/static/img/homepage/designer.png" 
+            srcset="/static/img/homepage/designer@2x.png 2x" alt="">
           <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.engineer.rotateX}, ${banner.engineer.rotateY}`}"
-            :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__engineer" src="/static/img/homepage/engineer.png" srcset="/static/img/homepage/engineer@2x.png 2x" alt="">
+            :class="{active: isActive, prohibit: isProhibit}" 
+            class="site-homepage-banner__engineer" 
+            src="/static/img/homepage/engineer.png" 
+            srcset="/static/img/homepage/engineer@2x.png 2x" alt="">
           <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.component.rotateX}, ${banner.component.rotateY}`}"
-            :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__component" src="/static/img/homepage/component.png" srcset="/static/img/homepage/component@2x.png 2x" alt="">
+            :class="{active: isActive, prohibit: isProhibit}" 
+            class="site-homepage-banner__component" 
+            src="/static/img/homepage/component.png" 
+            srcset="/static/img/homepage/component@2x.png 2x" alt="">
           <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.vase.rotateX}, ${banner.vase.rotateY}`}"
-            :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__vase" src="/static/img/homepage/vase.png" srcset="/static/img/homepage/vase@2x.png 2x" alt="">
+            :class="{active: isActive, prohibit: isProhibit}" 
+            class="site-homepage-banner__vase" 
+            src="/static/img/homepage/vase.png" 
+            srcset="/static/img/homepage/vase@2x.png 2x" alt="">
           <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.computer.rotateX}, ${banner.computer.rotateY}`}"
-            :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__computer" src="/static/img/homepage/computer.png" srcset="/static/img/homepage/computer@2x.png 2x" alt="">
+            :class="{active: isActive, prohibit: isProhibit}" 
+            class="site-homepage-banner__computer" 
+            src="/static/img/homepage/computer.png" 
+            srcset="/static/img/homepage/computer@2x.png 2x" alt="">
           <img :style="{transform: `matrix(1, 0, 0, 1, ${banner.desktop.rotateX}, ${banner.desktop.rotateY}`}"
-            :class="{active: isActive, prohibit: isProhibit}" class="site-homepage-banner__desktop" src="/static/img/homepage/desktop.png" srcset="/static/img/homepage/desktop@2x.png 2x" alt="">
+            :class="{active: isActive, prohibit: isProhibit}" 
+            class="site-homepage-banner__desktop" 
+            src="/static/img/homepage/desktop.png" 
+            srcset="/static/img/homepage/desktop@2x.png 2x" alt="">
         </div>
       </section>
       <section class="site-homepage-feature">
         <div class="site-homepage-feature__item">
           <div class="site-homepage-feature__thumb">
-            <img src="/static/img/homepage/feature_1.png" srcset="/static/img/homepage/feature_1@2x.png 2x" alt="">
+            <img src="/static/img/homepage/feature_1.png" 
+              srcset="/static/img/homepage/feature_1@2x.png 2x" alt="">
           </div>
           <div class="site-homepage-feature__title">
             帮助产品经理搭建原型
@@ -44,7 +68,8 @@
         </div>
         <div class="site-homepage-feature__item" style="margin: 0 180px;">
           <div class="site-homepage-feature__thumb">
-            <img src="/static/img/homepage/feature_2.png" srcset="/static/img/homepage/feature_2@2x.png 2x" alt="">
+            <img src="/static/img/homepage/feature_2.png" 
+              srcset="/static/img/homepage/feature_2@2x.png 2x" alt="">
           </div>
           <div class="site-homepage-feature__title">
             帮助开发复用代码和组件元素
@@ -58,7 +83,8 @@
         </div>
         <div class="site-homepage-feature__item">
           <div class="site-homepage-feature__thumb">
-            <img src="/static/img/homepage/feature_3.png" srcset="/static/img/homepage/feature_3@2x.png 2x" alt="">
+            <img src="/static/img/homepage/feature_3.png" 
+              srcset="/static/img/homepage/feature_3@2x.png 2x" alt="">
           </div>
           <div class="site-homepage-feature__title">
             帮助设计减少重复劳动力
@@ -73,10 +99,10 @@
       </section>
       <footer class="site-homepage-footer">
         <div class="cd-container">
-          <ul class="site-homepage-footer__nav">
+          <!-- <ul class="site-homepage-footer__nav">
             <li><a href="">隐私协议</a></li>
             <li><a href="">下载文档</a></li>
-          </ul>
+          </ul> -->
           <div class="site-homepage-footer__copyright">
             © 2017 Codeages Design 阔知用户体验技术团队
           </div>

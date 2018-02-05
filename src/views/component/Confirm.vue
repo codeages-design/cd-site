@@ -14,7 +14,7 @@
       <div class="cd-mb16" slot="style">
         <button class="cd-btn cd-btn-ghost-default" id="cofirm-btn" @click="onConfirm">点击触发</button>
       </div>
-      <div class="cd-text-xs" slot="dec">
+      <div class="" slot="dec">
       </div>
     </x-panel>
 

@@ -16,7 +16,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.radio_base"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             单选框同组可以根据实际业务需求设定个数，但一次只能选中一个值。
           </div>
         </x-panel>
@@ -30,7 +30,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.radio_size"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             小尺寸单选框在一些特定的对空间有较大要求的场景下可以选择性使用。
           </div>
         </x-panel>
@@ -46,7 +46,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.radio_disabled"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             在禁用单选框的情况下，不应该产生任何样式上的交互反馈。
           </div>
         </x-panel>

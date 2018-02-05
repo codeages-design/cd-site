@@ -16,7 +16,7 @@
             </code></pre>
           </div>
           <div slot="style" v-html="code.tag_type"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             标签主要包含两种类型，一种是静态标签，一种是可关闭标签，酌情使用。
           </div>
         </x-panel>
@@ -36,7 +36,7 @@
             <br>
             <span class="cd-tag cd-tag-blue">蓝色标签</span><span class="cd-tag cd-tag-purple">紫色标签</span><span class="cd-tag cd-tag-pink">粉色标签</span><span class="cd-tag cd-tag-yellow">黄色标签</span>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             标签更多的是作为一种属性使用，通过颜色的区分增加多样性，尽量不要将标签的颜色作为状态场景色来使用。
           </div>
         </x-panel>

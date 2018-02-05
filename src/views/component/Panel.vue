@@ -14,7 +14,7 @@
         </code></pre>
       </div>
       <div class="cd-mb16" slot="style" v-html="code.panel_base"></div>
-      <div class="cd-text-xs" slot="dec">
+      <div class="" slot="dec">
         面板必须涵盖头部和身体部分，头部右侧可以根据实际场景更改不同的图标，从而灵活增减交互点。  
       </div>
     </x-panel>

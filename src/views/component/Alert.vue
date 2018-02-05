@@ -14,7 +14,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.alert_color"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             我们将场景色引入了提示框中，为的是让用户通过场景色能够快速感知提示框可能带来的内容定义。通过成功提示框、错误提示框、警告提示框、信息提示框来区分不同场景下的信息提示。
           </div>
         </x-panel>
@@ -31,7 +31,7 @@
           </div>
           <div class="cd-mb16" slot="style" v-html="code.alert_close">
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             在一些偏向营销的提示框场景下，我们应该给用户以关闭“碍眼的提示信息”的权利。
           </div>
         </x-panel>

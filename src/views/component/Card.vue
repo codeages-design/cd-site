@@ -16,7 +16,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.card_base"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             卡片内容并没有规定固定的结构，通过不同的内容布局可以达到各种灵活的业务诉求。  
           </div>
         </x-panel>
@@ -32,7 +32,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.card_cover"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             卡片内容并没有规定固定的结构，通过不同的图文混排可以达到各种灵活的业务诉求。
           </div>
         </x-panel>

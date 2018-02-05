@@ -18,7 +18,7 @@
           <div class="cd-mb16" slot="style">
             <div style="width: 200px;" v-html="code.select_base"></div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
       </div>
@@ -35,7 +35,7 @@
           <div class="cd-mb16" slot="style">
             <div style="width: 200px;" v-html="code.select_multi"></div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
       </div>

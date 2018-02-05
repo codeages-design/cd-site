@@ -16,7 +16,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.avatar_circle"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             在列表等场景中，默认采用圆形头像，更为灵活轻便。
           </div>
         </x-panel>
@@ -32,7 +32,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.avatar_square"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             矩形头像一般在对排版有特殊要求的情况下才会使用，相对而言更为规整。
           </div>
         </x-panel>

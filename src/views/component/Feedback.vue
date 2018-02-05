@@ -16,7 +16,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.feedback_color"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
               
           </div>
         </x-panel>

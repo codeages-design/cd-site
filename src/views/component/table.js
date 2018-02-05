@@ -81,7 +81,7 @@ export const table_sort_filter = `
           <div class="dropdown">
             状态 
             <a href="javascrip:;" class="cd-link-primary" data-toggle="dropdown">
-              <i class="cd-icon cd-icon-filter cd-text-xs"></i>
+              <i class="cd-icon cd-icon-filter "></i>
             </a>
             <ul class="dropdown-menu cd-dropdown-menu cd-dropdown-menu-filter" style="display:none">
               <li class="active"><a href="javascript:;" data-toggle="cd-table-filter" data-filter-key="status">全部</a></li>

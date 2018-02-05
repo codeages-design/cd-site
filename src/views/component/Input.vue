@@ -18,7 +18,7 @@
           <div class="cd-row cd-mb16" slot="style" >
             <div class="col-xs-8" v-html="code.input_base"></div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             基础输入框不带标题，宽度根据具体场景设定。
           </div>
         </x-panel>
@@ -39,7 +39,7 @@
               </div>
             </form>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             基础输入框不带标题，宽度根据具体场景设定。
           </div>
         </x-panel>
@@ -55,7 +55,7 @@
           <div class="cd-row cd-mb16" slot="style">
             <div class="col-xs-8" v-html="code.input_textarea"></div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             基础输入框不带标题，宽度根据具体场景设定。
           </div>
         </x-panel>
@@ -80,7 +80,7 @@
               " placeholder="最小输入框" />
             </div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             基础输入框不带标题，宽度根据具体场景设定。
           </div>
         </x-panel>
@@ -96,7 +96,7 @@
           <div class="cd-row cd-mb16" slot="style">
             <div class="col-xs-8" v-html="code.input_disabled"></div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             禁用输入框样式。
           </div>
         </x-panel>

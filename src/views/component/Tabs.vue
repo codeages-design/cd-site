@@ -16,7 +16,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.tabs_base"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>
@@ -30,7 +30,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.tabs_ajax"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>
@@ -46,7 +46,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.tabs_switch"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>

@@ -18,7 +18,7 @@
           <div class="cd-row cd-mb16" slot="style">
             <div class="col-xs-8" v-html="code.switch_base"></div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
       </div>
@@ -35,7 +35,7 @@
           <div class="cd-row cd-mb16" slot="style">
             <div class="col-xs-8" v-html="code.switch_disabled"></div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
       </div>

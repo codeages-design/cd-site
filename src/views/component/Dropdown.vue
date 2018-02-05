@@ -18,7 +18,7 @@
           <div class="cd-row cd-mb16" slot="style" >
             <div class="col-xs-8" v-html="code.dropdown_base"></div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>
@@ -34,7 +34,7 @@
           <div class="cd-row cd-mb16" slot="style" >
             <div class="col-xs-8" v-html="code.dropdown_placement"></div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>
@@ -52,7 +52,7 @@
           <div class="cd-row cd-mb16" slot="style" >
             <div class="col-xs-8" v-html="code.dropdown_click"></div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>

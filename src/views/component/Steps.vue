@@ -13,7 +13,7 @@
         </code></pre>
       </div>
       <div class="cd-mb16" slot="style" v-html="code.steps_base"></div>
-      <div class="cd-text-xs" slot="dec">
+      <div class="" slot="dec">
       </div>
     </x-panel>
   </div>

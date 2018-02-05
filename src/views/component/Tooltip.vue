@@ -16,7 +16,7 @@
           </div>
           <div class="cd-mb16 site-example-tooltip" slot="style" v-html="code.tooltip_base">
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
       </div>
@@ -56,7 +56,7 @@
               <button class="cd-btn cd-btn-ghost-default" data-toggle="cd-tooltip" data-title="tooltip in bottom center" data-placement="bottomRight" style="width: 120px">bottomRight</button>
             </div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
       </div>

@@ -25,7 +25,7 @@
               <span class="cd-light-assist">淡色系辅助文本</span>
             </div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>
@@ -43,7 +43,7 @@
               {{ code.tools_spacing_example }}
             </code></pre>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             注：上面的<code class="code">*</code>可替换为
             <code class="code">0</code>
             <code class="code">8</code>
@@ -78,7 +78,7 @@
             <span class="cd-text-md">正常文本</span><br><br>
             <span class="cd-text-sm">小号文本</span>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>
@@ -96,7 +96,7 @@
             <a href="javascript:;" class="cd-link-minor">次要文本链接</a><br><br>
             <a href="javascript:;" class="cd-link-assist">辅助文本链接</a>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>

@@ -1,18 +1,18 @@
 <template>
   <div class="site-pager">
     <span class="site-page site-page-left" @click="switchRoute(preName)" v-if="preName">
-      <i class="cd-icon cd-icon-arrow-left"></i>{{preName.text_zh}}
+      <i class="cd-icon cd-icon-arrow-left"></i><span>{{preName.text_zh}}</span>
     </span>
     <span class="site-page site-page-right" @click="switchRoute(nextName)" v-if="nextName">
-      {{nextName.text_zh}}<i class="cd-icon cd-icon-arrow-right"></i>
+      <span>{{nextName.text_zh}}</span><i class="cd-icon cd-icon-arrow-right"></i>
     </span>
   </div>
 </template>
 
 <script>
-import { componentData } from '@/assets/js/data';
+import { component } from '@/assets/data.json';
 
-const newCompData = componentData.filter((item) => {
+const newCompData = component.filter((item) => {
   return item.isItem;
 });
 

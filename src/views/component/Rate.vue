@@ -16,7 +16,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.rate_base"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>
@@ -32,7 +32,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.rate_static"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>

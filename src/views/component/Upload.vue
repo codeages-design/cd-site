@@ -15,7 +15,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.upload_avatar"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>
@@ -31,7 +31,7 @@
             </code></pre>
           </div>
           <div class="cd-mb16" slot="style" v-html="code.upload_file"></div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
             
           </div>
         </x-panel>

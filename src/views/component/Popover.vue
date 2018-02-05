@@ -17,7 +17,7 @@
           </div>
           <div class="cd-mb16 site-example-popover" slot="style" v-html="code.popover_base">
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
       </div>
@@ -33,7 +33,7 @@
           </div>
           <div class="cd-mb16" slot="style" v-html="code.popover_type">
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
       </div>
@@ -73,7 +73,7 @@
               <button class="cd-btn cd-btn-ghost-default" data-toggle="cd-popover" data-title="popover in bottom center" data-content="popover content<br>popover content" data-placement="bottomRight" style="width: 120px">bottomRight</button>
             </div>
           </div>
-          <div class="cd-text-xs" slot="dec">
+          <div class="" slot="dec">
           </div>
         </x-panel>
       </div>
