@@ -1213,9 +1213,9 @@ code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
 
-codeages-design@^0.1.4:
-  version "0.1.4"
-  resolved "https://registry.npmjs.org/codeages-design/-/codeages-design-0.1.4.tgz#49c35fc170517d72a7cf91ae1a0010b4b5104c78"
+codeages-design@^0.1.5:
+  version "0.1.5"
+  resolved "https://registry.npmjs.org/codeages-design/-/codeages-design-0.1.5.tgz#3dbc82fc23d988bb5783cf1c92795c96b8b907a2"
   dependencies:
     jquery "^3.2.1"
 
