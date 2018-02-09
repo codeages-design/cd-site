@@ -104,7 +104,7 @@
             <li><a href="">下载文档</a></li>
           </ul> -->
           <div class="site-homepage-footer__copyright">
-            © 2017 Codeages Design 阔知用户体验技术团队
+            © 2017-2018 Codeages Design v{{version}} 阔知用户体验技术团队
           </div>
         </div>
       </footer>
@@ -114,7 +114,8 @@
 
 <script>
 import XHeader from '@/views/Header';
-
+import { version } from 'codeages-design/package.json';
+ 
 export default {
   name: 'homepage',
   components: {
@@ -122,6 +123,7 @@ export default {
   },
   data() {
     return {
+      version,
       banner: {
         rotateX: 0,
         rotateY: 0,
