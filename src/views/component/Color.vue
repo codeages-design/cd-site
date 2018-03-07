@@ -3,8 +3,8 @@
     <div class="site-content-title">色彩</div>
     <div class="site-content-des">
       颜色是设计语言中非常重要的一块内容，因为不同颜色能够给用户带来截然不同的心里感知，
-      我们在 Codeages Design 中定义了主色调以及场景色，所谓场景色，就是指颜色本身的属性能够唤起用户自主意识对颜色的感受，
-      例如红色对于用户来说，意味着“危险、错误”，而绿色对于用户来说，则意味着“安全、成功”，通过不同场景色的引入，能够在不同交互场景下通过颜色快速表达意图，从而减少用户理解成本。
+      我们在 Codeages Design 引入了颜色层级的算法，只需要提供自己的主色调，就能够自动生成对应的颜色层级以供使用。
+      另外，我们提供了默认的颜色色板，所有色板都是根据自然界的颜色生成，更是符合“WCAG 2.0”对可视化的要求。
     </div>
     <div class="cd-row">
 	  <div class="cd-md-8">
@@ -14,7 +14,7 @@
 	    		<span class="text-right-bottom">{{ primaryColors[5].color }}</span>
 	    	</div>
 	      <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in primaryColors" :key="index">
-	    		<span class="text-left">P {{color.name}}</span>
+	    		<span class="text-left">{{color.name}}</span>
 	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
@@ -26,60 +26,96 @@
 	<div class="cd-row">
  	  <div class="cd-md-8">
 	    <div class="color-palette">
-	    	<div class="palette-info">
-	    		<span class="text-left-top">信息色（Info）</span>
-	    		<span class="text-right-bottom">{{ infoColors[5].color }}</span>
+	    	<div class="palette-forest">
+	    		<span class="text-left-top">森林绿（Forest）</span>
+	    		<span class="text-right-bottom">{{ forestColors[5].color }}</span>
 	    	</div>
-	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in infoColors" :key="index">
-	    		<span class="text-left">I {{color.name}}</span>
+	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in forestColors" :key="index">
+	    		<span class="text-left">{{color.name}}</span>
 	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
 	  </div>
 	  <div class="cd-md-8">
 	    <div class="color-palette">
-	    	<div class="palette-danger">
-	    		<span class="text-left-top">危险色（Danger）</span>
-	    		<span class="text-right-bottom">{{ dangerColors[5].color }}</span>
+	    	<div class="palette-ocean">
+	    		<span class="text-left-top">海洋蓝（Ocean）</span>
+	    		<span class="text-right-bottom">{{ oceanColors[5].color }}</span>
 	    	</div>
-	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in dangerColors" :key="index">
-	    		<span class="text-left">D {{color.name}}</span>
+	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in oceanColors" :key="index">
+	    		<span class="text-left">{{color.name}}</span>
 	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
 	  </div>
 	  <div class="cd-md-8">
 	    <div class="color-palette">
-	    	<div class="palette-warning">
-	    		<span class="text-left-top">警告色（Warning）</span>
-	    		<span class="text-right-bottom">{{ warningColors[5].color }}</span>
+	    	<div class="palette-rose">
+	    		<span class="text-left-top">玫瑰红（Rose）</span>
+	    		<span class="text-right-bottom">{{ roseColors[5].color }}</span>
 	    	</div>
-	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in warningColors" :key="index">
-	    		<span class="text-left">W {{color.name}}</span>
+	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in roseColors" :key="index">
+	    		<span class="text-left">{{color.name}}</span>
 	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
 	  </div>
 	  <div class="cd-md-8">
 	    <div class="color-palette">
-	    	<div class="palette-success">
-	    		<span class="text-left-top">成功色（Success）</span>
-	    		<span class="text-right-bottom">{{ successColors[5].color }}</span>
+	    	<div class="palette-flame">
+	    		<span class="text-left-top">烈焰橙（Flame）</span>
+	    		<span class="text-right-bottom">{{ flameColors[5].color }}</span>
 	    	</div>
-	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in successColors" :key="index">
-	    		<span class="text-left">S {{color.name}}</span>
+	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in flameColors" :key="index">
+	    		<span class="text-left">{{color.name}}</span>
 	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
 	  </div>
 	  <div class="cd-md-8">
 	    <div class="color-palette">
-	    	<div class="palette-neutral">
-	    		<span class="text-left-top">中性色（Neutral)</span>
-	    		<span class="text-right-bottom">{{ neutralColors[5].color }}</span>
+	    	<div class="palette-bud">
+	    		<span class="text-left-top">新芽绿（Bud）</span>
+	    		<span class="text-right-bottom">{{ budColors[5].color }}</span>
 	    	</div>
-        <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in neutralColors" :key="index">
-	    		<span class="text-left">N {{color.name}}</span>
+        <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in budColors" :key="index">
+	    		<span class="text-left">{{color.name}}</span>
+	    		<span class="text-right">{{ color.color }}</span>
+	    	</div>
+	    </div>
+	  </div>
+    <div class="cd-md-8">
+	    <div class="color-palette">
+	    	<div class="palette-lemon">
+	    		<span class="text-left-top">柠檬黄（Lemon）</span>
+	    		<span class="text-right-bottom">{{ lemonColors[5].color }}</span>
+	    	</div>
+        <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in lemonColors" :key="index">
+	    		<span class="text-left">{{color.name}}</span>
+	    		<span class="text-right">{{ color.color }}</span>
+	    	</div>
+	    </div>
+	  </div>
+    <div class="cd-md-8">
+	    <div class="color-palette">
+	    	<div class="palette-violet">
+	    		<span class="text-left-top">罗兰紫（Violet）</span>
+	    		<span class="text-right-bottom">{{ violetColors[5].color }}</span>
+	    	</div>
+        <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in violetColors" :key="index">
+	    		<span class="text-left">{{color.name}}</span>
+	    		<span class="text-right">{{ color.color }}</span>
+	    	</div>
+	    </div>
+	  </div>
+    <div class="cd-md-8">
+	    <div class="color-palette">
+	    	<div class="palette-gray">
+	    		<span class="text-left-top">中性灰（Gray）</span>
+	    		<span class="text-right-bottom">{{ grayColors[5].color }}</span>
+	    	</div>
+        <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in grayColors" :key="index">
+	    		<span class="text-left">{{color.name}}</span>
 	    		<span class="text-right">{{ color.color }}</span>
 	    	</div>
 	    </div>
@@ -96,22 +132,31 @@ import * as colorMix from '@/assets/js/color-mix';
 
 const baseColor = {
   primary: {
-    hex: '#18ad3b'
+    hex: '#14954B'
   },
-  info: {
-    hex: '#278bf5',
+  forest: {
+    hex: '#14954B'
   },
-  danger: {
-    hex: '#ed3e3e',
+  ocean: {
+    hex: '#177ED7'
   },
-  warning: {
-    hex: '#ffa51f',
+  rose: {
+    hex: '#E80404'
   },
-  success: {
-    hex: '#18ad3b'
+  flame: {
+    hex: '#F46300'
   },
-  neutral: {
-    hex: '#808080'
+  bud: {
+    hex: '#82A01C'
+  },
+  lemon: {
+    hex: '#FDB500'
+  },
+  violet: {
+    hex: '#744EA1'
+  },
+  gray: {
+    hex: '808080'
   }
 };
 
@@ -119,7 +164,7 @@ const palette = [
   {
     type: 'tint',
     name: '50',
-    value: 0.8
+    value: 0.88
   },
   {
     type: 'tint',
@@ -176,24 +221,30 @@ export default {
     return {
       baseColor: baseColor,
       primaryColors: [],
-      infoColors: [],
-      dangerColors: [],
-      warningColors: [],
-      successColors: [],
-      neutralColors: [],
+      forestColors: [],
+      oceanColors: [],
+      roseColors: [],
+      flameColors: [],
+      budColors: [],
+      lemonColors: [],
+      violetColors: [],
+      grayColors: [],
     }
   },
   created() {
     this.primaryColors = this.colorMix(baseColor.primary.hex);
-    this.infoColors = this.colorMix(baseColor.info.hex);
-    this.dangerColors = this.colorMix(baseColor.danger.hex);
-    this.warningColors = this.colorMix(baseColor.warning.hex);
-    this.successColors = this.colorMix(baseColor.success.hex);
-    this.neutralColors = this.colorMix(baseColor.neutral.hex);
+    this.forestColors = this.colorMix(baseColor.forest.hex);
+    this.oceanColors = this.colorMix(baseColor.ocean.hex);
+    this.roseColors = this.colorMix(baseColor.rose.hex);
+    this.flameColors = this.colorMix(baseColor.flame.hex);
+    this.budColors = this.colorMix(baseColor.bud.hex);
+    this.lemonColors = this.colorMix(baseColor.lemon.hex);
+    this.violetColors = this.colorMix(baseColor.violet.hex);
+    this.grayColors = this.colorMix(baseColor.gray.hex);
   },
   methods: {
     updateValue(color) {
-      console.log(color, 'updateValue');
+      // console.log(color, 'updateValue');
 
       this.primaryColors = this.colorMix(color.hex);
     },
@@ -206,7 +257,7 @@ export default {
           color: color
         });
       });
-      console.log(colors, 'colorMix');
+      // console.log(colors, 'colorMix');
       return colors;
     }
   }
@@ -273,9 +324,13 @@ export default {
 }
 
 .palette-levels(@brand-primary, primary);
-.palette-levels(@brand-info, info);
-.palette-levels(@brand-danger, danger);
-.palette-levels(@brand-warning, warning);
-.palette-levels(@brand-success, success);
-.palette-levels(@brand-neutral, neutral);
+.palette-levels(@color-forest, forest);
+.palette-levels(@color-ocean, ocean);
+.palette-levels(@color-rose, rose);
+.palette-levels(@color-flame, flame);
+.palette-levels(@color-bud, bud);
+.palette-levels(@color-lemon, lemon);
+.palette-levels(@color-violet, violet);
+.palette-levels(@color-gray, gray);
+
 </style>
