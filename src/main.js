@@ -3,6 +3,8 @@ import App from '@/App';
 import router from '@/router';
 import filters from '@/filters';
 import utils from '@/utils';
+
+import 'babel-polyfill';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/googlecode.css';
 import 'jquery';

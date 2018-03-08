@@ -67,7 +67,8 @@ var baseWebpackConfig = {
   plugins: [
     new webpack.ProvidePlugin({
       $: 'jquery',
-      jQuery: 'jquery'
+      jQuery: 'jquery',
+      cd: 'codeages-design/dist/codeages-design'
     }),
   ]
 }
