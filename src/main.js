@@ -6,10 +6,8 @@ import utils from '@/utils';
 import hljs from 'highlight.js';
 import 'highlight.js/styles/googlecode.css';
 import 'jquery';
-import * as cd from 'codeages-design';
+import 'codeages-design/dist/codeages-design';
 import 'codeages-design/src/less/codeages-design.less';
-
-window.cd = cd;
 
 Vue.use(filters);
 Vue.use(utils);
