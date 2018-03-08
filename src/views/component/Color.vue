@@ -110,6 +110,18 @@
 	  </div>
     <div class="cd-md-8">
 	    <div class="color-palette">
+	    	<div class="palette-sakura">
+	    		<span class="text-left-top">樱花粉（Sakura）</span>
+	    		<span class="text-right-bottom">{{ sakuraColors[5].color }}</span>
+	    	</div>
+        <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in sakuraColors" :key="index">
+	    		<span class="text-left">{{color.name}}</span>
+	    		<span class="text-right">{{ color.color }}</span>
+	    	</div>
+	    </div>
+	  </div>
+    <div class="cd-md-8">
+	    <div class="color-palette">
 	    	<div class="palette-gray">
 	    		<span class="text-left-top">中性灰（Gray）</span>
 	    		<span class="text-right-bottom">{{ grayColors[5].color }}</span>
@@ -154,6 +166,9 @@ const baseColor = {
   },
   violet: {
     hex: '#744EA1'
+  },
+  sakura: {
+    hex: '#DD3E8F'
   },
   gray: {
     hex: '808080'
@@ -228,6 +243,7 @@ export default {
       budColors: [],
       lemonColors: [],
       violetColors: [],
+      sakuraColors: [],
       grayColors: [],
     }
   },
@@ -240,6 +256,7 @@ export default {
     this.budColors = this.colorMix(baseColor.bud.hex);
     this.lemonColors = this.colorMix(baseColor.lemon.hex);
     this.violetColors = this.colorMix(baseColor.violet.hex);
+    this.sakuraColors = this.colorMix(baseColor.sakura.hex);
     this.grayColors = this.colorMix(baseColor.gray.hex);
   },
   methods: {
@@ -251,7 +268,7 @@ export default {
     colorMix(hex) {
       const colors = [];
       palette.map((item) => {
-        let color = colorMix[item.type](hex.replace('#', ''), item.value);
+        let color = colorMix[item.type](hex.replace('#', ''), item.value).toUpperCase();
         colors.push({
           name: item.name,
           color: color
@@ -331,6 +348,7 @@ export default {
 .palette-levels(@color-bud, bud);
 .palette-levels(@color-lemon, lemon);
 .palette-levels(@color-violet, violet);
+.palette-levels(@color-sakura, sakura);
 .palette-levels(@color-gray, gray);
 
 </style>
