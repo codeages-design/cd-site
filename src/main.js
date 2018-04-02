@@ -1,4 +1,5 @@
 import Vue from 'vue';
+import MetaInfo from 'vue-meta-info';
 import App from '@/App';
 import router from '@/router';
 import filters from '@/filters';
@@ -11,6 +12,7 @@ import 'jquery';
 import 'codeages-design/dist/codeages-design';
 import 'codeages-design/src/less/codeages-design.less';
 
+Vue.use(MetaInfo);
 Vue.use(filters);
 Vue.use(utils);
 

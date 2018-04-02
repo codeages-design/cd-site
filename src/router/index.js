@@ -24,6 +24,7 @@ const routes = [{
 
 const router = new Router({
   routes,
+  mode: 'history'
 });
 
 router.beforeEach((to, from, next) => {

@@ -7,134 +7,133 @@
       另外，我们提供了默认的颜色色板，所有色板都是根据自然界的颜色生成，更是符合“WCAG 2.0”对可视化的要求。
     </div>
     <div class="cd-row">
-	  <div class="cd-md-8">
-	    <div class="color-palette">
-	    	<div class="palette-primary" :style="{background: primaryColors[5].color}">
-	    		<span class="text-left-top">主色调（Primary）</span>
-	    		<span class="text-right-bottom">{{ primaryColors[5].color }}</span>
-	    	</div>
-	      <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in primaryColors" :key="index">
-	    		<span class="text-left">{{color.name}}</span>
-	    		<span class="text-right">{{ color.color }}</span>
-	    	</div>
-	    </div>
-	  </div>
-	  <div class="cd-md-8 cd-md-offset-4" style="margin-top: 120px;">
-      <chrome-picker :value="baseColor.primary" @input="updateValue" style="margin: 0 auto;"></chrome-picker>
+      <div class="cd-md-8">
+        <div class="color-palette">
+          <div class="palette-primary" :style="{background: primaryColors[5].color}">
+            <span class="text-left-top">主色调（Primary）</span>
+            <span class="text-right-bottom">{{ primaryColors[5].color }}</span>
+          </div>
+          <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in primaryColors" :key="index">
+            <span class="text-left">{{color.name}}</span>
+            <span class="text-right">{{ color.color }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="cd-md-8 cd-md-offset-4" style="margin-top: 120px;">
+        <chrome-picker :value="baseColor.primary" @input="updateValue" style="margin: 0 auto;"></chrome-picker>
+      </div>
     </div>
-	</div>
-	<div class="cd-row">
- 	  <div class="cd-md-8">
-	    <div class="color-palette">
-	    	<div class="palette-forest">
-	    		<span class="text-left-top">森林绿（Forest）</span>
-	    		<span class="text-right-bottom">{{ forestColors[5].color }}</span>
-	    	</div>
-	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in forestColors" :key="index">
-	    		<span class="text-left">{{color.name}}</span>
-	    		<span class="text-right">{{ color.color }}</span>
-	    	</div>
-	    </div>
-	  </div>
-	  <div class="cd-md-8">
-	    <div class="color-palette">
-	    	<div class="palette-ocean">
-	    		<span class="text-left-top">海洋蓝（Ocean）</span>
-	    		<span class="text-right-bottom">{{ oceanColors[5].color }}</span>
-	    	</div>
-	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in oceanColors" :key="index">
-	    		<span class="text-left">{{color.name}}</span>
-	    		<span class="text-right">{{ color.color }}</span>
-	    	</div>
-	    </div>
-	  </div>
-	  <div class="cd-md-8">
-	    <div class="color-palette">
-	    	<div class="palette-rose">
-	    		<span class="text-left-top">玫瑰红（Rose）</span>
-	    		<span class="text-right-bottom">{{ roseColors[5].color }}</span>
-	    	</div>
-	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in roseColors" :key="index">
-	    		<span class="text-left">{{color.name}}</span>
-	    		<span class="text-right">{{ color.color }}</span>
-	    	</div>
-	    </div>
-	  </div>
-	  <div class="cd-md-8">
-	    <div class="color-palette">
-	    	<div class="palette-flame">
-	    		<span class="text-left-top">烈焰橙（Flame）</span>
-	    		<span class="text-right-bottom">{{ flameColors[5].color }}</span>
-	    	</div>
-	    	<div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in flameColors" :key="index">
-	    		<span class="text-left">{{color.name}}</span>
-	    		<span class="text-right">{{ color.color }}</span>
-	    	</div>
-	    </div>
-	  </div>
-	  <div class="cd-md-8">
-	    <div class="color-palette">
-	    	<div class="palette-bud">
-	    		<span class="text-left-top">新芽绿（Bud）</span>
-	    		<span class="text-right-bottom">{{ budColors[5].color }}</span>
-	    	</div>
-        <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in budColors" :key="index">
-	    		<span class="text-left">{{color.name}}</span>
-	    		<span class="text-right">{{ color.color }}</span>
-	    	</div>
-	    </div>
-	  </div>
-    <div class="cd-md-8">
-	    <div class="color-palette">
-	    	<div class="palette-lemon">
-	    		<span class="text-left-top">柠檬黄（Lemon）</span>
-	    		<span class="text-right-bottom">{{ lemonColors[5].color }}</span>
-	    	</div>
-        <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in lemonColors" :key="index">
-	    		<span class="text-left">{{color.name}}</span>
-	    		<span class="text-right">{{ color.color }}</span>
-	    	</div>
-	    </div>
-	  </div>
-    <div class="cd-md-8">
-	    <div class="color-palette">
-	    	<div class="palette-violet">
-	    		<span class="text-left-top">罗兰紫（Violet）</span>
-	    		<span class="text-right-bottom">{{ violetColors[5].color }}</span>
-	    	</div>
-        <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in violetColors" :key="index">
-	    		<span class="text-left">{{color.name}}</span>
-	    		<span class="text-right">{{ color.color }}</span>
-	    	</div>
-	    </div>
-	  </div>
-    <div class="cd-md-8">
-	    <div class="color-palette">
-	    	<div class="palette-sakura">
-	    		<span class="text-left-top">樱花粉（Sakura）</span>
-	    		<span class="text-right-bottom">{{ sakuraColors[5].color }}</span>
-	    	</div>
-        <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in sakuraColors" :key="index">
-	    		<span class="text-left">{{color.name}}</span>
-	    		<span class="text-right">{{ color.color }}</span>
-	    	</div>
-	    </div>
-	  </div>
-    <div class="cd-md-8">
-	    <div class="color-palette">
-	    	<div class="palette-gray">
-	    		<span class="text-left-top">中性灰（Gray）</span>
-	    		<span class="text-right-bottom">{{ grayColors[5].color }}</span>
-	    	</div>
-        <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in grayColors" :key="index">
-	    		<span class="text-left">{{color.name}}</span>
-	    		<span class="text-right">{{ color.color }}</span>
-	    	</div>
-	    </div>
-	  </div>
+    <div class="cd-row">
+      <div class="cd-md-8">
+        <div class="color-palette">
+          <div class="palette-forest">
+            <span class="text-left-top">森林绿（Forest）</span>
+            <span class="text-right-bottom">{{ forestColors[5].color }}</span>
+          </div>
+          <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in forestColors" :key="index">
+            <span class="text-left">{{color.name}}</span>
+            <span class="text-right">{{ color.color }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="cd-md-8">
+        <div class="color-palette">
+          <div class="palette-ocean">
+            <span class="text-left-top">海洋蓝（Ocean）</span>
+            <span class="text-right-bottom">{{ oceanColors[5].color }}</span>
+          </div>
+          <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in oceanColors" :key="index">
+            <span class="text-left">{{color.name}}</span>
+            <span class="text-right">{{ color.color }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="cd-md-8">
+        <div class="color-palette">
+          <div class="palette-rose">
+            <span class="text-left-top">玫瑰红（Rose）</span>
+            <span class="text-right-bottom">{{ roseColors[5].color }}</span>
+          </div>
+          <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in roseColors" :key="index">
+            <span class="text-left">{{color.name}}</span>
+            <span class="text-right">{{ color.color }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="cd-md-8">
+        <div class="color-palette">
+          <div class="palette-flame">
+            <span class="text-left-top">烈焰橙（Flame）</span>
+            <span class="text-right-bottom">{{ flameColors[5].color }}</span>
+          </div>
+          <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in flameColors" :key="index">
+            <span class="text-left">{{color.name}}</span>
+            <span class="text-right">{{ color.color }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="cd-md-8">
+        <div class="color-palette">
+          <div class="palette-bud">
+            <span class="text-left-top">新芽绿（Bud）</span>
+            <span class="text-right-bottom">{{ budColors[5].color }}</span>
+          </div>
+          <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in budColors" :key="index">
+            <span class="text-left">{{color.name}}</span>
+            <span class="text-right">{{ color.color }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="cd-md-8">
+        <div class="color-palette">
+          <div class="palette-lemon">
+            <span class="text-left-top">柠檬黄（Lemon）</span>
+            <span class="text-right-bottom">{{ lemonColors[5].color }}</span>
+          </div>
+          <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in lemonColors" :key="index">
+            <span class="text-left">{{color.name}}</span>
+            <span class="text-right">{{ color.color }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="cd-md-8">
+        <div class="color-palette">
+          <div class="palette-violet">
+            <span class="text-left-top">罗兰紫（Violet）</span>
+            <span class="text-right-bottom">{{ violetColors[5].color }}</span>
+          </div>
+          <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in violetColors" :key="index">
+            <span class="text-left">{{color.name}}</span>
+            <span class="text-right">{{ color.color }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="cd-md-8">
+        <div class="color-palette">
+          <div class="palette-sakura">
+            <span class="text-left-top">樱花粉（Sakura）</span>
+            <span class="text-right-bottom">{{ sakuraColors[5].color }}</span>
+          </div>
+          <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in sakuraColors" :key="index">
+            <span class="text-left">{{color.name}}</span>
+            <span class="text-right">{{ color.color }}</span>
+          </div>
+        </div>
+      </div>
+      <div class="cd-md-8">
+        <div class="color-palette">
+          <div class="palette-gray">
+            <span class="text-left-top">中性灰（Gray）</span>
+            <span class="text-right-bottom">{{ grayColors[5].color }}</span>
+          </div>
+          <div class="palette-color" :class="index < 5 ? 'cd-dark-major': 'cd-light-major'" :style="{background: color.color}" v-for="(color, index) in grayColors" :key="index">
+            <span class="text-left">{{color.name}}</span>
+            <span class="text-right">{{ color.color }}</span>
+          </div>
+        </div>
+      </div>
 
-	</div>
-
+    </div>
   </div>
 </template>
 
