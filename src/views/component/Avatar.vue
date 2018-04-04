@@ -1,4 +1,4 @@
-<template>
+ww<template>
   <div class="avatar-page">
     <div class="site-content-title">头像</div>
     <div class="site-content-des">
@@ -43,7 +43,7 @@
 
 <script>
 import * as code from './avatar';
-import XPanel from '@/components/Panel';
+import XPanel from '@/components/panel.vue';
 
 export default {
   components: {

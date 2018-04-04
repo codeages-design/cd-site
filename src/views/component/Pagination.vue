@@ -26,7 +26,7 @@
 
 <script>
 import * as code from './pagination';
-import XPanel from '@/components/Panel';
+import XPanel from '@/components/panel.vue';
 
 export default {
   components: {

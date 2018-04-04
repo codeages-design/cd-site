@@ -107,7 +107,7 @@
 
 <script>
 import * as code from './input';
-import XPanel from '@/components/Panel';
+import XPanel from '@/components/panel.vue';
 
 export default {
   components: {

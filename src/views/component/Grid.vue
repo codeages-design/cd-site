@@ -70,7 +70,7 @@
 
 <script>
 import * as code from './grid';
-import XPanel from '@/components/Panel';
+import XPanel from '@/components/panel.vue';
 
 export default {
   components: {

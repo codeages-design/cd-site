@@ -13,14 +13,14 @@ const routes = [{
   redirect: {
     name: 'component_color'
   },
-  component: (resolve) => require(['@/views/Component.vue'], resolve),
+  component: (resolve) => require(['@/views/component.vue'], resolve),
   children: [
     ...component,
   ],
 }, {
   path: '/',
   name: 'homepage',
-  component: (resolve) => require(['@/views/Homepage.vue'], resolve),
+  component: (resolve) => require(['@/views/homepage.vue'], resolve),
 }];
 
 const router = new Router({

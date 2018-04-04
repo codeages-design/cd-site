@@ -23,7 +23,7 @@
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
 
-import ThemePicker from '@/components/ThemePicker.vue';
+import ThemePicker from '@/components/theme-picker.vue';
 import { version } from 'codeages-design/package.json';
 import { navMenu } from '@/data';
 

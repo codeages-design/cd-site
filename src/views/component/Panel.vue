@@ -23,7 +23,7 @@
 
 <script>
 import * as code from './panel';
-import XPanel from '@/components/Panel';
+import XPanel from '@/components/panel.vue';
 
 export default {
   components: {

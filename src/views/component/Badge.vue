@@ -28,7 +28,7 @@
 
 <script>
 import * as code from './badge';
-import XPanel from '@/components/Panel';
+import XPanel from '@/components/panel.vue';
 
 export default {
   components: {

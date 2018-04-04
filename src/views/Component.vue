@@ -17,10 +17,10 @@
   </div>
 </template>
 
-<script>
-import XSideBar from '@/views/SideBar';
-import XHeader from '@/views/Header';
-import XPager from '@/views/Pager';
+<script lang="ts">
+import XSideBar from '@/views/sidebar.vue';
+import XHeader from '@/views/header.vue';
+import XPager from '@/views/pager.vue';
 
 import * as code from './component/modal';
 

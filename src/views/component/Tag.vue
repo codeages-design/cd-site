@@ -1,4 +1,4 @@
-<template>
+w<template>
   <div class="tag-page">
     <div class="site-content-title">标签</div>
     <div class="site-content-des">
@@ -52,8 +52,8 @@
 
 <script>
 import * as code from './tag';
-import XPanel from '@/components/Panel';
-import XApiTable from '@/components/ApiTable';
+import XPanel from '@/components/panel.vue';
+import XApiTable from '@/components/api-table.vue';
 
 const attrData = [
   {

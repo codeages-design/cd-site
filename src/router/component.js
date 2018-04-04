@@ -9,7 +9,7 @@ componentData.map((item) => {
     meta: {
       title: item.text_zh,
     },
-    component: (resolve) => require([`@/views/component/${item.text_en}.vue`], resolve),
+    component: (resolve) => require([`@/views/component/${item.text_en.toLowerCase()}.vue`], resolve),
   })
 });
 

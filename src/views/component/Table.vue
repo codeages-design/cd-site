@@ -26,7 +26,7 @@
 
 <script>
 import * as code from './table';
-import XPanel from '@/components/Panel';
+import XPanel from '@/components/panel.vue';
 import '@/api/mock';
 
 export default {

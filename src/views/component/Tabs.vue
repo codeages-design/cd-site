@@ -63,8 +63,8 @@
 
 <script>
 import * as code from './tabs';
-import XPanel from '@/components/Panel';
-import XApiTable from '@/components/ApiTable';
+import XPanel from '@/components/panel.vue';
+import XApiTable from '@/components/api-table.vue';
 import '@/api/mock';
 
 const dataApiData = [
