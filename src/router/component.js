@@ -1,4 +1,4 @@
-import { componentData } from '@/assets/data';
+import { componentData } from '@/data';
 
 const rules = [];
 

@@ -27,7 +27,7 @@
 <script>
 import * as code from './table';
 import XPanel from '@/components/Panel';
-import '@/mock';
+import '@/api/mock';
 
 export default {
   components: {

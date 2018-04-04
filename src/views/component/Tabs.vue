@@ -65,7 +65,7 @@
 import * as code from './tabs';
 import XPanel from '@/components/Panel';
 import XApiTable from '@/components/ApiTable';
-import '@/mock';
+import '@/api/mock';
 
 const dataApiData = [
   {

@@ -139,7 +139,7 @@
 
 <script>
 import { Chrome } from 'vue-color';
-import * as colorMix from '@/assets/js/color-mix';
+import * as colorMix from '@/utils/color-mix';
 
 const baseColor = {
   primary: {

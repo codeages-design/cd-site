@@ -25,7 +25,7 @@ import { Component } from 'vue-property-decorator';
 
 import ThemePicker from '@/components/ThemePicker.vue';
 import { version } from 'codeages-design/package.json';
-import { navMenu } from '@/assets/data';
+import { navMenu } from '@/data';
 
 @Component({
   components: {

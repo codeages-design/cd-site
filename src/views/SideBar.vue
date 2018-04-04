@@ -23,7 +23,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import { Component, Watch } from 'vue-property-decorator';
-import { componentMenu } from '@/assets/data';
+import { componentMenu } from '@/data';
 
 @Component
 export default class extends Vue {

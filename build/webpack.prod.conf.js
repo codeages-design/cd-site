@@ -10,7 +10,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var PrerenderSpaPlugin = require('prerender-spa-plugin')
 var Renderer = PrerenderSpaPlugin.PuppeteerRenderer
-var { componentData } = require('../src/assets/data')
+var { componentData } = require('../src/data')
 
 var env = config.build.env
 

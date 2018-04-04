@@ -4,4 +4,6 @@ declare module '*.vue' {
 }
 
 declare module 'codeages-design/package.json';
-// declare module '@/assets/data';
+declare module '@/router';
+declare module '@/filters';
+declare module '@/plugins';
