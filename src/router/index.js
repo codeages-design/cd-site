@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Router from 'vue-router';
+import config from '../../config';
 
 import component from './component';
 
@@ -24,7 +25,7 @@ const routes = [{
 
 const router = new Router({
   routes,
-  mode: 'history'
+  mode: config.build.isPrerenderSpa ? 'history' : 'hash'
 });
 
 router.beforeEach((to, from, next) => {

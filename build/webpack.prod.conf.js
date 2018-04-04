@@ -12,17 +12,6 @@ var PrerenderSpaPlugin = require('prerender-spa-plugin')
 var Renderer = PrerenderSpaPlugin.PuppeteerRenderer
 var component = require('../src/assets/data.json').component
 
-var newCompData = component.filter(function(item) {
-  return item.isItem;
-});
-
-// get prerender routes
-var prerenderRoutes = [];
-var prefix = '/component/';
-newCompData.map(function(item) {
-  prerenderRoutes.push(prefix + item.text_en.toLowerCase());
-});
-
 var env = config.build.env
 
 var webpackConfig = merge(baseWebpackConfig, {
@@ -105,7 +94,23 @@ var webpackConfig = merge(baseWebpackConfig, {
         to: config.build.assetsSubDirectory,
         ignore: ['.*']
       }
-    ]),
+    ])
+  ]
+})
+
+if (config.build.isPrerenderSpa) {
+  var newCompData = component.filter(function(item) {
+    return item.isItem;
+  });
+  
+  // get prerender routes
+  var prerenderRoutes = []
+  var prefix = '/component/'
+  newCompData.map(function(item) {
+    prerenderRoutes.push(prefix + item.text_en.toLowerCase())
+  })
+
+  webpackConfig.plugins.push(
     new PrerenderSpaPlugin({
       staticDir: path.join(__dirname, '../dist'),
       routes: [
@@ -115,8 +120,8 @@ var webpackConfig = merge(baseWebpackConfig, {
       //   renderAfterTime: 5000
       // })
     })
-  ]
-})
+  )
+}
 
 if (config.build.productionGzip) {
   var CompressionWebpackPlugin = require('compression-webpack-plugin')
