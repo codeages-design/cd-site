@@ -9,42 +9,35 @@
   </div>
 </template>
 
-<script>
-import { component } from '@/assets/data.json';
+<script lang="ts">
+import Vue from 'vue';
+import { Component, Watch } from 'vue-property-decorator';
+import { componentData } from '@/assets/data';
 
-const newCompData = component.filter((item) => {
-  return item.isItem;
-});
+@Component
+export default class extends Vue {
+  currentName: string = '';
+  preName: any = '';
+  nextName: any = '';
 
-export default {
-  data() {
-    return {
-      currentName: this.$route.name,
-      preName: '',
-      nextName: ''
-    }
-  },
+  @Watch('$route')
+  getSibling() {
+    this.currentName = this.$route.name;
+    
+    componentData.map((item, index) => {
+      if(item.name == this.currentName) {
+        this.preName = index - 1 >= 0 ? componentData[index - 1] : '';
+        this.nextName = index + 1 < componentData.length ? componentData[index + 1] : '';
+      }
+    })
+  }
+
   created() {
     this.getSibling();
-  },
-  watch: {
-    '$route': function() {
-      this.currentName = this.$route.name;
-      this.getSibling();
-    }
-  },
-  methods: {
-    getSibling() {
-      newCompData.map((item, index) => {
-        if(item.name == this.currentName) {
-          this.preName = index - 1 >= 0 ? newCompData[index - 1] : '';
-          this.nextName = index + 1 < newCompData.length ? newCompData[index + 1] : '';
-        }
-      })
-    },
-    switchRoute(routeName) {
-      this.$router.push(routeName);
-    },
+  }
+
+  switchRoute(routeName) {
+    this.$router.push(routeName);
   }
 }
 </script>

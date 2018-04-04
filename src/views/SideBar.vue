@@ -1,50 +1,50 @@
 <template>
   <div class="site-sidebar">
-    <ul class="site-sidebar__nav">
-      <li class="site-sidebar__nav-item" 
-        v-for="(component, index) in componentData" 
-        :key="index">
-        <span class="site-sidebar__nav-item__subtitle" 
-          v-if="component.isItem" 
-          :class="{ active: routeName === component.name }"
-          @click="switchNav(component.name)">
-          <span>{{component.text_zh}}</span>
-          <span class="nav-en">{{ component.text_en }}</span>
-        </span>
-        <span class="site-sidebar__nav-item__title" v-else>
-          {{ component.text }}
-        </span>
-      </li>
-    </ul>
+    <div class="site-sidebar__column" 
+      v-for="(menu, menuIndex) in componentMenu" 
+      :key="menuIndex">
+      <div class="site-sidebar__column__title">
+        {{ menu.text }}
+      </div>
+      <ul class="site-sidebar__nav">
+        <li 
+          v-for="(submenu, submenuIndex) in menu.children" 
+          :key="submenuIndex"
+          :class="{ active: routeName === submenu.name }"
+          @click="switchNav(submenu.name)">
+          <span>{{ submenu.text_zh }}</span>
+          <span class="nav-en">{{ submenu.text_en }}</span>
+        </li>
+      </ul>
+    </div>
   </div>
 </template>
 
-<script>
-import { component } from '@/assets/data.json';
+<script lang="ts">
+import Vue from 'vue';
+import { Component, Watch } from 'vue-property-decorator';
+import { componentMenu } from '@/assets/data';
 
-export default {
-  data() {
-    return {
-      componentData: component,
-      routeName: ''
-    }
-  },
-  watch: {
-    '$route': 'getRoute'
-  },
+@Component
+export default class extends Vue {
+  componentMenu: any[] = componentMenu;
+  routeName:string = '';
+
+  @Watch('$route')
+  getRoute() {
+    this.routeName = this.$route.name;
+  }
+
   created() {
     this.getRoute();
-  },
-  methods: {
-    getRoute() {
-      this.routeName = this.$route.name;
-    },
-    sidebarToggle() {
-      this.$emit('sidebarToggle');
-    },
-    switchNav(name) {
-      this.$router.push({ name: name });
-    }
+  }
+
+  sidebarToggle() {
+    this.$emit('sidebarToggle');
+  }
+
+  switchNav(name) {
+    this.$router.push({ name: name });
   }
 }
 </script>

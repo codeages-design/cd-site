@@ -7,7 +7,10 @@
     </div>
     <div class="site-header__nav cd-clearfix">
       <ul class="">
-        <li :class="{ active: routeName === nav.name }" @click="switchNav(nav.name)" v-for="(nav, index) in navData" :key="index">
+        <li :class="{ active: routeName === nav.name }" 
+            @click="switchNav(nav.name)" 
+            v-for="(nav, index) in navMenu" 
+            :key="index">
           {{nav.text}}
         </li>
       </ul>
@@ -16,99 +19,105 @@
   </header>
 </template>
 
-<script>
-import ThemePicker from '@/components/ThemePicker';
-import { version } from 'codeages-design/package.json';
-import { nav } from '@/assets/data.json';
+<script lang="ts">
+import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
 
-export default {
+import ThemePicker from '@/components/ThemePicker.vue';
+import { version } from 'codeages-design/package.json';
+import { navMenu } from '@/assets/data';
+
+@Component({
   components: {
     ThemePicker,
   },
-  data() {
-    return {
-      navData: nav,
-      routeName: null,
-      chalk: window.chalk,
-    }
-  },
+})
+export default class extends Vue {
+  navMenu: any[] = navMenu;
+  routeName: string = null;
+  chalk: string = (<any>window).chalk;
+
   created() {
     this.getRoute();
-  },
-  methods: {
-    getRoute() {
-      this.routeName = this.$route.matched[0].name;
-    },
-    switchNav(name) {
-      this.$router.push({ name: name });
-    },
-    pickerOk(oldColor, newColor) {
-      const chalkHandler = this.getHandler(oldColor, newColor, 'chalk-style');
+  }
 
-      if (!this.chalk) {
-        const url = `https://unpkg.com/codeages-design@${version}/dist/cd-main-color.css`;
-        this.getCSSString(url, chalkHandler);
-      } else {
-        chalkHandler();
-      };
+  getRoute() {
+    this.routeName = this.$route.matched[0].name;
+  }
 
-      const styles = [].slice.call(document.querySelectorAll('style'))
-        .filter(style => {
-          const text = style.innerText;
-          return new RegExp(oldColor.hex, 'i').test(text) && /.site-/.test(text) && !/@font-face/.test(text);
-        })
+  switchNav(name) {
+    this.$router.push({ name: name });
+  }
 
-      styles.forEach(style => {
-        const { innerText } = style;
-        if (typeof innerText !== 'string') return;
-        style.innerText = this.updateStyle(innerText, oldColor, newColor);
-      });
+  pickerOk(oldColor, newColor) {
+    const chalkHandler = this.getHandler(oldColor, newColor, 'chalk-style');
 
-      cd.message({
-        type: 'success',
-        message: '修改主色调成功'
-      });
-    },
-    getHandler(oldColor, newColor, id) {
-      return () => {
-        const newStyle = this.updateStyle(this.chalk, oldColor, newColor);
+    if (!this.chalk) {
+      const url = `https://unpkg.com/codeages-design@${version}/dist/cd-main-color.css`;
+      this.getCSSString(url, chalkHandler);
+    } else {
+      chalkHandler();
+    };
 
-        this.chalk = newStyle;
-        window.chalk = newStyle;
+    const styles = [].slice.call(document.querySelectorAll('style'))
+      .filter(style => {
+        const text = style.innerText;
+        return new RegExp(oldColor.hex, 'i').test(text) && /.site-/.test(text) && !/@font-face/.test(text);
+      })
 
-        let styleTag = document.getElementById(id);
-        if (!styleTag) {
-          styleTag = document.createElement('style');
-          styleTag.setAttribute('id', id);
-          document.head.appendChild(styleTag);
-        }
-        styleTag.innerText = newStyle;
+    styles.forEach(style => {
+      const { innerText } = style;
+      if (typeof innerText !== 'string') return;
+      style.innerText = this.updateStyle(innerText, oldColor, newColor);
+    });
+
+    (<any>window).cd.message({
+      type: 'success',
+      message: '修改主色调成功'
+    });
+  }
+
+  getHandler(oldColor, newColor, id) {
+    return () => {
+      const newStyle = this.updateStyle(this.chalk, oldColor, newColor);
+
+      this.chalk = newStyle;
+      (<any>window).chalk = newStyle;
+
+      let styleTag = document.getElementById(id);
+      if (!styleTag) {
+        styleTag = document.createElement('style');
+        styleTag.setAttribute('id', id);
+        document.head.appendChild(styleTag);
       }
-    },
-    updateStyle(style, oldColor, newColor) {
-      let newStyle = style;
-
-      const rgb = (color) => {
-        return [color.rgba.r, color.rgba.g, color.rgba.b].join(',');
-      }
-
-      newStyle = newStyle.replace(new RegExp(oldColor.hex, 'ig'), newColor.hex);
-      newStyle = newStyle.replace(new RegExp(rgb(oldColor), 'ig'), rgb(newColor));
-
-      return newStyle;
-    },
-    getCSSString(url, callback) {
-      const xhr = new XMLHttpRequest();
-      xhr.onreadystatechange = () => {
-        if (xhr.readyState === 4 && xhr.status === 200) {
-          this.chalk = xhr.responseText;
-          window.chalk = xhr.responseText;
-          callback();
-        }
-      }
-      xhr.open('GET', url);
-      xhr.send();
+      styleTag.innerText = newStyle;
     }
+  }
+
+  updateStyle(style, oldColor, newColor) {
+    let newStyle = style;
+
+    const rgb = (color) => {
+      return [color.rgba.r, color.rgba.g, color.rgba.b].join(',');
+    }
+
+    newStyle = newStyle.replace(new RegExp(oldColor.hex, 'ig'), newColor.hex);
+    newStyle = newStyle.replace(new RegExp(rgb(oldColor), 'ig'), rgb(newColor));
+
+    return newStyle;
+  }
+
+  getCSSString(url, callback) {
+    const xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = () => {
+      if (xhr.readyState === 4 && xhr.status === 200) {
+        this.chalk = xhr.responseText;
+        (<any>window).chalk = xhr.responseText;
+        callback();
+      }
+    }
+    xhr.open('GET', url);
+    xhr.send();
   }
 }
 </script>

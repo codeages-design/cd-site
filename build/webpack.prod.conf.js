@@ -10,7 +10,7 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var PrerenderSpaPlugin = require('prerender-spa-plugin')
 var Renderer = PrerenderSpaPlugin.PuppeteerRenderer
-var component = require('../src/assets/data.json').component
+var { componentData } = require('../src/assets/data')
 
 var env = config.build.env
 
@@ -99,14 +99,11 @@ var webpackConfig = merge(baseWebpackConfig, {
 })
 
 if (config.build.isPrerenderSpa) {
-  var newCompData = component.filter(function(item) {
-    return item.isItem;
-  });
   
   // get prerender routes
   var prerenderRoutes = []
   var prefix = '/component/'
-  newCompData.map(function(item) {
+  componentData.map(function(item) {
     prerenderRoutes.push(prefix + item.text_en.toLowerCase())
   })
 

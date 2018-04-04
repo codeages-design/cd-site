@@ -9,23 +9,22 @@
   box-shadow: 0 0 4px 0 rgba(0,0,0,0.01), 0 4px 4px 0 rgba(0,0,0,0.04);
 }
 
-.site-sidebar__nav {
-  list-style: none;
-  padding-left: 8px;
+.site-sidebar__column__title {
+  padding: 24px 16px 16px 24px;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.32);
 }
 
-.site-sidebar__nav-item {
-  padding: 16px;
-  display: block;
-  .site-sidebar__nav-item__title {
-    font-size: 12px;
-    color: rgba(0, 0, 0, 0.32);
-  }
-  .site-sidebar__nav-item__subtitle {
+.site-sidebar__nav {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  li {
     font-size: 14px;
-    padding-left: 8px;
     line-height: 20px;
     color: rgba(0, 0, 0, 0.56);
+    padding: 16px 16px 16px 32px;
     &:hover {
       cursor: pointer;
       .cd-hover-light;

@@ -1,12 +1,8 @@
-import { component } from '@/assets/data.json';
-
-const newCompData = component.filter((item) => {
-  return item.isItem;
-});
+import { componentData } from '@/assets/data';
 
 const rules = [];
 
-newCompData.map((item) => {
+componentData.map((item) => {
   rules.push({
     path: item.text_en.toLowerCase(),
     name: item.name,
