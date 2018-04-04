@@ -1,0 +1,17 @@
+image: kkarczmarczyk/node-yarn
+
+cache:
+  paths:
+    - node_modules/
+
+build:
+  stage: deploy
+  script:
+  - yarn
+  - npm run build 
+  - curl -L http://collection.b0.upaiyun.com/softwares/upx/upx-linux-amd64-v0.2.3 -o upx
+  - chmod a+x ./upx
+  - ./upx login design-codeages gitlabci $UPYUN_PASSWORD
+  - cd dist; ../upx put ./ ./
+  only:
+  - master
