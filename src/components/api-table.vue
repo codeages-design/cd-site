@@ -1,6 +1,6 @@
 <template>
   <div class="site-api">
-    <div v-if="dataApiData && dataApiData.length">
+    <div v-if="dataApiData.length">
       <div class="site-content-subtitle">
         DATA-API
       </div>
@@ -35,7 +35,7 @@
       </code></pre>
     </div>
 
-    <div v-if="attrData && attrData.length">
+    <div v-if="attrData.length">
       <div class="site-content-subtitle">
         属性
       </div>
@@ -68,7 +68,7 @@
       </div>
     </div>
 
-    <div v-if="eventData && eventData.length">
+    <div v-if="eventData.length">
       <div class="site-content-subtitle">
         事件
       </div>
@@ -94,7 +94,7 @@
       </div>
     </div>
 
-    <div v-if="hookData && hookData.length">
+    <div v-if="hookData.length">
       <div class="site-content-subtitle">
         钩子方法
       </div>
@@ -141,16 +141,36 @@ export default class extends Vue {
   @Prop()
   code: any;
 
-  @Prop()
+  @Prop({
+    type: Array,
+    default: () => {
+      return [];
+    }
+  })
   dataApiData: any[];
 
-  @Prop()
+  @Prop({
+    type: Array,
+    default: () => {
+      return [];
+    }
+  })
   attrData: any[];
 
-  @Prop()
+  @Prop({
+    type: Array,
+    default: () => {
+      return [];
+    }
+  })
   eventData: any[];
 
-  @Prop()
+  @Prop({
+    type: Array,
+    default: () => {
+      return [];
+    }
+  })
   hookData: any[];
   
   created() {

@@ -151,10 +151,19 @@ export default class extends Vue {
   baseColor: any = baseColor;
   colors: any = {};
   
+  beforeCreate () {
+    this.$nextTick().then(() => {
+      console.log(2122)
+    })
+  }
   created() {
     for (let color in baseColor) {
       this.$set(this.colors, color, this.colorMix(baseColor[color].hex));
     }
+
+    this.$nextTick().then(() => {
+      console.log(222)
+    })
   }
 
   updateValue(color) {

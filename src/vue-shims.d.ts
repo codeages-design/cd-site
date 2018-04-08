@@ -15,6 +15,7 @@ declare module 'vue/types/vue' {
 }
 
 declare global {
-  const cd: any
+  const cd: any,
+  const process: any
 }
 

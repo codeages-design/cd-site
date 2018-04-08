@@ -36,7 +36,6 @@ export default class extends Vue {
   title: string;
 
   get middleIndex():number {
-    console.log(Math.ceil(this.colorArr.length / 2), 'colorArr')
     return Math.ceil(this.colorArr.length / 2);
   }
 }
