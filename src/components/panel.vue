@@ -33,7 +33,7 @@ export default class extends Vue {
   code: any[];
 
   created() {
-    (<any>window).cd.tooltip({
+   cd.tooltip({
       el: '.js-code-tooltip'
     });
   }
@@ -45,7 +45,7 @@ export default class extends Vue {
   copy() {
     const clipboard = new Clipboard('.js-copy-code');
     clipboard.on('success', function(e) {
-      (<any>window).cd.message({
+      cd.message({
         type: 'success',
         message: '复制成功'
       });

@@ -18,29 +18,29 @@
 </template>
 
 <script lang="ts">
+import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
+
 import XSideBar from '@/views/sidebar.vue';
 import XHeader from '@/views/header.vue';
 import XPager from '@/views/pager.vue';
 
 import * as code from './component/modal';
 
-export default {
+@Component({
   name: 'layout',
-  data() {
-    return {
-      code,
-      isHideSidebar: false,
-    }
-  },
   components: {
     XSideBar,
     XHeader,
     XPager
-  },
-  methods: {
-    sidebarToggle() {
-      return this.isHideSidebar = !this.isHideSidebar;
-    },
-  },
+  }
+})
+export default class extends Vue {
+  code: any = code;
+  isHideSidebar: boolean = false;
+
+  sidebarToggle() {
+    return this.isHideSidebar = !this.isHideSidebar;
+  }
 };
 </script>

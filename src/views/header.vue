@@ -71,7 +71,7 @@ export default class extends Vue {
       style.innerText = this.updateStyle(innerText, oldColor, newColor);
     });
 
-    (<any>window).cd.message({
+    cd.message({
       type: 'success',
       message: '修改主色调成功'
     });

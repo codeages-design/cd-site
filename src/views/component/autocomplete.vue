@@ -30,7 +30,10 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
+
 import * as code from './autocomplete';
 import XPanel from '@/components/panel.vue';
 import XApiTable from '@/components/api-table.vue';
@@ -68,18 +71,17 @@ const hookData = [
   }
 ];
 
-export default {
+@Component({
   components: {
     XPanel,
     XApiTable
-  },
-  data() {
-    return {
-      code,
-      attrData,
-      hookData
-    }
-  },
+  }
+})
+export default class extends Vue {
+  code: any = code;
+  attrData: any[] = attrData;
+  hookData: any[] = hookData;
+
   mounted() {
     cd.autocomplete({
       el: '#cd-autocomplete',
@@ -103,8 +105,6 @@ export default {
       ],
       selectKey: 'name'
     });
-  },
-  methods: {
   }
 }
 </script>

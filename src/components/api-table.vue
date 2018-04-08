@@ -1,7 +1,7 @@
 <template>
   <div class="site-api">
     <div v-if="dataApiData && dataApiData.length">
-      <div class="site-content-subtitle" >
+      <div class="site-content-subtitle">
         DATA-API
       </div>
       <div class="site-content-des">
@@ -35,7 +35,7 @@
       </code></pre>
     </div>
 
-    <div  v-if="attrData && attrData.length">
+    <div v-if="attrData && attrData.length">
       <div class="site-content-subtitle">
         属性
       </div>
@@ -154,7 +154,7 @@ export default class extends Vue {
   hookData: any[];
   
   created() {
-    (<any>window).cd.tooltip();
+    cd.tooltip();
   }
 }
 </script>
