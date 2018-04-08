@@ -20,36 +20,38 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
+import { Component, Prop } from 'vue-property-decorator';
 import Clipboard from 'clipboard';
 
-export default {
-  props: ['code'],
-  data() {
-    return {
-      isShowCode: false
-    }
-  },
-  methods: {
-    toggleCode() {
-      this.isShowCode = !this.isShowCode;
-    },
-    copy() {
-      const clipboard = new Clipboard('.js-copy-code');
-      clipboard.on('success', function(e) {
-        cd.message({
-          type: 'success',
-          message: '复制成功'
-        });
+@Component
+export default class extends Vue {
+  isShowCode: boolean = false;
 
-        clipboard.destroy();
-      })
-    }
-  },
+  @Prop()
+  code: any[];
+
   created() {
-    cd.tooltip({
+    (<any>window).cd.tooltip({
       el: '.js-code-tooltip'
     });
+  }
+
+  toggleCode() {
+    this.isShowCode = !this.isShowCode;
+  }
+
+  copy() {
+    const clipboard = new Clipboard('.js-copy-code');
+    clipboard.on('success', function(e) {
+      (<any>window).cd.message({
+        type: 'success',
+        message: '复制成功'
+      });
+
+      clipboard.destroy();
+    })
   }
 }
 </script>

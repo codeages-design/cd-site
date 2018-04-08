@@ -11,7 +11,10 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
+
 import { Sketch } from 'vue-color';
 
 const defaultColor = {
@@ -24,35 +27,36 @@ const defaultColor = {
   }
 };
 
-export default {
+@Component({
   components: {
     'sketch-picker': Sketch
-  },
-  data() {
-    return {
-      color: window.color || defaultColor,
-      newColor: {},
-      isShow: false
-    }
-  },
-  methods: {
-    select() {
-      this.isShow = !this.isShow;
-    },
-    cancel() {
-      this.isShow = false;
-    },
-    ok() {
-      this.isShow = false;
+  }
+})
+export default class extends Vue {
 
-      this.$emit('ok', this.color, this.newColor);
-      this.color = this.newColor;
-      window.color = this.newColor;
-    },
-    updateValue(color) {
-      this.newColor = color;
-      console.log(color, 'updateValue');
-    },
+  color: any = (<any>window).color || defaultColor;
+  newColor: any = {};
+  isShow: boolean = false;
+ 
+  select() {
+    this.isShow = !this.isShow;
+  }
+
+  cancel() {
+    this.isShow = false;
+  }
+
+  ok() {
+    this.isShow = false;
+
+    this.$emit('ok', this.color, this.newColor);
+    this.color = this.newColor;
+    (<any>window).color = this.newColor;
+  }
+
+  updateValue(color) {
+    this.newColor = color;
+    console.log(color, 'updateValue');
   }
 }
 </script>

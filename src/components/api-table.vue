@@ -122,24 +122,39 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
+import Vue from 'vue';
+import { Component, Prop } from 'vue-property-decorator';
+
 const dataApiThead = ['data属性', '说明', '类型', '固定值'];
 const attrThead = ['属性名', '说明', '类型', '默认值', '可选值', 'data属性'];
 const eventThead = ['事件名', '说明', '回调函数', '回调函数参数说明'];
 const hookThead = ['钩子名', '说明', '回调函数', '回调函数参数说明'];
 
-export default {
-  props: ['code', 'dataApiData', 'attrData', 'eventData', 'hookData'],
-  data() {
-    return {
-      dataApiThead,
-      attrThead,
-      eventThead,
-      hookThead
-    }
-  },
+@Component
+export default class extends Vue {
+  dataApiThead: any[] = dataApiThead;
+  attrThead: any[] = attrThead;
+  eventThead: any[] = eventThead;
+  hookThead: any[] = hookThead;
+
+  @Prop()
+  code: any;
+
+  @Prop()
+  dataApiData: any[];
+
+  @Prop()
+  attrData: any[];
+
+  @Prop()
+  eventData: any[];
+
+  @Prop()
+  hookData: any[];
+  
   created() {
-    cd.tooltip();
+    (<any>window).cd.tooltip();
   }
 }
 </script>
