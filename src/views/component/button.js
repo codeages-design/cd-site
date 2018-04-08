@@ -12,7 +12,9 @@ export const button_link = `
 export const button_ghost = `
 <button class="cd-btn cd-btn-ghost-primary">主要按钮</button>
 <button class="cd-btn cd-btn-ghost-default">默认按钮</button>
-<button class="cd-btn cd-btn-ghost-light">白色按钮</button>
+<span style="background: #313131; padding: 8px; display:inline-block; border-radius: 4px;">
+  <button class="cd-btn cd-btn-ghost-light" style="margin-right:0">白色按钮</button>
+</span>
 `;
 
 export const button_disabled = `

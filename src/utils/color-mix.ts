@@ -1,12 +1,12 @@
-export const tint = (color, amount) => {
+export const tint = (color: string, amount: number): string => {
 
   if (amount === 0) {
     return `#${color}`.toLowerCase();
   }
 
-  let red = parseInt(color.slice(0, 2), 16)
-  let green = parseInt(color.slice(2, 4), 16)
-  let blue = parseInt(color.slice(4, 6), 16)
+  let red:number | string = parseInt(color.slice(0, 2), 16)
+  let green:number | string = parseInt(color.slice(2, 4), 16)
+  let blue:number | string = parseInt(color.slice(4, 6), 16)
   
   red += Math.round(amount * (255 - red))
   green += Math.round(amount * (255 - green))
@@ -19,10 +19,10 @@ export const tint = (color, amount) => {
   return `#${red}${green}${blue}`
 };
 
-export const shade = (color, amount) => {
-  let red = parseInt(color.slice(0, 2), 16)
-  let green = parseInt(color.slice(2, 4), 16)
-  let blue = parseInt(color.slice(4, 6), 16)
+export const shade = (color: string, amount: number): string => {
+  let red:number | string = parseInt(color.slice(0, 2), 16)
+  let green:number | string = parseInt(color.slice(2, 4), 16)
+  let blue:number | string = parseInt(color.slice(4, 6), 16)
 
   red = Math.round((1 - amount) * red)
   green = Math.round((1 - amount) * green)
@@ -35,7 +35,4 @@ export const shade = (color, amount) => {
   return `#${red}${green}${blue}`
 };
 
-export const tone = (color, amount) => {
-
-};
 

@@ -1,49 +1,33 @@
 <template>
-  <div>
-    <div class="site-content-title">徽标数</div>
-    <div class="site-content-des">
-      
-    </div>
-    <div class="cd-row">
-      <div class="cd-xs-12">
-        <x-panel :code="code.badge_base|trim">
-          <span slot="title">
-            基础
-          </span>
-          <div slot="code">
-            <pre v-highlightjs><code class="html">
-              {{ code.badge_base }}
-            </code></pre>
-          </div>
-          <div class="cd-row cd-mb16" slot="style">
-            <div class="col-xs-8" v-html="code.badge_base"></div>
-          </div>
-          <div class="" slot="dec">
-          </div>
-        </x-panel>
-      </div>
-    </div>
-  </div>
+  <x-component-template 
+    title="徽标数"
+    :card="card"
+    >
+  </x-component-template>
 </template>
 
-<script>
-import * as code from './badge';
-import XPanel from '@/components/panel.vue';
+<script lang="ts">
+import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
+import XComponentTemplate from '@/components/component-template.vue';
 
-export default {
-  components: {
-    XPanel
-  },
-  data() {
-    return {
-      code,
-    }
-  },
-  methods: {
+import * as code from './badge';
+
+const card = [
+  {
+    col: '12',
+    title: '基础',
+    code: code.badge_base,
   }
+];
+
+@Component({
+  components: {
+    XComponentTemplate
+  },
+})
+export default class extends Vue {
+  card: any = card;
 }
 </script>
 
-<style lang="less">
-
-</style>

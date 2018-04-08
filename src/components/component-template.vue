@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div :class="className">
     <div class="site-content-title">
       {{ title }}
     </div>
@@ -7,7 +7,7 @@
       {{ des }}
     </div>
     <div class="cd-row">
-      <div :class="'cd-xs-' + item.col" v-for="(item, index) in card" :key="index">
+      <div :class="'cd-xs-' + item.col || 12" v-for="(item, index) in card" :key="index">
         <x-panel :code="item.code|trim">
           <div slot="title">
             {{ item.title }}
@@ -17,12 +17,13 @@
               {{ item.code }}
             </code></pre>
           </div>
-          <div class="cd-mb16" slot="style" v-html="item.code"></div>
+          <div class="cd-mb16" slot="style" v-html="item.code_style || item.code"></div>
           <div class="" slot="dec">
             {{ item.dec }}
           </div>
-        </x-panel>  
+        </x-panel>
       </div>
+      <slot name="card"></slot>
     </div>
     <x-api-table 
       :code="api.code"
@@ -48,16 +49,29 @@ import XApiTable from '@/components/api-table.vue';
   }
 })
 export default class extends Vue {
+  @Prop({default: ''})
+  className: string;
+
   @Prop({ default: '' })
   title: string;
 
   @Prop({ default: '' })
   des: string;
 
-  @Prop({ default: [] })
+  @Prop({ 
+    type: Array,
+    default: () => {
+      return [];
+    }  
+  })
   card: any[];
 
-  @Prop()
+  @Prop({ 
+    type: Object, 
+    default: () => {
+      return {}
+    } 
+  })
   api: any;
 }
 </script>

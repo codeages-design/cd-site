@@ -1,86 +1,70 @@
 <template>
-  <div>
-    <div class="site-content-title">自动补全</div>
-    <div class="site-content-des">
-      
-    </div>
-    <div class="cd-row">
-      <div class="cd-xs-12">
-        <x-panel :code="code.autoComplete_base|trim">
-          <span slot="title">
-            基础
-          </span>
-          <div slot="code">
-            <pre v-highlightjs><code class="html">
-              {{ code.autoComplete_base }}
-            </code></pre>
-          </div>
-          <div class="cd-mb16" slot="style" v-html="code.autoComplete_base" style="width: 200px">
-          </div>
-          <div class="" slot="dec">
-          </div>
-        </x-panel>
-      </div>
-    </div>
-    <x-api-table 
-      :code="code.autocomplete_api" 
-      :attrData="attrData" 
-      :hookData="hookData">
-    </x-api-table>
-  </div>
+  <x-component-template
+    title='自动补全'
+    :card="card"
+    :api="api"
+    >
+  </x-component-template>
 </template>
 
 <script lang="ts">
 import Vue from 'vue';
 import { Component } from 'vue-property-decorator';
+import XComponentTemplate from '@/components/component-template.vue';
 
 import * as code from './autocomplete';
-import XPanel from '@/components/panel.vue';
-import XApiTable from '@/components/api-table.vue';
 
-const attrData = [
+const card = [
   {
-    name: 'el',
-    dec: '要绑定的Dom元素',
-    type: 'String',
-    value: '无',
-    optional: '--'
-  },
-  {
-    name: 'sources',
-    dec: '数据源, 如果是Function类型，则必须返回一个Promise, resolve值为数组',
-    type: 'Array | Function',
-    value: '无',
-    optional: '--'
-  },
-  {
-    name: 'selectKey',
-    dec: '如果数据源中的每一项是一个对象，则添加selectKey来筛选要匹配的key',
-    type: 'String',
-    value: '无',
-    optional: '--'
-  },
-];
-
-const hookData = [
-  {
-    name: 'change',
-    dec: '修改后触发的钩子',
-    callback: '--',
-    args: 'args1: value，选中的值'
+    col: '12',
+    title: '基础',
+    code: code.autoComplete_base
   }
-];
+]
+
+const api = {
+  code: code.autocomplete_api,
+  attrData: [
+    {
+      name: 'el',
+      dec: '要绑定的Dom元素',
+      type: 'String',
+      value: '无',
+      optional: '--'
+    },
+    {
+      name: 'sources',
+      dec: '数据源, 如果是Function类型，则必须返回一个Promise, resolve值为数组',
+      type: 'Array | Function',
+      value: '无',
+      optional: '--'
+    },
+    {
+      name: 'selectKey',
+      dec: '如果数据源中的每一项是一个对象，则添加selectKey来筛选要匹配的key',
+      type: 'String',
+      value: '无',
+      optional: '--'
+    },
+  ],
+  hookData: [
+    {
+      name: 'change',
+      dec: '修改后触发的钩子',
+      callback: '--',
+      args: 'args1: value，选中的值'
+    }
+  ]
+}
 
 @Component({
   components: {
-    XPanel,
-    XApiTable
+    XComponentTemplate,
   }
 })
 export default class extends Vue {
-  code: any = code;
-  attrData: any[] = attrData;
-  hookData: any[] = hookData;
+  card: any = card;
+  api: any = api;
 
   mounted() {
     cd.autocomplete({
@@ -109,6 +93,3 @@ export default class extends Vue {
 }
 </script>
 
-<style lang="less">
-
-</style>

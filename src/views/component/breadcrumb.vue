@@ -1,58 +1,37 @@
 <template>
-  <div>
-    <div class="site-content-title">面包屑</div>
-    <div class="site-content-des">
-      
-    </div>
-    <div class="cd-row">
-      <div class="cd-xs-12">
-        <x-panel :code="code.breadcrumb_base|trim">
-          <span slot="title">
-            基础
-          </span>
-          <div slot="code">
-            <pre v-highlightjs><code class="html">
-              {{ code.breadcrumb_base }}
-            </code></pre>
-          </div>
-          <div class="cd-mb16" slot="style" v-html="code.breadcrumb_base"></div>
-          <div class="" slot="dec">
-           
-          </div>
-        </x-panel>
-      </div>
-      <div class="cd-xs-12">
-        <x-panel :code="code.breadcrumb_nobg|trim">
-          <span slot="title">
-            无背景色
-          </span>
-          <div slot="code">
-            <pre v-highlightjs><code class="html">
-              {{ code.breadcrumb_nobg }}
-            </code></pre>
-          </div>
-          <div class="cd-mb16" slot="style" v-html="code.breadcrumb_nobg"></div>
-          <div class="" slot="dec">
-           
-          </div>
-        </x-panel>
-      </div>
-    </div>
-  </div>
+  <x-component-template 
+    title="面包屑"
+    :card="card"
+    >
+  </x-component-template>
 </template>
 
-<script>
-import * as code from './breadcrumb';
-import XPanel from '@/components/panel.vue';
+<script lang="ts">
+import Vue from 'vue';
+import { Component } from 'vue-property-decorator';
+import XComponentTemplate from '@/components/component-template.vue';
 
-export default {
+import * as code from './breadcrumb';
+
+const card = [
+  {
+    col: '12',
+    title: '基础',
+    code: code.breadcrumb_base,
+  },
+  {
+    col: '12',
+    title: '无背景色',
+    code: code.breadcrumb_nobg
+  }
+];
+
+@Component({
   components: {
-    XPanel
+    XComponentTemplate
   },
-  data() {
-    return {
-      code,
-    }
-  },
+})
+export default class extends Vue {
+  card: any = card;
 }
 </script>
