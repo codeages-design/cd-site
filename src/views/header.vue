@@ -14,7 +14,10 @@
           {{nav.text}}
         </li>
       </ul>
-      <theme-picker @ok="pickerOk"></theme-picker>
+      <theme-picker @ok="pickerOk">
+        <embed src="/static/svg/color.svg" type="" style="vertical-align: middle; margin-top: -2px">
+        主题色
+      </theme-picker>
     </div>
   </header>
 </template>
