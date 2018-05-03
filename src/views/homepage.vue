@@ -9,18 +9,28 @@
           <button class="cd-btn cd-btn-primary cd-btn-lg" @click="getMore">了解更多</button>
         </div>
         <div class="site-homepage-banner__pic" 
-          :style="{transform: `perspective(${banner.global.perspective}px) rotateX(${banner.global.rotateY}deg) rotateY(${banner.global.rotateX}deg)`}" 
+          :style="{
+            transform: `perspective(${banner.global.perspective}px) rotateX(${banner.global.rotateY}deg) rotateY(${banner.global.rotateX}deg)`
+          }" 
           @mousemove="mousemove" 
           @mouseleave="mouseleave" 
           ref="banner">
           <img :style="{transform: `matrix(1, 0, 0, 1, ${item.rotateX}, ${item.rotateY}`}"
             :class="[{active: isActive, prohibit: isProhibit}, `site-homepage-banner__${index}`]" 
             :src="item.src"
-            :srcset="item.srcset" alt="" v-for="(item, index) in banner" :key="index" :data-a="banner[item]" v-if="index != 'global'">
+            :srcset="item.srcset" alt="" 
+            v-for="(item, index) in banner" 
+            :key="index" 
+            :data-a="banner[item]" 
+            v-if="index != 'global'">
         </div>
       </section>
       <section class="site-homepage-feature">
-        <div class="site-homepage-feature__item" :class="{middle: index == 1}" v-for="(item, index) in feature" :key="index">
+        <div class="site-homepage-feature__item" 
+          :class="{middle: index == 1}" 
+          v-for="(item, index) in feature" 
+          :key="index"
+        >
           <div class="site-homepage-feature__thumb">
             <img :src="item.src" 
               :srcset="item.srcset" alt="">
@@ -38,10 +48,6 @@
       </section>
       <footer class="site-homepage-footer">
         <div class="cd-container">
-          <!-- <ul class="site-homepage-footer__nav">
-            <li><a href="">隐私协议</a></li>
-            <li><a href="">下载文档</a></li>
-          </ul> -->
           <div class="site-homepage-footer__copyright">
             © 2017-2018 Codeages Design v{{version}} 阔知用户体验技术团队
           </div>
@@ -57,6 +63,8 @@ import { Component, } from 'vue-property-decorator';
 
 import XHeader from '@/views/header.vue';
 import { version } from 'codeages-design/package.json';
+
+import 'codeages-design/src/less/codeages-design.less';
 
 @Component({
   name: 'homepage',
