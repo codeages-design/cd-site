@@ -1,6 +1,10 @@
 language: node_js
 node_js: stable
 
+cache:
+  directories:
+    - node_modules
+
 script:
   - curl -L http://collection.b0.upaiyun.com/softwares/upx/upx-linux-amd64-v0.2.3 -o upx
   - chmod a+x ./upx
