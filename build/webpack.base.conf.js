@@ -10,7 +10,7 @@ function resolve (dir) {
 
 var baseWebpackConfig = {
   entry: {
-    app: './src/main.ts'
+    app: './src/main.js'
   },
   output: {
     path: config.build.assetsRoot,

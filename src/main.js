@@ -11,31 +11,24 @@ import 'jquery';
 import * as cd from 'codeages-design';
 import '@/assets/styles/main.less';
 
-// import {
-//   Alert,
-//   Panel,
-//   Row,
-//   Col,
-//   message,
-//   CollapseTransition,
-// } from 'cd-vue';
-
-import cdvue from 'cd-vue';
+import {
+  Alert,
+  Panel,
+  Row,
+  Col,
+  message
+} from 'cd-vue';
 
 Vue.use(MetaInfo);
 Vue.use(filters);
 Vue.use(plugins);
-Vue.use(cdvue);
 
-// console.log(cdvue, 'vue');
+Vue.component('cd-alert', Alert);
+Vue.component('cd-panel', Panel);
+Vue.component('cd-row', Row);
+Vue.component('cd-col', Col);
 
-// console.log(Alert, 'alert');
-// Vue.component('cd-alert', Alert);
-// Vue.component('cd-panel', Panel);
-// Vue.component('cd-row', Row);
-// Vue.component('cd-col', Col);
-
-// Vue.prototype.$message = message;
+Vue.prototype.$message = message;
 
 Vue.config.productionTip = false;
 
@@ -43,7 +36,7 @@ Vue.directive('highlightjs', (e) => {
   hljs.highlightBlock(e);
 });
 
-(<any>window).cd = cd;
+window.cd = cd;
 
 /* eslint-disable no-new */
 new Vue({
