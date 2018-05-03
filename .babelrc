@@ -1,0 +1,18 @@
+{
+  "presets": [
+    [
+      "env",
+      {
+        "modules": false
+      }
+    ],
+    "stage-0"
+  ],
+  "plugins": [
+    ["import", {
+      "libraryName": "cd-vue",
+      "libraryDirectory": "src/components"
+    }]
+  ],
+  "compact": false
+}

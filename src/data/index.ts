@@ -218,25 +218,63 @@ const componentMenu:any[] = [
   }
 ];
 
+const vueComponentMenu:any[] = [
+  {
+    'text': '基础 Basic',
+    'children': [
+      {
+        'isItem': true,
+        'text_zh': '栅格',
+        'text_en': 'Grid',
+        'name': 'vue-component_grid'
+      },
+    ]
+  },
+  {
+    'text': '通知 Notice',
+    'children': [
+      {
+        'text_zh': '提示框',
+        'text_en': 'Alert',
+        'name': 'vue-component_alert'
+      },
+     
+    ]
+  },
+];
+
 const navMenu:any[] = [
   {
     'text': '首页',
     'name': 'homepage'
   }, 
   {
-    'text': '组件',
+    'text': 'ES6版',
     'name': 'component'
+  }, 
+  {
+    'text': 'Vue版',
+    'name': 'vue-component'
   }
 ];
 
-const componentData:any[] = [];
 
-componentMenu.map((item: any):void => {
-  componentData.push(...item.children);
-});
+const getData = (menu) => {
+  const data:any[] = [];
+  menu.map((item: any):void => {
+    data.push(...item.children)
+  });
+
+  return data;
+}
+
+const componentData:any[] = getData(componentMenu);
+const vueComponentData:any[] = getData(vueComponentMenu);
 
 export {
   componentMenu,
+  componentData,
+  vueComponentMenu,
+  vueComponentData,
   navMenu,
-  componentData
 };

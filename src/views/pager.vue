@@ -11,11 +11,13 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { Component, Watch } from 'vue-property-decorator';
-import { componentData } from '@/data';
+import { Component, Watch, Prop } from 'vue-property-decorator';
 
 @Component
 export default class extends Vue {
+  @Prop()
+  data: any;
+
   currentName: string = '';
   preName: any = '';
   nextName: any = '';
@@ -24,10 +26,10 @@ export default class extends Vue {
   getSibling() {
     this.currentName = this.$route.name;
     
-    componentData.map((item, index) => {
+    this.data.map((item, index) => {
       if(item.name == this.currentName) {
-        this.preName = index - 1 >= 0 ? componentData[index - 1] : '';
-        this.nextName = index + 1 < componentData.length ? componentData[index + 1] : '';
+        this.preName = index - 1 >= 0 ? this.data[index - 1] : '';
+        this.nextName = index + 1 < this.data.length ? this.data[index + 1] : '';
       }
     })
   }

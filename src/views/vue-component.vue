@@ -26,9 +26,9 @@ import XHeader from '@/views/header.vue';
 import XPager from '@/views/pager.vue';
 
 import * as code from './component/modal';
-import { componentMenu, componentData } from '@/data';
+import { vueComponentMenu, vueComponentData } from '@/data';
 
-import 'codeages-design/src/less/codeages-design.less';
+import 'cd-vue/src/styles/index.less';
 
 @Component({
   name: 'layout',
@@ -40,7 +40,8 @@ import 'codeages-design/src/less/codeages-design.less';
 })
 export default class extends Vue {
   code: any = code;
-  componentMenu: any = componentMenu;
-  componentData: any = componentData;
+  componentMenu: any = vueComponentMenu;
+  componentData: any = vueComponentData;
 };
 </script>
+

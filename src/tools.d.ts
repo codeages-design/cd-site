@@ -7,3 +7,5 @@ declare module '@/mixins/component';
 declare module '@/components/panel.vue';
 declare module '@/components/api-table.vue';
 declare module '@/components/component-template.vue';
+
+declare module 'cd-vue';

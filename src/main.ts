@@ -9,12 +9,33 @@ import hljs from 'highlight.js';
 import 'highlight.js/styles/googlecode.css';
 import 'jquery';
 import * as cd from 'codeages-design';
-import 'codeages-design/src/less/codeages-design.less';
 import '@/assets/styles/main.less';
+
+// import {
+//   Alert,
+//   Panel,
+//   Row,
+//   Col,
+//   message,
+//   CollapseTransition,
+// } from 'cd-vue';
+
+import cdvue from 'cd-vue';
 
 Vue.use(MetaInfo);
 Vue.use(filters);
 Vue.use(plugins);
+Vue.use(cdvue);
+
+// console.log(cdvue, 'vue');
+
+// console.log(Alert, 'alert');
+// Vue.component('cd-alert', Alert);
+// Vue.component('cd-panel', Panel);
+// Vue.component('cd-row', Row);
+// Vue.component('cd-col', Col);
+
+// Vue.prototype.$message = message;
 
 Vue.config.productionTip = false;
 

@@ -1,7 +1,7 @@
 <template>
   <div class="site-sidebar">
     <div class="site-sidebar__column" 
-      v-for="(menu, menuIndex) in componentMenu" 
+      v-for="(menu, menuIndex) in data" 
       :key="menuIndex">
       <div class="site-sidebar__column__title">
         {{ menu.text }}
@@ -22,12 +22,12 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { Component, Watch } from 'vue-property-decorator';
-import { componentMenu } from '@/data';
+import { Component, Watch, Prop } from 'vue-property-decorator';
 
 @Component
 export default class extends Vue {
-  componentMenu: any[] = componentMenu;
+  @Prop()
+  data: any[];
   routeName:string = '';
 
   @Watch('$route')

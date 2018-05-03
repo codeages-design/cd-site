@@ -33,7 +33,7 @@ export default class extends Vue {
   code: any[];
 
   created() {
-   cd.tooltip({
+    cd.tooltip({
       el: '.js-code-tooltip'
     });
   }

@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import config from '../../config';
 
 import component from './component';
+import vueComponent from './vue-component';
 
 Vue.use(Router);
 
@@ -16,6 +17,16 @@ const routes = [{
   component: (resolve) => require(['@/views/component.vue'], resolve),
   children: [
     ...component,
+  ],
+}, {
+  path: '/vue-component',
+  name: 'vue-component',
+  redirect: {
+    name: 'vue-component_alert'
+  },
+  component: (resolve) => require(['@/views/vue-component.vue'], resolve),
+  children: [
+    ...vueComponent,
   ],
 }, {
   path: '/',
