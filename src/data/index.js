@@ -1,4 +1,4 @@
-const componentMenu:any[] = [
+const componentMenu = [
   {
     'text': '基础 Basic',
     'children': [
@@ -218,7 +218,7 @@ const componentMenu:any[] = [
   }
 ];
 
-const navMenu:any[] = [
+const navMenu = [
   {
     'text': '首页',
     'name': 'homepage'
@@ -229,9 +229,9 @@ const navMenu:any[] = [
   }
 ];
 
-const componentData:any[] = [];
+const componentData = [];
 
-componentMenu.map((item: any):void => {
+componentMenu.map((item) => {
   componentData.push(...item.children);
 });
 
