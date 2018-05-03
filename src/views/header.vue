@@ -15,7 +15,7 @@
         </li>
       </ul>
       <theme-picker @ok="pickerOk">
-        <embed src="/static/svg/color.svg" type="" style="vertical-align: middle; margin-top: -2px">
+        <embed src="/static/svg/color.svg" type="" height="13" width="10" style="vertical-align: middle; margin-top: -2px">
         主题色
       </theme-picker>
     </div>
