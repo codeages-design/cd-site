@@ -10,7 +10,6 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin')
 var OptimizeCSSPlugin = require('optimize-css-assets-webpack-plugin')
 var PrerenderSpaPlugin = require('prerender-spa-plugin')
 var Renderer = PrerenderSpaPlugin.PuppeteerRenderer
-var { componentData } = require('../src/data')
 
 var env = config.build.env
 
@@ -97,28 +96,6 @@ var webpackConfig = merge(baseWebpackConfig, {
     ])
   ]
 })
-
-if (config.build.isPrerenderSpa) {
-  
-  // get prerender routes
-  var prerenderRoutes = []
-  var prefix = '/component/'
-  componentData.map(function(item) {
-    prerenderRoutes.push(prefix + item.text_en.toLowerCase())
-  })
-
-  webpackConfig.plugins.push(
-    new PrerenderSpaPlugin({
-      staticDir: path.join(__dirname, '../dist'),
-      routes: [
-        '/',
-      ].concat(prerenderRoutes),
-      // renderer: new Renderer({
-      //   renderAfterTime: 5000
-      // })
-    })
-  )
-}
 
 if (config.build.productionGzip) {
   var CompressionWebpackPlugin = require('compression-webpack-plugin')
