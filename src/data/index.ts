@@ -238,7 +238,16 @@ const vueComponentMenu:any[] = [
         'text_en': 'Alert',
         'name': 'vue-component_alert'
       },
-     
+    ]
+  },
+  {
+    'text': '导航 Navigation',
+    'children': [
+      {
+        'text_zh': '步骤条',
+        'text_en': 'Step',
+        'name': 'vue-component_step'
+      },
     ]
   },
 ];
