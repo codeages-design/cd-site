@@ -16,7 +16,9 @@ import {
   Panel,
   Row,
   Col,
-  message
+  message,
+  Step,
+  Steps
 } from 'cd-vue';
 
 Vue.use(MetaInfo);
@@ -27,6 +29,8 @@ Vue.component('cd-alert', Alert);
 Vue.component('cd-panel', Panel);
 Vue.component('cd-row', Row);
 Vue.component('cd-col', Col);
+Vue.component('cd-steps', Steps);
+Vue.component('cd-step', Step);
 
 Vue.prototype.$message = message;
 
