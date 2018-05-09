@@ -18,7 +18,8 @@ import {
   Col,
   message,
   Step,
-  Steps
+  Steps,
+  badge
 } from 'cd-vue';
 
 Vue.use(MetaInfo);
