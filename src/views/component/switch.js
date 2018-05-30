@@ -1,6 +1,6 @@
 export const switch_base = `
 <label class="cd-switch checked">
-  <input type="checkbox" data-toggle="cd-switch" value="1" checked/>
+  <input id="switch" type="checkbox" data-toggle="cd-switch" value="1" checked/>
 </label>
 `;
 
