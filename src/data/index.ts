@@ -28,6 +28,12 @@ const componentMenu:any[] = [
           'text_zh': '布局',
           'text_en': 'Layout',
           'name': 'component_layout'
+        },
+        {
+          'isItem': true,
+          'text_zh': '后台布局',
+          'text_en': 'Backstage',
+          'name': 'component_backstage'
         }
     ]
   },

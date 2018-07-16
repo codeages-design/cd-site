@@ -1,0 +1,41 @@
+// add-layout-component
+ul,li,div,h5{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+.ct-layout-container{
+  height: 705px;
+  .cd-fixed-top{
+    position: absolute;
+    left: 10px;
+    right: 10px;
+    margin-top: 10px;  
+  }
+  .cd-layout-main{
+    padding-top: 74px;
+    .cd-lauout-sidebar{
+      height: 620px;
+      left: 10px;
+      top:124px;
+      position: absolute;  
+      .sidebar-title span{
+        padding-left: 13px;
+      }
+    }
+    .cd-layout-aside {
+      margin-left: 250px;
+      .cd-layout-aside_bread{
+        .cd-breadcrumb{
+          margin-bottom: 11px;
+        }
+      }
+      .cd-layout-adside_content{
+        height:550px;
+        margin: 0 10px 0 24px;
+      }
+    }
+  }
+}
