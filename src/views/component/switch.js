@@ -13,7 +13,18 @@ export const switch_disabled = `
 </label>
 `;
 
+
 export const switch_api = `
+<!-- 1 无需js调用方式 即DATA-API -->
+<label class="cd-switch checked">
+  <input type="radio" data-toggle="cd-switch" value="1" checked/>
+</label>
+
+<!-- 2 js调用方式 -->
+<label class="cd-switch disabled">
+  <input id="switch" type="radio" value="1" disabled />
+</label>
+
 // 为了避免和js中的switch关键词冲突，故用onoff
 cd.onoff({
   el: '#switch'
