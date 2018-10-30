@@ -22,7 +22,7 @@ export const switch_api = `
 
 <!-- 2 js调用方式 -->
 <label class="cd-switch disabled">
-  <input id="switch" type="radio" value="1" disabled />
+  <input id="switch" type="radio" value="1" checked />
 </label>
 
 // 为了避免和js中的switch关键词冲突，故用onoff
