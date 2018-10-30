@@ -1,15 +1,15 @@
 export const switch_base = `
 <label class="cd-switch checked">
-  <input id="switch" type="checkbox" data-toggle="cd-switch" value="1" checked/>
+  <input id="switch" type="radio" data-toggle="cd-switch" value="1" checked/>
 </label>
 `;
 
 export const switch_disabled = `
 <label class="cd-switch disabled">
-  <input type="checkbox" data-toggle="cd-switch" value="1" disabled />
+  <input type="radio" data-toggle="cd-switch" value="1" disabled />
 </label>
 <label class="cd-switch checked disabled">
-  <input type="checkbox" data-toggle="cd-switch" value="2" checked disabled />
+  <input type="radio" data-toggle="cd-switch" value="2" checked disabled />
 </label>
 `;
 
