@@ -224,8 +224,23 @@ const navMenu:any[] = [
     'name': 'homepage'
   }, 
   {
+    'text': '原则策略',
+    'name': 'principle',
+    children: [
+      
+    ]
+  },
+  {
+    'text': '元素布局',
+    'name': 'layout'
+  },
+  {
     'text': '组件',
     'name': 'component'
+  },
+  {
+    'text': '资源',
+    'name': 'resource'
   }
 ];
 

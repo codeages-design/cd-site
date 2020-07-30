@@ -2,48 +2,30 @@
   <div id="app" class="site-wrap">
     <x-header></x-header>
     <div class="site-homepage-main">
-      <section class="site-homepage-banner">
-        <div class="site-homepage-banner__text">
-          <h1>Codeages Design<br>一种 Web 设计语言</h1>
-          <h2>让你快速搭建自己的中后台应用</h2>
-          <button class="cd-btn cd-btn-primary cd-btn-lg" @click="getMore">了解更多</button>
+      <div class="site-homepage-banner__text">
+        <div class="title">Codeages Design system</div>
+        <div class="desc">阔知设计系统：一个让团队协作规范、高效的全栈式设计体系。</div>
+        <div class="link">
+          <button class="cd-btn cd-btn-default">入门</button>
+          <button class="cd-btn cd-btn-primary" style="margin-left: 64px;">组件</button>
         </div>
-        <div class="site-homepage-banner__pic" 
-          :style="{transform: `perspective(${banner.global.perspective}px) rotateX(${banner.global.rotateY}deg) rotateY(${banner.global.rotateX}deg)`}" 
-          @mousemove="mousemove" 
-          @mouseleave="mouseleave" 
-          ref="banner">
-          <img :style="{transform: `matrix(1, 0, 0, 1, ${item.rotateX}, ${item.rotateY}`}"
-            :class="[{active: isActive, prohibit: isProhibit}, `site-homepage-banner__${index}`]" 
-            :src="item.src"
-            :srcset="item.srcset" alt="" v-for="(item, index) in banner" :key="index" :data-a="banner[item]" v-if="index != 'global'">
-        </div>
-      </section>
+      </div>
       <section class="site-homepage-feature">
-        <div class="site-homepage-feature__item" :class="{middle: index == 1}" v-for="(item, index) in feature" :key="index">
+        <div class="site-homepage-feature__item"
+          :class="feature.direction"
+          v-for="feature in features" :key="feature.title">
           <div class="site-homepage-feature__thumb">
-            <img :src="item.src" 
-              :srcset="item.srcset" alt="">
+            <img alt="" />
           </div>
-          <div class="site-homepage-feature__title">
-            {{ item.title }}
-          </div>
-          <div class="site-homepage-feature__content">
-            {{ item.content }}
-          </div>
-          <div class="site-homepage-feature__action">
-            <button class="cd-btn cd-btn-primary cd-btn-lg" @click="getMore">查看详情</button>
-          </div>
+          <div class="site-homepage-feature__title">{{ feature.title }}</div>
+          <div class="site-homepage-feature__content">{{ feature.content }}</div>
         </div>
       </section>
       <footer class="site-homepage-footer">
         <div class="cd-container">
-          <!-- <ul class="site-homepage-footer__nav">
-            <li><a href="">隐私协议</a></li>
-            <li><a href="">下载文档</a></li>
-          </ul> -->
+          <div class="site-homepage-footer__belongto">阔知UED团队和技术团队联合出品</div>
           <div class="site-homepage-footer__copyright">
-            © 2017-2018 Codeages Design v{{version}} 阔知用户体验技术团队
+            © 2019-2020 Codeages Design V1.0.1
           </div>
         </div>
       </footer>
@@ -125,22 +107,32 @@ export default class extends Vue {
     },
   };
   
-  feature: any = [
+  features: any = [
     {
-      title: '帮助产品经理搭建原型',
-      content: '了解设计指南，帮助产品经理搭建逻辑清晰，结构合理且高效易用的产品。',
+      direction: 'right',
+      title: '原则策略',
+      content: '原则策略能辅助产品和设计团队规范的、严谨的表达内容，让用户使用起来更加愉悦。',
       src: '/static/img/homepage/feature_1.png',
       srcset: "/static/img/homepage/feature_1@2x.png 2x"
     },
     {
-      title: '帮助开发复用代码和组件元素',
-      content: '使用组件演示快速体验交互细节，使用前端框架封装的代码帮助快速开发。',
+      direction: 'left',
+      title: '设计元素',
+      content: '元素规范能让设计和前端团队在设计和开发过程中做出专业的决策，搭建出结构合理、高效易用的产品。',
       src: '/static/img/homepage/feature_2.png',
       srcset: "/static/img/homepage/feature_2@2x.png 2x"
     },
     {
-      title: '帮助设计减少重复劳动力',
-      content: '下载相关资源快速搭建页面原型或高保真视觉稿，提升产品设计效率。',
+      direction: 'right',
+      title: '组件Demo',
+      content: '使用组件 Demo 快速体验交互细节；使用前端框架封装的代码帮助工程师快速开发。',
+      src: '/static/img/homepage/feature_3.png',
+      srcset: "/static/img/homepage/feature_3@2x.png 2x"
+    },
+    {
+      direction: 'left',
+      title: '可复用的资源',
+      content: '下载相关资源，用其快速搭建页面原型或高保真视觉稿，提升产品设计率。',
       src: '/static/img/homepage/feature_3.png',
       srcset: "/static/img/homepage/feature_3@2x.png 2x"
     },
@@ -192,9 +184,6 @@ export default class extends Vue {
     this.banner.global.rotateX = 0;
     this.banner.global.rotateY = 0;
   }
-
-  getMore() {
-    this['$router'].push({ 'name': 'component' });
-  }
+  
 }
 </script>
