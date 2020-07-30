@@ -174,7 +174,7 @@ const componentMenu:any[] = [
         'text_en': 'Pagination',
         'name': 'component_pagination'
       }
-    ] 
+    ]
   },
   {
     'text': '提示 Hint',
@@ -203,7 +203,7 @@ const componentMenu:any[] = [
         'text_zh': '加载中',
         'text_en': 'Loading',
         'name': 'component_loading'
-      } 
+      }
     ]
   },
   {
@@ -222,17 +222,14 @@ const navMenu:any[] = [
   {
     'text': '首页',
     'name': 'homepage'
-  }, 
+  },
   {
     'text': '原则策略',
     'name': 'principle',
-    children: [
-      
-    ]
   },
   {
     'text': '元素布局',
-    'name': 'layout'
+    'name': 'element-layout'
   },
   {
     'text': '组件',

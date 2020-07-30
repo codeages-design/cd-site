@@ -7,21 +7,34 @@ import component from './component';
 Vue.use(Router);
 
 // route分模块
-const routes = [{
-  path: '/component',
-  name: 'component',
-  redirect: {
-    name: 'component_color'
+const routes = [
+  {
+    path: '/component',
+    name: 'component',
+    redirect: {
+      name: 'component_color'
+    },
+    component: (resolve) => require(['@/views/component.vue'], resolve),
+    children: [
+      ...component,
+    ],
   },
-  component: (resolve) => require(['@/views/component.vue'], resolve),
-  children: [
-    ...component,
-  ],
-}, {
-  path: '/',
-  name: 'homepage',
-  component: (resolve) => require(['@/views/homepage.vue'], resolve),
-}];
+  {
+    path: '/principle',
+    name: 'principle',
+    component: (resolve) => require(['@/views/principle.vue'], resolve),
+  },
+  {
+    path: '/element-layout',
+    name: 'element-layout',
+    component: (resolve) => require(['@/views/element-layout.vue'], resolve),
+  },
+  {
+    path: '/',
+    name: 'homepage',
+    component: (resolve) => require(['@/views/homepage.vue'], resolve),
+  }
+];
 
 const router = new Router({
   routes,
