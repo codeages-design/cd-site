@@ -6,8 +6,8 @@
         <div class="title">Codeages Design system</div>
         <div class="desc">阔知设计系统：一个让团队协作规范、高效的全栈式设计体系。</div>
         <div class="link">
-          <button class="cd-btn cd-btn-default">入门</button>
-          <button class="cd-btn cd-btn-primary" style="margin-left: 64px;">组件</button>
+          <button class="cd-btn desc-link">入门</button>
+          <button class="cd-btn component-link" style="margin-left: 64px;">组件</button>
         </div>
       </div>
       <section class="site-homepage-feature">
