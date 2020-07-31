@@ -30,6 +30,11 @@ const routes = [
     component: (resolve) => require(['@/views/element-layout.vue'], resolve),
   },
   {
+    path: '/resources',
+    name: 'resources',
+    component: (resolve) => require(['@/views/resources.vue'], resolve),
+  },
+  {
     path: '/',
     name: 'homepage',
     component: (resolve) => require(['@/views/homepage.vue'], resolve),

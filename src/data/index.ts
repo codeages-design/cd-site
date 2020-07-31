@@ -237,7 +237,7 @@ const navMenu:any[] = [
   },
   {
     'text': '资源',
-    'name': 'resource'
+    'name': 'resources'
   }
 ];
 

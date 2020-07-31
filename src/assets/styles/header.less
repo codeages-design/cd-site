@@ -1,13 +1,31 @@
+//.site-header {
+//  position: fixed;
+//  top: 0;
+//  left: 0;
+//  right: 0;
+//  background-color: #f5faff;
+//  padding: 0 0 0 200px;
+//  height: 60px;
+//  z-index: 99;
+//}
+
 .site-header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background-color: #f5faff;
-  padding: 0 0 0 200px;
-  height: 60px;
   z-index: 99;
+  height: 60px;
+  padding: 0 0 0 200px;
+  background-color: #fff;
+  .cd-box-shadow();
 }
+
+.site-header.none {
+  box-shadow: none;
+  background-color: #f5faff;
+}
+
 
 .site-header__logo {
   position: absolute;
