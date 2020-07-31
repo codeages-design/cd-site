@@ -1,6 +1,8 @@
 <template>
   <div class="site-theme-picker">
-    <div class="picker" :style="{background: color.hex}" @click="select"></div>
+    <div class="picker" :style="{background: color.hex}" @click="select">
+      <slot></slot>
+    </div>
     <div class="vc-sketch-warp" v-show="isShow">
       <sketch-picker :value="color.hex" @input="updateValue"></sketch-picker>
       <div class="vc-sketch-action">
@@ -13,7 +15,7 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { Component } from 'vue-property-decorator';
+import { Component, Prop } from 'vue-property-decorator';
 
 import { Sketch } from 'vue-color';
 
@@ -66,12 +68,14 @@ export default class extends Vue {
   position: relative;
   float: right;
   .picker {
-    width: 48px;
-    height: 24px;
-    margin-top: 16px;
-    border: 1px solid #fafafa;
+    width: 86px;
+    height: 34px;
+    line-height: 34px;
+    margin-top: 11px;
     cursor: pointer;
     border-radius: 4px;
+    color: #fff;
+    text-align: center;
   }
   .vc-sketch-warp {
     position: absolute;

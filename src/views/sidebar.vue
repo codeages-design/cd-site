@@ -39,10 +39,6 @@ export default class extends Vue {
     console.log(this.menus);
   }
 
-  sidebarToggle() {
-    this.$emit('sidebarToggle');
-  }
-
   switchNav(name) {
     this.$router.push({ name: name });
   }
