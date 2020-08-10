@@ -12,8 +12,8 @@
           :key="submenuIndex"
           :class="{ active: routeName === submenu.name }"
           @click="switchNav(submenu.name)">
-          <span>{{ submenu.text_zh }}</span>
           <span class="nav-en" v-if="!menu.isHideEn">{{ submenu.text_en }}</span>
+          <span>{{ submenu.text_zh }}</span>
         </li>
       </ul>
     </div>

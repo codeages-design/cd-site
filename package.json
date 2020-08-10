@@ -11,8 +11,10 @@
     "lint": "eslint --ext .js,.vue src"
   },
   "dependencies": {
+    "@types/lodash": "^4.14.159",
     "axios": "^0.16.2",
     "babel-polyfill": "^6.26.0",
+    "ckeditor4-vue": "^1.0.1",
     "clipboard": "^1.7.1",
     "codeages-design": "^0.1.6",
     "element-ui": "^1.4.0",
@@ -20,6 +22,7 @@
     "jquery": "^3.2.1",
     "less": "^2.7.2",
     "less-loader": "^4.0.5",
+    "lodash": "^4.17.19",
     "mockjs": "^1.0.1-beta3",
     "moment": "^2.18.1",
     "qs": "^6.5.0",

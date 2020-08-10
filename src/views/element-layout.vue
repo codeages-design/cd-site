@@ -1,8 +1,7 @@
 <template>
   <div id="app" class="site-wrap" :class="{ 'hide-sidebar': isHideSidebar }">
     <x-header></x-header>
-    <div class="element-layout-facility">PC端</div>
-    <x-side-bar @sidebarToggle="sidebarToggle" :menus="menus" style="top: 112px;"></x-side-bar>
+    <x-side-bar @sidebarToggle="sidebarToggle" :menus="menus"></x-side-bar>
     <main class="site-main">
       <div class="site-content">
         <keep-alive>

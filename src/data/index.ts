@@ -229,7 +229,11 @@ const navMenu:any[] = [
   },
   {
     'text': '元素布局',
-    'name': 'element-layout'
+    'name': 'element-layout',
+    'children': [
+        { 'text': 'PC端元素布局', 'name': 'pc-element-layout' },
+        { 'text': '移动端元素布局', 'name': 'mobile-element-layout' },
+    ]
   },
   {
     'text': '组件',

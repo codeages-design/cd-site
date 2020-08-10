@@ -1,6 +1,6 @@
 .site-sidebar {
   position: fixed;
-  top: 56px;
+  top: 72px;
   left: 0;
   bottom: 0;
   width: 272px;
@@ -11,11 +11,13 @@
 }
 
 .site-sidebar__column__title {
-  padding: 20px 16px 12px 32px;
+  padding-bottom: 8px;
+  margin: 12px 32px;
   font-family: PingFangSC-Medium;
   font-size: 14px;
   color: #333333;
   line-height: 20px;
+  border-bottom: solid 1px #ebebeb;
 }
 
 .site-sidebar__nav {
@@ -27,26 +29,13 @@
     font-size: 14px;
     line-height: 20px;
     color: #666;
-    padding: 8px 16px 8px 44px;
+    padding: 12px 32px 12px 44px;
     cursor: pointer;
-    //&:hover {
-    //  cursor: pointer;
-    //  .cd-hover-light;
-    //  .cd-transition;
-    //  .nav-en {
-    //    .cd-hover-light;
-    //    .cd-transition;
-    //  }
-    //}
     &:hover,
     &.active {
-      box-shadow: inset -2px 0 0 0 @brand-primary;
+      color: #31a1ff;
+      box-shadow: inset -2px 0 0 0 #31a1ff;
       background-color: #f1f9ff;
-    }
-    .nav-en {
-      font-size: 12px;
-      margin-left: 4px;
-      color: rgba(0, 0, 0, 0.32);
     }
   }
 }

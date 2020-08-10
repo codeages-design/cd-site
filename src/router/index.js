@@ -25,10 +25,15 @@ const routes = [
     component: (resolve) => require(['@/views/principle.vue'], resolve),
   },
   {
-    path: '/element-layout',
-    name: 'element-layout',
+    path: '/pc-element-layout',
+    name: 'pc-element-layout',
     component: (resolve) => require(['@/views/element-layout.vue'], resolve),
   },
+	{
+		path: '/mobile-element-layout',
+		name: 'mobile-element-layout',
+		component: (resolve) => require(['@/views/element-layout.vue'], resolve),
+	},
   {
     path: '/resources',
     name: 'resources',
@@ -38,6 +43,16 @@ const routes = [
     path: '/',
     name: 'homepage',
     component: (resolve) => require(['@/views/homepage.vue'], resolve),
+  },
+  {
+    path: '/admin',
+    name: 'admin',
+    component: (resolve) => require(['@/views/admin/admin.vue'], resolve),
+  },
+  {
+    path: '/login',
+    name: 'login',
+    component: (resolve) => require(['@/views/admin/login.vue'], resolve),
   }
 ];
 

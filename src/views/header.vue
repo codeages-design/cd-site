@@ -7,11 +7,16 @@
     </div>
     <div class="site-header__nav cd-clearfix">
       <ul class="">
-        <li :class="{ active: routeName === nav.name }" 
-            @click="switchNav(nav.name)" 
-            v-for="(nav, index) in navMenu" 
-            :key="index">
+        <li :class="{ active: routeName === nav.name }"
+            @click="switchNav(nav)"
+            v-for="nav in navMenu">
           {{nav.text}}
+					<template v-if="nav.children">
+						<div class="nav-child-icon"></div>
+						<ul class="nav-child" v-if="nav.children" v-show="childShow[nav.name]">
+							<li v-for="item in nav.children" :key="item.name" @click="switchNav(item, nav)">{{ item.text }}</li>
+						</ul>
+					</template>
         </li>
       </ul>
       <theme-picker @ok="pickerOk">
@@ -24,32 +29,62 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { Component } from 'vue-property-decorator';
+import { Component, Watch } from 'vue-property-decorator';
 
 import ThemePicker from '@/components/theme-picker.vue';
 import { version } from 'codeages-design/package.json';
 import { navMenu } from '@/data';
+import * as _ from 'lodash';
+
+interface Nav {
+	name: String,
+	text: String,
+	children: Nav[],
+}
 
 @Component({
   components: {
     ThemePicker,
   },
 })
+
 export default class extends Vue {
-  navMenu: any[] = navMenu;
+  navMenu: Nav[] = navMenu;
   routeName: string = null;
   chalk: string = (<any>window).chalk;
+	childShow: Object = {};
+	
+	resetNavMenu() {
+		for (let i = 0;i < this.navMenu.length;i++) {
+			const nav = this.navMenu[i];
+			if (nav.children) {
+				const index = _.findIndex(nav.children, item => item.name === this.routeName);
+				if (index > -1) {
+					this.navMenu[i] = (<any>Object).assign({}, this.navMenu[i], nav.children[index]);
+				}
+			}
+		}
+	}
 
   created() {
     this.getRoute();
+    this.resetNavMenu();
   }
 
   getRoute() {
     this.routeName = this.$route.matched[0].name;
   }
 
-  switchNav(name) {
-    this.$router.push({ name: name });
+  switchNav(nav, parent) {
+		if (nav.children) {
+			this.$set(this.childShow, nav.name, !this.childShow[nav.name]);
+			return;
+		} else if (parent) {
+			this.$set(this.childShow, nav.name, false);
+			this.routeName = nav.name;
+			this.resetNavMenu();
+		}
+		this.$router.push({ name: nav.name });
   }
 
   pickerOk(oldColor, newColor) {
