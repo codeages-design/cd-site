@@ -11,12 +11,12 @@ const menu = [
       {
         'text_zh': '价值观',
         'text_en': 'value',
-        'name': 'component_value'
+        'name': 'principle_value'
       },
       {
         'text_zh': '适用边界',
         'text_en': 'boundary',
-        'name': 'component_boundary'
+        'name': 'principle_boundary'
       },
       {
         'text_zh': '更新日志',
@@ -40,7 +40,7 @@ const menu = [
         'name': 'component_controlled'
       },
       {
-        'text_zh': '亲密性',
+        'text_zh': '灵活性',
         'text_en': 'familiarity',
         'name': 'component_familiarity'
       },
@@ -127,10 +127,14 @@ const menu = [
     children: [],
   }
 ]
-const data = [];
+const principleData = [];
 
 menu.map(item => {
-  data.push(...item.children);
+  principleData.push(...item.children);
 });
 
 export default menu;
+
+export {
+  principleData
+}

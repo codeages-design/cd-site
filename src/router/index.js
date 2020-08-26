@@ -3,6 +3,7 @@ import Router from 'vue-router';
 import config from '../../config';
 
 import component from './component';
+import principle from './principle';
 
 Vue.use(Router);
 
@@ -23,6 +24,9 @@ const routes = [
     path: '/principle',
     name: 'principle',
     component: (resolve) => require(['@/views/principle.vue'], resolve),
+    children: [
+      ...principle,
+    ],
   },
   {
     path: '/pc-element-layout',
