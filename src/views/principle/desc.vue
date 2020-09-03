@@ -37,12 +37,14 @@
   </div>
 </template>
 
-<script>
-export default {
-
-};
+<script lang="ts">
+import Vue from 'vue'
+import BigTitle from '@/components/big-title.vue';
+export default Vue.extend({
+    
+})
 </script>
-
-<style>
+     
+<style lang="less" scoped>
 
 </style>
