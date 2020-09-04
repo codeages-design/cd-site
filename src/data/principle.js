@@ -86,9 +86,9 @@ const menu = [
         name: 'principle_interaction'
       },
       {
-        text_zh: '巧用过渡',
-        text_en: 'transform',
-        name: 'principle_transform'
+        text_zh: '提供邀请',
+        text_en: 'offer_request',
+        name: 'principle_offer_request'
       },
       {
         text_zh: '及时反馈',
