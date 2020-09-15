@@ -18,11 +18,11 @@ const menu = [
         'text_en': 'boundary',
         'name': 'principle_boundary'
       },
-      {
-        'text_zh': '更新日志',
-        'text_en': 'update_log',
-        'name': 'component_update_log'
-      },
+      // {
+      //   'text_zh': '更新日志',
+      //   'text_en': 'update_log',
+      //   'name': 'component_update_log'
+      // },
     ]
   },
   {
