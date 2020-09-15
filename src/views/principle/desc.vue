@@ -40,14 +40,9 @@
   </div>
 </template>
 
-<script lang="ts">
-import Vue from 'vue'
-import BigTitle from '@/components/big-title.vue';
-export default Vue.extend({
-    
-})
+<script lang="ts"> 
+ 
 </script>
-<<<<<<< HEAD
 
 <style lang="less" scoped> 
   .site-principle-content-info {
@@ -58,10 +53,6 @@ export default Vue.extend({
       letter-spacing: 0;
       line-height: 24px;
     }
-=======
-     
-<style lang="less" scoped>
->>>>>>> a0769b3cbb46b5c27407b276b656d551b1bf5a17
 
     &.second-section p {
       font-family: PingFangSC-Regular;
