@@ -58,15 +58,6 @@
     letter-spacing: 0;
   }
 
-  .site-principle-content-info-name {
-    font-family: PingFangSC-Medium;
-    font-size: 16px;
-    color: #333333;
-    letter-spacing: 0;
-    line-height: 24px;
-    font-weight: 700;
-  }
-
   .site-principle-content-small-title {
     & + div {
       span {
