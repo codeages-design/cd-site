@@ -1,17 +1,15 @@
-stages:
-  - deploy
-
 cache:
-  key: ${CI_COMMIT_REF_SLUG}
+  key: "$CI_COMMIT_REF_NAME"
   paths:
     - node_modules
 
-deploy:
+deploy for master:
   stage: deploy
-  only:
-    - master
+  image: codeages/ci-php71:6
   script:
     - curl -L http://collection.b0.upaiyun.com/softwares/upx/upx-linux-amd64-v0.2.3 -o upx
     - chmod a+x ./upx
     - ./upx login $UPYUN_BUCKET $UPYUN_USER $UPYUN_PASSWORD
     - cd dist; ../upx put ./ ./
+  only:
+    - master
