@@ -36,6 +36,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Run a multi-line script
         run: |
-          ./qshell account ${{ QINIU_AK }} ${{ QINIU_SK }} dev
+          ./qshell account ${{ secrets.QINIU_AK }} ${{ secrets.QINIU_SK }} dev
           cd dist
-          ../qshell qupload2 --src-dir=.  --bucket=${{ QINIU_BUCKET }}
+          ../qshell qupload2 --src-dir=.  --bucket=${{ secrets.QINIU_BUCKET }}
