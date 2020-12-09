@@ -24,17 +24,17 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Download qiniu tool
+      - name: Download qiniu tool zip file
         run: curl http://devtools.qiniu.com/qshell-linux-x64-v2.4.2.zip -o qshell-linux-x64-v2.4.2.zip
 
-      - name: Unzip qiniu tool
+      - name: Setup qiniu tool
         run: |
           unzip qshell-linux-x64-v2.4.2.zip
           mv qshell-linux-x64-v2.4.2 qshell
           chmod a+x ./qshell
           
       # Runs a set of commands using the runners shell
-      - name: Run a multi-line script
+      - name: Publish code
         run: |
           ./qshell account ${{ secrets.QINIU_AK }} ${{ secrets.QINIU_SK }} dev
           cd dist
