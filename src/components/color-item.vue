@@ -44,6 +44,7 @@ export default class extends Vue {
 <style lang="less" scoped>
 @import '~codeages-design/src/less/variables.less';
 @import '~codeages-design/src/less/mixins.less';
+@import '../variables.less';
 
 .color-palette {
 	position: relative;
@@ -71,7 +72,7 @@ export default class extends Vue {
 		opacity: 0;
 		float: right;
 		display: inline-block;
-		padding: 13px 16px;
+    padding: 13px 16px;
 		.cd-transition;
 	}
 	& div:last-child {
@@ -110,6 +111,7 @@ export default class extends Vue {
 .palette-levels(@color-violet, violet);
 .palette-levels(@color-sakura, sakura);
 .palette-levels(@color-gray, gray);
+
 </style>
 
 

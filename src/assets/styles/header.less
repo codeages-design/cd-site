@@ -4,8 +4,8 @@
   left: 0;
   right: 0;
   z-index: 99;
-  height: 60px;
-  padding: 0 0 0 200px;
+  height: 63px;
+  padding: 0 272px;
   background-color: #fff;
   .cd-box-shadow();
 }
@@ -16,14 +16,15 @@
 }
 
 .site-header__logo {
+  display: inline-block;
   position: absolute;
   top: 0;
-  left: 0;
+  // left: 0;
   height: 56px;
   line-height: 32px;
   padding: 12px 40px;
   width: 200px;
-  color: @brand-primary;
+  color: #31A1FF;
 }
 
 .site-header__nav {
@@ -39,25 +40,25 @@
       line-height: 20px;
       padding: 18px 0;
       margin: 0 32px;
-      font-size: 14px;
+      font-size: 16px;
       float: left;
-      color: @cd-dark-minor;
+      color:#999999;
       .cd-transition();
       &:hover {
         cursor: pointer;
-        color: @brand-primary;
+        color: #31A1FF;
         .cd-transition();
       }
       &.active {
-        color: @brand-primary;
+        color: #31A1FF;
         .nav-child-icon {
-          border-top-color: @brand-primary;
+          border-top-color: #31A1FF;
         }
       }
     }
     .nav-child-icon {
       position: absolute;
-      right: -14px;
+      right: -26px;
       top: 50%;
       width: 0;
       height: 0;
@@ -75,7 +76,7 @@
       padding: 10px 0;
       margin-left: -73px;
       font-size: 14px;
-      line-height: 20px;
+      line-height: 28px;
       color: #999;
       background: #fff;
       box-shadow: 0 0 12px 0 rgba(0,0,0,0.10);
@@ -100,4 +101,9 @@
       }
     }
   }
+}
+
+.site-header__top {
+  background-color: transparent;
+  box-shadow: none;
 }

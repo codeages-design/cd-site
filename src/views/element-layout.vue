@@ -3,7 +3,7 @@
     <x-header></x-header>
     <x-side-bar @sidebarToggle="sidebarToggle" :menus="menus"></x-side-bar>
     <main class="site-main">
-      <div class="site-content">
+      <div class="el-content">
         <keep-alive>
           <router-view v-if="$route.meta.keepAlive">
           </router-view>
