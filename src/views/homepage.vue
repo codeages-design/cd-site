@@ -14,7 +14,7 @@
         </div>
         <img class="banner" src="/static/img/homepage/banner.png" srcset="/static/img/homepage/banner@2x.png" alt="">
       </div>
-
+      
       <section class="site-homepage-feature">
         <div class="site-homepage-feature__item"
           :class="feature.direction"
