@@ -1,0 +1,102 @@
+p,
+ul,
+li,
+h4,
+h5
+{
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: PingFangSC-Medium;
+}
+
+li {
+  list-style: none;
+} 
+
+h4 {
+  font-size: 18px;
+  color: #333333;
+  letter-spacing: 0;
+  line-height: 28px;
+}
+
+img {
+  display: block;
+}
+
+.inline-block {
+  display: inline-block;
+}
+
+.fl {
+  float: left;
+}
+
+.fr {
+  float: right;
+}
+
+.clearfix {
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }
+} 
+
+.site-principle-content-title {
+  position: relative;
+  font-size: 24px;
+  color: #333333;
+  line-height: 32px;
+  padding-left: 14px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #ebebeb;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 50%;
+    width: 6px;
+    height: 18px;
+    margin-top: -16px;
+    background-color: #31a1ff;
+    border-radius: 2px;
+  }
+}
+
+.site-principle-content-inner {  
+  padding: 0 12px;
+}
+
+.site-principle-content-img { 
+  max-width: 100%;
+}
+ 
+.key-words {
+  color: #000000 !important;
+}
+
+.dynamic-effect-video-block {
+  padding: 40px 40px 32px;
+  background: #F9F9F9;
+}
+
+.es-video {
+  width: 390px;
+  height: 390px;
+}
+
+.start-icon {
+  color: #31A1FF;
+}
+
+.star-span {
+  font-size: 14px;
+  color: #333333;
+  letter-spacing: 0;
+}
