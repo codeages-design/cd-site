@@ -25,6 +25,9 @@ const routes = [
     path: '/principle',
     name: 'principle',
     component: (resolve) => require(['@/views/principle.vue'], resolve),
+    redirect: {
+      name: 'principle_desc'
+    },
     children: [
       ...principle,
     ],
