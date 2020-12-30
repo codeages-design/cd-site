@@ -11,18 +11,13 @@ const menu = [
       {
         'text_zh': '价值观',
         'text_en': 'value',
-        'name': 'component_value'
+        'name': 'principle_value'
       },
       {
         'text_zh': '适用边界',
         'text_en': 'boundary',
-        'name': 'component_boundary'
-      },
-      {
-        'text_zh': '更新日志',
-        'text_en': 'update_log',
-        'name': 'component_update_log'
-      },
+        'name': 'principle_boundary'
+      }, 
     ]
   },
   {
@@ -40,7 +35,7 @@ const menu = [
         'name': 'component_controlled'
       },
       {
-        'text_zh': '亲密性',
+        'text_zh': '灵活性',
         'text_en': 'familiarity',
         'name': 'component_familiarity'
       },
@@ -86,9 +81,9 @@ const menu = [
         name: 'principle_interaction'
       },
       {
-        text_zh: '巧用过渡',
-        text_en: 'transform',
-        name: 'principle_transform'
+        text_zh: '提供邀请',
+        text_en: 'offer_request',
+        name: 'principle_offer_request'
       },
       {
         text_zh: '及时反馈',
@@ -119,18 +114,38 @@ const menu = [
     ]
   },
   {
-    text: '动效',
-    children: [],
+    text: '动效',  
+    isHideEn: true,
+    isOnly: true,
+    children: [
+      {
+        text_zh: '动效',
+        text_en: 'dynamic_effect',
+        name: 'principle_dynamic_effect',
+      }
+    ],
   },
   {
-    text: '可视化',
-    children: [],
+    text: '可视化', 
+    isHideEn: true,
+    isOnly: true,
+    children: [
+      {
+        text_zh: '可视化',
+        text_en: 'visualization', 
+        name: 'principle_visualization',
+      }
+    ],
   }
 ]
-const data = [];
+const principleData = [];
 
 menu.map(item => {
-  data.push(...item.children);
+  principleData.push(...item.children);
 });
 
 export default menu;
+
+export {
+  principleData
+}
