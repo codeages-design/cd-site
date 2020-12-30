@@ -67,8 +67,7 @@
 
 <style lang="less" scoped>
   .site-principle-content-inner {
-    & > p {
-      font-family: PingFangSC-Regular;
+    & > p { 
       font-size: 16px;
       color: #333333;
       letter-spacing: 0;

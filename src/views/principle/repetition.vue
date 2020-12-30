@@ -17,12 +17,12 @@
         >
         <img
           class="site-principle-content-img pt-40"
-          src="static/img/principle/chongfu_01.png"
+          src="static/img/principle/chongfu_02.png"
           alt=""
         >
         <img
           class="site-principle-content-img pt-40"
-          src="static/img/principle/chongfu_01.png"
+          src="static/img/principle/chongfu_03.png"
           alt=""
         >
       </div>

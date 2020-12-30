@@ -3,10 +3,14 @@
     <div class="site-sidebar__column"
       v-for="(menu, menuIndex) in menus"
       :key="menuIndex">
-      <div class="site-sidebar__column__title">
+      <div 
+        :class="['site-sidebar__column__title', {isAlone: menu.isOnly}]"
+        @click="switchNav(menu.children[0].name)">
         {{ menu.text }}
       </div>
-      <ul class="site-sidebar__nav">
+      <ul 
+        v-if="!menu.isOnly"
+        class="site-sidebar__nav">
         <li
           v-for="(submenu, submenuIndex) in menu.children"
           :key="submenuIndex"

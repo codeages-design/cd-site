@@ -17,12 +17,7 @@ const menu = [
         'text_zh': '适用边界',
         'text_en': 'boundary',
         'name': 'principle_boundary'
-      },
-      // {
-      //   'text_zh': '更新日志',
-      //   'text_en': 'update_log',
-      //   'name': 'component_update_log'
-      // },
+      }, 
     ]
   },
   {
@@ -119,12 +114,28 @@ const menu = [
     ]
   },
   {
-    text: '动效',
-    children: [],
+    text: '动效',  
+    isHideEn: true,
+    isOnly: true,
+    children: [
+      {
+        text_zh: '动效',
+        text_en: 'dynamic_effect',
+        name: 'principle_dynamic_effect',
+      }
+    ],
   },
   {
-    text: '可视化',
-    children: [],
+    text: '可视化', 
+    isHideEn: true,
+    isOnly: true,
+    children: [
+      {
+        text_zh: '可视化',
+        text_en: 'visualization', 
+        name: 'principle_visualization',
+      }
+    ],
   }
 ]
 const principleData = [];
