@@ -5,6 +5,7 @@ import config from '../../config';
 import component from './component';
 import principle from './principle';
 
+import elementLayout from './element-layout';
 Vue.use(Router);
 
 // route分模块
@@ -31,7 +32,13 @@ const routes = [
   {
     path: '/pc-element-layout',
     name: 'pc-element-layout',
+    redirect: {
+      name: 'element_Font'
+    },
     component: (resolve) => require(['@/views/element-layout.vue'], resolve),
+    children: [
+      ...elementLayout,
+    ],
   },
 	{
 		path: '/mobile-element-layout',

@@ -6,16 +6,16 @@
     <div class="resources-list">
       <div class="resources-item">
         <div class="img">
-          <img src="" alt="" />
+          <img src="../../static/img/resourse/mokuai.png" srcset="../../static/img/resourse/mokuai@2x.png" alt="" />
         </div>
         <div class="name">模块设计资源</div>
         <div class="description">
-          从 Element Template 快速调用常用组件，在提升设计效率的同时，保证统一的视觉风格
+          设计师之间可复用的各种由组件构成的页面模块资源。
         </div>
       </div>
       <div class="resources-item">
         <div class="img">
-          <img src="" alt="" />
+          <img src="../../static/img/resourse/axure.png" srcset="../../static/img/resourse/axure@2x.png" alt="" />
         </div>
         <div class="name">原型Axure组件资源</div>
         <div class="description">
@@ -24,11 +24,11 @@
       </div>
       <div class="resources-item">
         <div class="img">
-          <img src="" alt="" />
+          <img src="../../static/img/resourse/sketch.png" srcset="../../static/img/resourse/sketch@2x.png" alt="" />
         </div>
         <div class="name">设计稿sketch资源</div>
         <div class="description">
-          从 Element Template 快速调用常用组件，在提升设计效率的同时，保证统一的视觉风格
+          设计师之间可复用的页面设计稿资源
         </div>
       </div>
     </div>

@@ -1,0 +1,41 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the action will run. 
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [ master ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-18.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+
+      # Runs a single command using the runners shell
+      - name: Download qiniu tool zip file
+        run: curl http://devtools.qiniu.com/qshell-linux-x64-v2.4.2.zip -o qshell-linux-x64-v2.4.2.zip
+
+      - name: Setup qiniu tool
+        run: |
+          unzip qshell-linux-x64-v2.4.2.zip
+          mv qshell-linux-x64-v2.4.2 qshell
+          chmod a+x ./qshell
+          
+      # Runs a set of commands using the runners shell
+      - name: Publish code
+        run: |
+          ./qshell account ${{ secrets.QINIU_AK }} ${{ secrets.QINIU_SK }} dev
+          cd dist
+          ../qshell qupload2 --src-dir=.  --bucket=${{ secrets.QINIU_BUCKET }}

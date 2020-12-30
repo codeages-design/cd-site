@@ -1,7 +1,10 @@
 <template>
   <div id="app" class="site-wrap">
-    <x-header></x-header>
+
+    <x-header :index="true"></x-header>
+    
     <div class="site-homepage-main">
+
       <div class="site-homepage-banner__text">
         <div class="title">Codeages Design system</div>
         <div class="desc">阔知设计系统：一个让团队协作规范、高效的全栈式设计体系。</div>
@@ -9,18 +12,21 @@
           <button class="cd-btn desc-link">入门</button>
           <button class="cd-btn component-link" style="margin-left: 64px;">组件</button>
         </div>
+        <img class="banner" src="/static/img/homepage/banner.png" srcset="/static/img/homepage/banner@2x.png" alt="">
       </div>
+      
       <section class="site-homepage-feature">
         <div class="site-homepage-feature__item"
           :class="feature.direction"
           v-for="feature in features" :key="feature.title">
           <div class="site-homepage-feature__thumb">
-            <img alt="" />
+            <img alt="" :src="feature.src" :srcset="feature.srcset" />
           </div>
           <div class="site-homepage-feature__title">{{ feature.title }}</div>
           <div class="site-homepage-feature__content">{{ feature.content }}</div>
         </div>
       </section>
+      
       <footer class="site-homepage-footer">
         <div class="cd-container">
           <div class="site-homepage-footer__belongto">阔知UED团队和技术团队联合出品</div>
@@ -30,6 +36,7 @@
         </div>
       </footer>
     </div>
+
   </div>
 </template>
 
@@ -60,29 +67,29 @@ export default class extends Vue {
       rotateX: 0,
       rotateY: 0,
       ratio: -3,
-      src: '/static/img/homepage/boss.png',
-      srcset: '/static/img/homepage/boss@2x.png 2x'
+      src: '/static/img/homepage/01.png',
+      srcset: '/static/img/homepage/01@2x.png 2x'
     },
     designer: {
       rotateX: 0,
       rotateY: 0,
       ratio: 4,
-      src: '/static/img/homepage/designer.png',
-      srcset: '/static/img/homepage/designer@2x.png 2x'
+      src: '/static/img/homepage/02.png',
+      srcset: '/static/img/homepage/02@2x.png 2x'
     },
     engineer: {
       rotateX: 0,
       rotateY: 0,
       ratio: 4,
-      src: '/static/img/homepage/engineer.png',
-      srcset: '/static/img/homepage/engineer@2x.png 2x'
+      src: '/static/img/homepage/03.png',
+      srcset: '/static/img/homepage/03@2x.png 2x'
     },
     component: {
       rotateX: 0,
       rotateY: 0,
       ratio: 2,
-      src: '/static/img/homepage/component.png',
-      srcset: '/static/img/homepage/component@2x.png 2x'
+      src: '/static/img/homepage/04.png',
+      srcset: '/static/img/homepage/04@2x.png 2x'
     },
     vase: {
       rotateX: 0,
@@ -109,32 +116,32 @@ export default class extends Vue {
   
   features: any = [
     {
-      direction: 'right',
+      direction: 'left',
       title: '原则策略',
       content: '原则策略能辅助产品和设计团队规范的、严谨的表达内容，让用户使用起来更加愉悦。',
-      src: '/static/img/homepage/feature_1.png',
-      srcset: "/static/img/homepage/feature_1@2x.png 2x"
-    },
-    {
-      direction: 'left',
-      title: '设计元素',
-      content: '元素规范能让设计和前端团队在设计和开发过程中做出专业的决策，搭建出结构合理、高效易用的产品。',
-      src: '/static/img/homepage/feature_2.png',
-      srcset: "/static/img/homepage/feature_2@2x.png 2x"
+      src: '/static/img/homepage/01.png',
+      srcset: "/static/img/homepage/01@2x.png 2x"
     },
     {
       direction: 'right',
-      title: '组件Demo',
-      content: '使用组件 Demo 快速体验交互细节；使用前端框架封装的代码帮助工程师快速开发。',
-      src: '/static/img/homepage/feature_3.png',
-      srcset: "/static/img/homepage/feature_3@2x.png 2x"
+      title: '设计元素',
+      content: '元素规范能让设计和前端团队在设计和开发过程中做出专业的决策，搭建出结构合理、高效易用的产品。',
+      src: '/static/img/homepage/02.png',
+      srcset: "/static/img/homepage/02@2x.png 2x"
     },
     {
       direction: 'left',
+      title: '组件Demo',
+      content: '使用组件 Demo 快速体验交互细节；使用前端框架封装的代码帮助工程师快速开发。',
+      src: '/static/img/homepage/03.png',
+      srcset: "/static/img/homepage/03@2x.png 2x"
+    },
+    {
+      direction: 'right',
       title: '可复用的资源',
       content: '下载相关资源，用其快速搭建页面原型或高保真视觉稿，提升产品设计率。',
-      src: '/static/img/homepage/feature_3.png',
-      srcset: "/static/img/homepage/feature_3@2x.png 2x"
+      src: '/static/img/homepage/04.png',
+      srcset: "/static/img/homepage/04@2x.png 2x"
     },
   ];
 
