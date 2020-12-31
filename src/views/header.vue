@@ -1,6 +1,7 @@
 <template>
   <header class="site-header" :class="['site-header', {'site-header__top': (this.isTop && this.isIndex)}]" >
-    <div class="site-header__logo">
+    <div class="site-header__container">
+      <div class="site-header__logo">
       <router-link :to="{name: 'homepage'}">
         <img src="/static/img/homepage/logo@2x.png" srcset="/static/img/homepage/logo.png 1x, /static/img/homepage/logo@2x.png 2x" alt="">
       </router-link>
@@ -21,6 +22,8 @@
         </li>
       </ul>
     </div>
+    </div>
+    
   </header>
 </template>
 

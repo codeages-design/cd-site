@@ -22,21 +22,6 @@
       </div>
       
       <section class="site-homepage-feature">
-        <!-- <div class="site-homepage-feature__item site-homepage-feature__item__flex"
-          :class="feature.direction"
-          v-for="feature in features" :key="feature.title">
-
-          <div class="site-homepage-feature__thumb" :class="feature.direction">
-            <img alt="" :src="feature.src" :srcset="feature.srcset" />
-          </div>
-
-          <div class="site-homepage-feature__text">
-            <div class="site-homepage-feature__title">{{ feature.title }}</div>
-            <div class="site-homepage-feature__content">{{ feature.content }}</div>
-          </div>
-          
-        </div> -->
-
         <div class="site-homepage-feature__item site-homepage-feature__item__flex left" >
           <div class="site-homepage-feature__thumb">
             <img alt="" src="/static/img/homepage/01.png" srcset="/static/img/homepage/01@2x.png 2x" />

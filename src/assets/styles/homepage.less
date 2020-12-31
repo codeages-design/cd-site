@@ -50,8 +50,6 @@
     line-height: 32px;
     font-weight: 300;
   }
-  .link {
-  }
   .desc-link {
     width: 100px;
     height: 40px;
@@ -75,27 +73,31 @@
 }
 
 .site-homepage-feature {
-  margin-bottom: 128px;
+  margin-top: 64px;
   .cd-clearfix();
 }
 
 .site-homepage-feature__item {
-  display: flex;
-  justify-content: center;
-  height: 315px;
-  margin: 64px 0px 128px 0;
-  padding-top: 99px;
+  padding: 0 24px;
+  margin-bottom: 128px;
+  height: 346px;
   .site-homepage-feature__text {
     margin-top: 100px;
   }
   &.left {
+    .site-homepage-feature__thumb {
+      float: left;
+    }
     .site-homepage-feature__text {
-      margin-left: 100px;
+      float: right;
     }
   }
   &.right {
+    .site-homepage-feature__thumb {
+      float: right;
+    }
     .site-homepage-feature__text {
-      margin-right: 100px;
+      float: left;
     }
   }
 
