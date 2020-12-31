@@ -46,7 +46,7 @@
 <style scoped>
 .greyBg {
   margin-top: 32px;
-  padding: 32px 0px 32px 40px;
+  padding: 32px 40px 32px 40px;
   background: #F9F9F9;
   max-width: 912px;
   min-height: 637px;
