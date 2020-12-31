@@ -1,6 +1,8 @@
 <template>
   <div id="app" class="site-wrap">
 
+    <div class="gradient"></div>
+
     <x-header :index="true"></x-header>
     
     <div class="site-homepage-main">
@@ -10,8 +12,8 @@
           <div class="title">Codeages Design system</div>
           <div class="desc">阔知设计系统：一个让团队协作规范、高效的全栈式设计体系。</div>
           <div class="link">
-            <button class="cd-btn desc-link">入门</button>
-            <button class="cd-btn component-link" style="margin-left: 64px;">组件</button>
+            <button class="cd-btn desc-link" @click="handleClick('/principle')">入门</button>
+            <button class="cd-btn component-link" style="margin-left: 64px;" @click="handleClick('/component')">组件</button>
           </div>
         </div>
         <div>
@@ -74,7 +76,9 @@
 
       </section>
       
-      <footer class="site-homepage-footer">
+      
+    </div>
+    <footer class="site-homepage-footer">
         <div class="cd-container">
           <div class="site-homepage-footer__belongto">阔知UED团队和技术团队联合出品</div>
           <div class="site-homepage-footer__copyright">
@@ -82,7 +86,6 @@
           </div>
         </div>
       </footer>
-    </div>
 
   </div>
 </template>
@@ -237,6 +240,9 @@ export default class extends Vue {
   mouseleave() {
     this.banner.global.rotateX = 0;
     this.banner.global.rotateY = 0;
+  }
+  handleClick(path) {
+    this.$router.push(path)
   }
   
 }
