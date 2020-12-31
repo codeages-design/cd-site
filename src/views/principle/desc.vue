@@ -37,6 +37,9 @@
   .main-titlee:last-child {
     padding-top: 48px;
   }
+  .principle-content_inner {
+    margin-bottom: 32px;
+  }
   .principle-content_text {
     p {
       font-size: 16px;

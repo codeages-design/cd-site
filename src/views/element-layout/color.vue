@@ -356,10 +356,9 @@ export default {
 .platte-color-container {
   .platte-color {
     float: left;
-    width: 160px;
-    margin-top: 40px;
-    margin-right: 64px;
-    margin-bottom: 48px;
+    /* width: 160px; */
+    width: 14%;
+    margin: 40px 1.3% 48px;
     text-align: center;
     .el-content-subtitle,.el-content-subdes {
       margin: 0;
@@ -413,10 +412,6 @@ export default {
       &:nth-child(9) {
         border-radius: 0px 0px 8px 8px;
       }
-    }
-
-    &:nth-child(6),&:nth-child(12) {
-      margin-right: 0px;
     }
   }
 }
