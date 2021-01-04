@@ -1,11 +1,12 @@
 <template>
   <header class="site-header" :class="['site-header', {'site-header__top': (this.isTop && this.isIndex)}]" >
     <div class="site-header__container">
-      <div class="site-header__logo">
+      <div class="site-header__logo" :class="[{ 'not-center': notCenter }]">
       <router-link :to="{name: 'homepage'}">
         <img src="/static/img/homepage/logo@2x.png" srcset="/static/img/homepage/logo.png 1x, /static/img/homepage/logo@2x.png 2x" alt="">
       </router-link>
     </div>
+    <div v-show="notCenter" class="vertical-split-line"></div>
     <div class="site-header__nav cd-clearfix">
       <ul class="">
         <li :class="{ active: routeName === nav.name }"
@@ -60,16 +61,15 @@ export default class extends Vue {
   }
 
   rollingheight(){
-      // console.log(window.pageYOffset)
       this.scrollTop =window.pageYOffset
   }
 
+  get notCenter() {
+    return ['homepage', 'resources'].indexOf(this.$route.name) === -1 
+  }
   
   get isTop() {
-    if(this.scrollTop == 0) {
-      return true
-    }
-    return false
+    return this.scrollTop == 0
   }
 
   get isIndex() {
@@ -115,3 +115,14 @@ export default class extends Vue {
 
 }
 </script>
+
+<style lang="less" scoped>
+  .vertical-split-line {
+    position: absolute;
+    top: 16px;
+    left: 271px;
+    width: 1px;
+    height: 32px;
+    background-color: #eee;
+  }
+</style>
