@@ -53,20 +53,15 @@ const menu = [
         'text_en': 'unit',
         'name': 'element_Unit'
       },
-      // {
-      //   'text_zh': '方块',
-      //   'text_en': 'block',
-      //   'name': 'component_block'
-      // },
-      // {
-      //   'text_zh': '间距',
-      //   'text_en': 'gap',
-      //   'name': 'component_gap'
-      // },
       {
         'text_zh': '栅格',
         'text_en': 'grid',
         'name': 'element_Grid'
+      },
+      {
+        'text_zh': '内容块',
+        'text_en': 'content-block',
+        'name': 'element_content_block'
       },
       {
         'text_zh': '布局',
