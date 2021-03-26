@@ -12,7 +12,7 @@
   },
   "dependencies": {
     "@types/lodash": "^4.14.159",
-    "axios": "^0.16.2",
+    "axios": "^0.21.1",
     "babel-polyfill": "^6.26.0",
     "ckeditor4-vue": "^1.0.1",
     "clipboard": "^1.7.1",
